@@ -5,6 +5,8 @@ Enjoy and you can always find me here:
 [Panos Matsinopoulos](https://www.matsinopoulos.gr)
 [email][panagiotis@matsinopoulos.gr]
 
+# Free
+
 ## Full Stack Web Developer
 
 - [01. Master HTML & CSS](./Full%20Stack%20Web%20Developer/01%20-%20Master%20HTML%20&%20CSS)
@@ -24,7 +26,9 @@ Enjoy and you can always find me here:
 - [15. Ruby on Rails](./Full%20Stack%20Web%20Developer/15%20-%20Ruby%20on%20Rails)
 - [16. NoSQL Databases - MongoDB](./Full%20Stack%20Web%20Developer/16%20-%20NoSQL%20Databases%20-%20MongoDB)
 
-## My APress Books (not free)
+# Not Free
+
+## My APress Books
 
 - [01. Practical Test Automation](https://www.apress.com/gp/book/9781484261408)
 - [02. Practical Bootstrap](https://www.apress.com/gp/book/9781484260708)
