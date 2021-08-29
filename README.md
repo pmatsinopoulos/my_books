@@ -1,5 +1,3 @@
-Hi!
-
 These are my books. Most of them are free and I have included both their PDF version and their source.
 
 Enjoy and you can always find me here: 
