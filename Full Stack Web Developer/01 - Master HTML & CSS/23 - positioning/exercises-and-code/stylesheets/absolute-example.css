@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.column {
+    position: relative;
+    width: 50%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: cover;
+}
+
+#left-column {
+    float: left;
+    background-image: url("../images/sarakiniko-water.jpg");
+}
+
+#right-column {
+    float: right;
+    background-image: url("../images/zakinthos-ship-wreck.jpg");
+}
+
+.tag {
+    position: absolute;
+    right: 0;
+    bottom: 25px;
+    background-color: darkblue;
+    color: white;
+    font-size: 24px;
+    padding: 5px 10px;
+    border-radius: 10px 0 0 10px;
+}

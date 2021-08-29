@@ -1,0 +1,111 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: "Which GUI command we can use to see the current state of our project?"
+    correct_answers:
+      - "git gui"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming that you have the following picture, can you tell how many files exist in the staging area?"
+      extra_text: |
+        ![How Many Files In Staging Area?](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/03-version-control-systems/chapters/04-git-gui-tools/assets/images/how-many-files-exist-in-the-staging-area.jpg)
+    options:
+      - 0
+      - 2
+      - 8
+      - 10
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Does the `git gui` command allow me to create commits?"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `git gui` command does not allow me to change the commit message of the last commit."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "`git gui` allows me to commit parts of the changes that I have done on a file and not necessarily all of them at once."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "How do we call the different parts of the file that include changes that we have done?"
+    correct_answers:
+      - "hunks"
+      - "hunk"
+  -
+    input_type: text
+    question:
+      text: "What is the GUI tool that gives you the commit history of your project?"
+    correct_answers:
+      - "gitk"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `gitk` tool allows you to create commits"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "In `gitk`, what does the red circle / node represent?"
+    options:
+      - 'It contains the untracked files.'
+      - 'It contains the untracked modified files.'
+      - 'It contains the staged modified files.'
+      - 'It contains the tracked unstaged modified files.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "In `gitk`, what does the green circle / node represent?"
+    options:
+      - 'It represents a commit.'
+      - 'It represents the staged changes, i.e. the changes that are ready to be committed.'
+      - 'It represents the diff between commit and stage.'
+      - 'It represents the untracked files.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "RubyMine, unfortunately, does not offer `git` integration."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+
+

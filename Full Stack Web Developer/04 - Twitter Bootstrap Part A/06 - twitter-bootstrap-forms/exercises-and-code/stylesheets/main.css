@@ -1,0 +1,8 @@
+body {
+    padding-bottom: 50px;
+}
+
+#inline-form-container {
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+}

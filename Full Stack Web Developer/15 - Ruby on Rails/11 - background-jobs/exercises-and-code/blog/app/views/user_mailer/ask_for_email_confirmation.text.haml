@@ -1,0 +1,12 @@
+- # File: app/views/user_mailer/ask_for_email_confirmation.text.haml
+-
+Welcome!
+
+= "Dear #{@user.email}"
+
+Please, confirm your email address by clicking on this link here:
+
+= confirm_email_address_url(email: @user.email, email_confirmation_token: @user.email_confirmation_token)
+
+
+TCB Customer Success

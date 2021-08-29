@@ -1,0 +1,40 @@
+html {
+    height: 100%;
+}
+body {
+    min-height: 100%;
+    background-image: url("../images/nice-looking-dog.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.block-element {
+    margin-bottom: 150px;
+}
+
+#main-header {
+    color: White;
+    font-size: 50px;
+    text-align: center;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+
+#dog-training {
+    background-image: url("../images/dog-training.jpg");
+}
+
+#dog-breeds {
+    background-image: url("../images/dog-breeds.jpg");
+}
+
+#dog-training, #dog-breeds {
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-size: 28px;
+    padding: 10px 30px;
+    color: white;
+}

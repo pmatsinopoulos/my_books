@@ -1,0 +1,67 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+form {
+    width: 30%;
+    margin: 0 auto;
+}
+
+form input[type='submit'] {
+    font-size: 1.8rem;
+    background-color: Maroon;
+    color: White;
+    padding: 5px 10px;
+}
+
+form input[type='submit']:hover {
+    background-color: Black;
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+    width: 65px;
+    text-align: right;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+fieldset {
+    padding-top: 10px;
+    margin-bottom: 10px;
+}
+
+legend {
+    text-align: left;
+    margin-left: 10px;
+    padding: 0 5px;
+}
+
+input[type="number"] {
+    text-align: right;
+}
+
+input[type="text"],
+input[type="number"],
+select {
+    width: 150px;
+}

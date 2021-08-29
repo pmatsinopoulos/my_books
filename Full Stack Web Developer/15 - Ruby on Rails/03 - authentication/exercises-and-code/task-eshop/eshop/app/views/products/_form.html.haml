@@ -1,0 +1,19 @@
+- # File: app/views/products/_form.html.haml
+- #
+= form_for @product do |f|
+
+  = render partial: 'shared/errors', locals: {model: @product, explanation: 'prohibited this Product from being saved:'}
+
+  .form-group
+    = f.label :code
+    = f.text_field :code, placeholder: 'Type product code', type: 'text', class: 'form-control'
+
+  .form-group
+    = f.label :display_name
+    = f.text_field :display_name, placeholder: 'Type the display name of the product', class: 'form-control'
+
+  .form-group
+    = f.label :display_description
+    = f.text_area :display_description, placeholder: 'Type the display description of the product', class: 'form-control'
+
+  = f.submit class: 'btn btn-success'

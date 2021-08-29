@@ -1,0 +1,24 @@
+- # File: app/views/sign_up/new.html.haml
+- #
+%h1 Sign Up
+
+= form_for @user, url: sign_up_path, method: :post do |f|
+
+  = render partial: 'shared/errors', locals: {model: @user, explanation: 'prohibited User from signing up:'}
+
+  .form-group
+    = f.label :email
+    = f.email_field :email, placeholder: 'Type in your email', class: 'form-control'
+
+  .form-group
+    = f.label :password
+    = f.password_field :password, placeholder: 'Type in your password', class: 'form-control'
+
+  .form-group
+    = f.label :password_confirmation
+    = f.password_field :password_confirmation, placeholder: 'Confirm Your Password', class: 'form-control'
+
+  = f.submit 'Sign Up', class: 'btn btn-success'
+
+%div
+  = link_to 'Home', root_path

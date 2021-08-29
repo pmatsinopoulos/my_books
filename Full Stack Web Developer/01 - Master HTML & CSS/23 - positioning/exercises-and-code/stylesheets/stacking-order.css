@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+div {
+    padding: 10px 10px;
+    width: 300px;
+    height: 200px;
+    position: absolute;
+    top: 35px;
+    left: 35px;
+}
+
+#background {
+    background-color: darkgreen;
+    color: white;
+    position: relative;
+}
+
+#negative-z-index {
+    background-color: #5F5F5F;
+    color: white;
+}
+
+#block-elements {
+    background-color: #FFE4B5;
+    color: black;
+}
+
+#float-elements {
+    background-color: #7CFC00;
+    color: black;
+}
+
+#inline-elements {
+    background-color: #4682B4;
+    color: white;
+}
+
+#zero-z-index {
+    background-color: #BC8F8F;
+    color: white;
+}
+
+#positive-z-index {
+    background-color: maroon;
+    color: white;
+}

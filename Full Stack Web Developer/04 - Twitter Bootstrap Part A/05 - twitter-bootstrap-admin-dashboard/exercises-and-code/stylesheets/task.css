@@ -1,0 +1,43 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding-top: 50px;
+    height: 100%;
+    font-family: "Anonymous Pro", monospace;
+}
+
+.sidebar {
+    padding: 10px 0;
+    background-color: transparent;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    /* fix the position of the sidebar */
+    position: fixed;
+    left: 10px;
+    top: 70px;
+}
+
+.sidebar ul {
+    margin-bottom: 20px;
+}
+
+.sidebar ul li a:hover {
+    color: #000096;
+}
+
+.sidebar ul li.active,
+.sidebar ul li.active a:hover {
+    background-color: #428BCA;
+    color: White;
+}
+
+.sidebar ul li.active a {
+    color: White;
+}
+
+#main-content-container .img-responsive {
+    display: inline;
+}
+

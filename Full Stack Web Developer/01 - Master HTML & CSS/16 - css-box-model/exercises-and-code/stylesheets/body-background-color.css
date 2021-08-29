@@ -1,0 +1,18 @@
+html {
+    padding: 10px;
+    border: 2px solid #ffb21a;
+    background-color: white;
+}
+
+body {
+    background-color: Blue;
+    padding: 10px;
+    border: 2px solid red;
+    /*color: White;*/
+}
+
+h1 {
+    background-color: Green;
+    padding: 20px;
+    border: 2px solid Maroon;
+}

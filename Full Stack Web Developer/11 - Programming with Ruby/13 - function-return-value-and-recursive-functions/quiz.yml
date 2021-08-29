@@ -1,0 +1,414 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the content of variable `f` at the end of the program?"
+      extra_text: |
+        ~~~ ruby
+        def square(a)
+          a ** 2
+        end
+
+        f = square(8)
+        ~~~
+    options:
+      - '`8`'
+      - '`64`'
+      - '`2`'
+      - '`0`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the value of variable `f` after the end of the program?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b)
+          a + b
+        end
+
+        c = 5
+
+        d = 8
+
+        f = foo(c, d)
+        ~~~
+    options:
+      - '`12`'
+      - '`13`'
+      - '`11`'
+      - 'Undefined, the program has error'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the value of variable `f` at the end of the program?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b)
+          a + b
+        end
+
+        c = 2
+
+        d = 5
+
+        f = foo(c)
+        ~~~
+    options:
+      - '`8`'
+      - '`7`'
+      - 'Undefined, the program has error'
+      - '`6`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the value of the variable `f` at the end of the program?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b = 2)
+          a * b
+        end
+
+        f = foo(5, 3)
+        ~~~
+    options:
+      - '`15`'
+      - '`10`'
+      - '`5`'
+      - '`0`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the value of the variable `f` at the end of the program?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b = 2)
+          a * b
+        end
+
+        f = foo(5)
+        ~~~
+    options:
+      - '`15`'
+      - '`10`'
+      - '`5`'
+      - '`0`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b)
+          result = a + b
+          return result
+        end
+
+        puts foo(2, 3)
+        ~~~
+    options:
+      - '`2`    '
+      - '`3`    '
+      - '`5`'
+      - 'Nothing'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b)
+          return a * b
+        end
+
+        puts foo(2, 3)
+        ~~~
+    options:
+      - '`5`'
+      - '`6`'
+      - '`7`'
+      - 'Nothing'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b)
+          a / b
+        end
+
+        puts foo(8, 4)
+        ~~~
+    options:
+      - '`8`'
+      - '`4`'
+      - 'Nothing'
+      - '`2`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def foo
+          2
+          3
+          4
+        end
+
+        puts foo
+        ~~~
+    options:
+      - '`2`'
+      - '`3`'
+      - '`4`'
+      - 'Nothing'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a)
+          return 0 if a == 1
+          foo(a - 1) * 2
+        end
+
+        puts foo(8)
+        ~~~
+    options:
+      - '`0`'
+      - '`1`'
+      - '`2`'
+      - '`16`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a)
+          return 0 if a == 1
+          foo(a - 1) + 2
+        end
+
+        puts foo(8)
+        ~~~
+    options:
+      - '`0`'
+      - '`1`'
+      - '`8`'
+      - '`14`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is a recursive function."
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b, c)
+          a + b + c
+        end
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is a recursive function."
+      extra_text: |
+        ~~~ ruby
+        def foo(a, b, c)
+          return 0 if a == 1 || b == 1 || c == 1
+          foo(a - 1, b - 1, c - 1) + 2
+        end
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `return` keyword exits the execution of a function."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will this program print?"
+      extra_text: |
+        ~~~ ruby
+        def foo
+          return if 1 == 1
+          puts 'Hello'
+        end
+
+        foo
+        ~~~
+    options:
+      - '`1`'
+      - 'Hello'
+      - 'Nothing'
+      - '`true`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the return value of the following function?"
+      extra_text: |
+        ~~~ ruby
+        def foo
+          return if 1 == 1
+          puts 'Hello'
+        end
+        ~~~
+    options:
+      - '`nil`'
+      - 'Hello'
+      - 'Nothing'
+      - '`true`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print?"
+      extra_text: |
+        ~~~ ruby
+        def bar(a)
+          return a ** 2
+        end
+
+        puts bar(15)
+        ~~~
+    options:
+      - '`15`'
+      - '`225`'
+      - 'Nothing'
+      - '`nil`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print?"
+      extra_text: |
+        ~~~ ruby
+        def foo(a)
+          a += 1
+          nil
+        end
+
+        puts "foo(5) is nil: #{foo(5).nil?}"
+        ~~~
+    options:
+      - 'Nothing. The program has errors.'
+      - '`foo(5) is nil: 6`'
+      - '`foo(5) is nil: false`'
+      - '`foo(5) is nil: true`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the return value of the following function?"
+      extra_text: |
+        ~~~ ruby
+        def foo
+          if 5 > 1
+            'bingo'
+          else
+            'missed that'
+          end
+        end
+        ~~~
+    options:
+      - '5'
+      - '`"bingo"`'
+      - 'Nothing'
+      - '`nil`'
+      - '`"missed that"`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which numbers does the following range include?"
+      extra_text: |
+        ~~~ ruby
+        (15..25)
+        ~~~
+    options:
+      - 'all integers from 16 till 24.'
+      - 'all integers from 15 till 25.'
+      - 'all integers from 15 till 24.'
+      - 'all integers from 16 till 25.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which numbers does the following range include?"
+      extra_text: |
+        ~~~ ruby
+        (15...25)
+        ~~~
+    options:
+      - 'all integers from 16 till 24.'
+      - 'all integers from 15 till 25.'
+      - 'all integers from 15 till 24.'
+      - 'all integers from 16 till 25.'
+    correct_options:
+      - 3

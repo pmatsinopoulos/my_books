@@ -1,0 +1,26 @@
+%h1 List of Products
+%table.table.table-condensed.table-striped
+  %thead
+    %tr
+      %th ID
+      %th Code
+      %th Name
+      %th Description
+      %th
+  %tbody
+    - @products.each do |product|
+      %tr
+        %td= product.id
+        %td= product.code
+        %td= product.display_name
+        %td= product.display_description
+        %td
+          = link_to 'Show', product_path(product)
+          &nbsp;&nbsp;  
+          = link_to 'Edit', edit_product_path(product) if current_user
+          = link_to 'Delete', product_path(product), method: :delete, data: {confirm: 'Are you sure that you want to delete this Product?'} if current_user
+- if current_user
+  .text-right
+    = link_to 'Create New Product', new_product_path
+%div
+  = link_to 'Home', root_path

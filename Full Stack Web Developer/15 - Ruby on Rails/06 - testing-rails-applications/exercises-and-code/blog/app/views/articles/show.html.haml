@@ -1,0 +1,23 @@
+- # File: app/views/articles/show.html.haml
+- #
+%div
+  %strong ID:
+  = @article.id
+%div
+  %strong Title:
+  = @article.title
+%hr/
+%div
+  %strong Text:
+%div
+  = @article.text
+- if current_user && current_user.can_write_article?(@article)
+  %div
+    = link_to 'Edit Article', edit_article_path(@article)
+- if current_user
+  %div
+    = link_to 'Create New Article', new_article_path
+%div
+  = link_to 'List of Articles', articles_path
+%div
+  = link_to 'Home', root_path

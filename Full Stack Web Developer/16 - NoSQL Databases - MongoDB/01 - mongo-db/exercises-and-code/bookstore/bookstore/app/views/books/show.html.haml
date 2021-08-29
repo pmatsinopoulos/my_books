@@ -1,0 +1,18 @@
+-# File: app/views/show.html.haml
+-#
+%h1 Book: #{@book.title}
+%p
+  Author: #{@book.author}
+%p
+  Publisher: #{@book.publisher.try(:name)}
+%p
+  Tags: #{@book.tags_joined}
+%h2 Comments
+%ul#comments-list
+  - @book.comments.sort { |a, b| b.created_at <=> a.created_at }.each do |comment|
+    = render partial: 'books/comment', locals: {comment: comment}
+
+%h3 New Comment
+= form_tag comments_book_path(@book), id: 'new_comment_form' do
+  = text_field_tag :new_comment
+  = submit_tag 'Submit'

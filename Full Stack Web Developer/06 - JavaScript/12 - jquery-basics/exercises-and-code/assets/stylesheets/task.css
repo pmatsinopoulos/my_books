@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#score-container,
+#timer-container {
+    margin: 10px 20px;
+}
+
+#score-container {
+    color: green;
+}
+
+#timer-container {
+    color: red;
+}

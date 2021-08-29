@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+table ,
+table th,
+table td {
+    border: 1px solid maroon;
+}
+
+th, td {
+    padding: 5px 10px;
+}
+
+th {
+    background-color: maroon;
+    color: white;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #FFE4B5;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #aaad21;
+}

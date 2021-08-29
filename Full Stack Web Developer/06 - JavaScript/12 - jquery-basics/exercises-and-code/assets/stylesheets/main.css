@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+#buttons-container {
+    min-height: 30px;
+}
+
+#color-container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 70%;
+}
+
+.bg-yellow {
+    background-color: Yellow;
+}
+
+.bg-blue {
+    background-color: Blue;
+}
+
+.bg-green {
+    background-color: Green;
+}
+
+.color-white {
+    color: White;
+}

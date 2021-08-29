@@ -1,0 +1,17 @@
+- # File: app/views/layouts/application.html.haml
+- #
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Blog
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
+    = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
+  %body
+    .container
+      = render partial: 'layouts/flash'
+      = render partial: 'layouts/signed_in_user'
+      = render partial: 'layouts/search'
+      = yield :menu
+      = yield

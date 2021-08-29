@@ -1,0 +1,18 @@
+div {
+    background-color: Blue;
+    margin: 20px;
+}
+
+#parent {
+    padding-top: 1px;
+    padding-bottom: 1px;
+}
+
+#first-child {
+    background-color: #A08888;
+}
+
+#second-child {
+    background-color: #FFE4B5;
+}
+

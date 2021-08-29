@@ -1,0 +1,263 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the type of columns that we want to hold time stamp values?"
+    options:
+      - '`datetime`'
+      - '`timestamp`'
+      - '`int`'
+      - '`numeric`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The type of a column that is a foreign key to another table/column needs to have the same type as the destination column."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "If the `customers` table has a primary key of type `int(11)`, what type the `customer_id` column on `orders` should be."
+    options:
+      - '`numeric(11)`'
+      - '`int(2)`'
+      - '`int(11)`'
+      - '`datetime`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is a command to create a table `customers`. Which column is optional?"
+      extra_text: |      
+        ~~~sql
+        create table customers (id int(11) not null auto_increment, first_name varchar(255) not null, last_name varchar(255) not null, primary key(id));
+        ~~~
+    options:
+      - '`id`'
+      - 'None. They are all mandatory'
+      - '`last_name`'
+      - '`first_name`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sequence of commands will end with an error, because it tries to insert an order for an non-existing customer:"
+      extra_text: |
+        ~~~sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, primary key(id));
+
+        insert into orders (customer_id) values (15);
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sequence of commands will end without an error, even if it inserts an order for a non existing customer. This is because the `customer_id` of `orders` table is not defined as a foreign key to column `id` of `customers` table."
+      extra_text: |
+        ~~~sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, primary key(id));
+
+        insert into orders (customer_id) values (15);
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command creates a unique index on the column `order_number` of the `orders` table?"
+    options:
+      - '`create index orders_order_number_uidx on orders(order_number);`'
+      - '`create unique index orders_order_number_uidx orders(order_number);`'
+      - '`create unique index orders_order_number_uidx on orders(order_number);`'
+      - '`create unique index orders_order_number_uidx on orders;`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sequence of statements will fail:"
+      extra_text: |
+        ~~~sql
+        create table orders (id int(11) not null auto_increment, order_number varchar(255) not null, primary key(id));
+
+        create unique index orders_order_number_uidx on orders(order_number);
+
+        insert into orders (order_number) values ('ABC00001');
+
+        insert into orders (order_number) values ('ABC00001');
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sequence of statements will fail:"
+      extra_text: |
+        ~~~sql
+        create table orders (id int(11) not null auto_increment, order_number varchar(255) not null, primary key(id));
+
+        create index orders_order_number_uidx on orders(order_number);
+
+        insert into orders (order_number) values ('ABC00001');
+
+        insert into orders (order_number) values ('ABC00001');
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "After the two statements, `customer_id` column of `orders` table will be a foreign key to `id` column of `customers` table:"
+      extra_text: |
+        ~~~sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, primary key(id));
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Create a foreign key constraint from `orders` `customer_id` to `customers` `id`. The name of the constraint needs to be `orders_customer_fk`."
+    correct_answers:
+      - "alter table orders add constraint orders_customer_fk foreign key(customer_id) references customers(id);"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "In MySQL when we create a foreign key constraint, we also create an index."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "After the three statements, `customer_id` column of `orders` table will be a foreign key to `id` column of `customers` table:"
+      extra_text: |
+        ~~~sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, primary key(id));
+
+        alter table orders add constraint orders_customer_fk foreign key(customer_id) references customers(id);
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sequence of commands will fail:"
+      extra_text: |
+        ~~~sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, primary key(id));
+
+        alter table orders add constraint orders_customer_fk foreign key(customer_id) references customers(id);
+
+        insert into customers (name) values ('Panos');
+
+        select * from customers:
+          -- gives: id: 1, name: 'Panos'
+
+        insert into orders (customer_id) values (2);
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sequence of commands will fail:"
+      extra_text: |
+        ~~~sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, primary key(id));?
+
+        alter table orders add constraint orders_customer_fk foreign key(customer_id) references customers(id);
+
+        insert into customers (name) values ('Panos');
+
+        select * from customers:
+          -- gives: id: 1, name: 'Panos'
+
+        insert into orders (customer_id) values (1);
+        ~~~
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "The following statements create the table `order_items` and corresponding foreign keys to `orders` and `products` tables. Fill in the blanks so that the statements are correct."
+      text_area_pre_fill: |
+        create table order_items (id int(11) not null auto_increment, order_id int(11) not null, product_id int(11) not null, primary key(id));
+
+        alter table order_items add constraint order_items_order_fk __<fill in this blank>__ references __<fill in this blank>__;
+
+        alter table order_items add constraint order_items_product_fk __<fill in this blank>__ references __<fill in this blank>__;
+    correct_answers:
+      - |
+        create table order_items (id int(11) not null auto_increment, order_id int(11) not null, product_id int(11) not null, primary key(id));
+
+        alter table order_items add constraint order_items_order_fk foreign key(order_id) references orders(id);
+
+        alter table order_items add constraint order_items_product_fk foreign key(product_id) references products(id);
+  -
+    input_type: text
+    question:
+      text: "How can you create a unique index on both `order_id` and `product_id` of the `order_items` table? The name of the index is `order_items_order_product_uidx`."
+    correct_answers:
+      - "create unique index order_items_order_product_uidx on order_items(order_id, product_id);"

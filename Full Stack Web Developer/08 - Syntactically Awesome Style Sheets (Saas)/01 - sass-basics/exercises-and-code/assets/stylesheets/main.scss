@@ -1,0 +1,89 @@
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  color: $basic-text-color;
+  background-color: $basic-background-color;
+}
+
+div {
+  margin-top: 20px;
+
+  ul {
+    margin-left: 10px;
+
+    li {
+      font-size: 8px;
+    }
+  }
+}
+
+div.left-column {
+  a {
+    color: Blue;
+    &:hover {
+      color: LightBlue;
+    }
+  }
+}
+
+.right-column {
+  background: {
+    color: #2b542c;
+    image: url("../images/parthenon.jpg");
+    repeat: no-repeat;
+    attachment: fixed;
+    position: left top;
+    size: 100% 100%;
+  }
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  -ms-border-radius: $radius;
+  border-radius: $radius;
+}
+
+div.big-radius { @include border-radius(60px); }
+div.small-radius { @include border-radius(10px); }
+
+.message {
+  font-size: 12px;
+  padding: 10px 20px;
+}
+
+.success {
+  @extend .message;
+  background-color: LightBlue;
+  color: Black;
+}
+
+.error {
+  @extend .message;
+  background-color: Red;
+  color: White;
+}
+
+.information {
+  @extend .message;
+  background-color: DarkBlue;
+  color: Yellow;
+}
+
+.container {
+  width: $container-width;
+}
+
+.left-column {
+  width: $left-column-width;
+}
+
+.right-column {
+  width: $right-column-width;
+}

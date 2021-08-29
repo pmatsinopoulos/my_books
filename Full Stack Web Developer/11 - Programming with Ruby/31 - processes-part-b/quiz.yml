@@ -1,0 +1,271 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "`Process.wait` is blocked until a child process finishes."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What happens if the `Process.wait` does not find any exit child information waiting to be consumed?"
+    options:
+      - 'It returns `nil`.'
+      - 'It terminates the program.'
+      - 'It blocks until a child is created and then terminated.'
+      - 'It raises an exception `Errno::ECHILD`.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is a zombie process?"
+    options:
+      - 'It is a child process that has exited and its exit information has been consumed by its parent process using `Process.wait`.'
+      - 'It is a child process that has exited and its exit information has not been consumed by its parent process.'
+      - 'It is a child process that has been inherited by the operating system root process.'
+      - 'It is a child process that runs forever.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command can we use to avoid creating zombie processes, when we don't care about their exit information?"
+    options:
+      - '`Process.detach_child`'
+      - '`Process.detach`'
+      - '`Process.waitpid`'
+      - '`Process.waitpid2`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the non-blocking version of the `Process.wait`?"
+    options:
+      - '`Process.detach`'
+      - '`Process.wait`'
+      - '`Process.wait(-1, Process::WNOHANG)`'
+      - '`Process.wait_nblck`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What happens if we call `Process.wait(-1, Process::WNOHANG)` if a child is running but has not finished yet?"
+    options:
+      - 'It raises an exception `Errno::ECHILD`.'
+      - 'It returns `nil`'
+      - 'It blocks until the child finishes.'
+      - 'This command is not valid, because `-1` is not a valid process id.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which signal we need to trap to get notified for exiting child process?"
+    options:
+      - '`SIGTERM`'
+      - '`SIGKILL`'
+      - '`SIGABORT`'
+      - '`SIGCHLD`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The trapping code for child termination is executed once per child process terminated. So, if you have 5 child processes terminated, it will be executed 5 times."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the Ruby command to send a signal to another process?"
+    options:
+      - '`Process.signal`.'
+      - '`Process.kill`.'
+      - '`Process.detach`.'
+      - '`Process.send`.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A pipe is a bi-directional stream of communication."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How do I create a pipe in Ruby?"
+    options:
+      - '`IO.pipe`'
+      - '`IO.create_pipe`'
+      - '`Pipe.new`'
+      - '`File.new`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Unix Socket is a tool to have two processes, running on different machines, communicate and exchange messages."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Unix Sockets are unidirectional."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What happens to a process that is controlled by a terminal when the terminal is terminated?"
+    options:
+      - 'The process continues to live without the terminal control.'
+      - 'The process will stay live for some minutes until the terminal comes back again.'
+      - 'The process will write logs and terminate.'
+      - 'The process is terminated too.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which symbol is used to start a process on the background and let you gain control of the terminal prompt?"
+    options:
+      - '`^`'
+      - '`&`'
+      - '`$`'
+      - '`@`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following process is attached to a terminal:"
+      extra_text: |
+        ``` bash
+          UID   PID  PPID        F CPU PRI NI       SZ    RSS WCHAN     S             ADDR TTY           TIME CMD
+            0  2935   481     4106   0  31  0  2507872   3152 -      Ss                  0 ttys001    0:00.04 login -pf panayotismatsinopoulos
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following process is attached to a terminal:"
+      extra_text: |
+        ``` bash
+          UID   PID  PPID        F CPU PRI NI       SZ    RSS WCHAN     S             ADDR TTY           TIME CMD
+            0     1     0     4004   0  37  0  2539720  10408 -      Ss                  0 ??         0:21.54 /sbin/launchd
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following shell command so that the Ruby process would survive the terminal termination:"
+      text_area_pre_fill: "$ _____ ruby run-for-long.rb"
+    correct_answers:
+      - "$ nohup ruby run-for-long.rb"
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following shell command so that the Ruby process would survive the terminal termination and also the input control would be returned to the user."
+      text_area_pre_fill: "$ ____ ruby run-for-long.rb ____"
+    correct_answers:
+      - "$ nohup ruby run-for-long.rb &"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command can be used to create a daemon process in Ruby?"
+    options:
+      - '`Process.detach`'
+      - '`Process.fork`'
+      - '`Process.daemon`'
+      - '`Process.pipe`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is a Ruby command that invokes a shell command?"
+    options:
+      - '`Process.fork`'
+      - '`shell`'
+      - '`system`'
+      - '`run`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "`Process.spawn` is a blocking call."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "`IO.popen` allows us to use both STDIN and STDOUT at the same time."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+
+
+
+
+
+
+
+
+
+
+

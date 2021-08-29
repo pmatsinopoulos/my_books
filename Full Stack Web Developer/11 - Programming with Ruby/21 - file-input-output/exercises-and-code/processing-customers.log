@@ -1,0 +1,17 @@
+# Logfile created on 2016-12-17 12:03:04 +0000 by logger.rb/47272
+I, [2016-12-17T12:03:04.782329 #42389]  INFO -- : Writing headers to CSV: ["First Name", "Last Name", "Address", "Phone"]
+I, [2016-12-17T12:03:04.782484 #42389]  INFO -- : Writing data to CSV: ["Mary", "Foo", "AGIA SOFIA 5, 19002, KOROPI, GREECE", "37839021"]
+I, [2016-12-17T12:03:04.782574 #42389]  INFO -- : Writing data to CSV: ["Paul", "Beach", "5TH AVENUE 121, NEW YORK, USA", "37994822"]
+I, [2016-12-17T12:05:44.057737 #42434]  INFO -- : Writing headers to CSV: ["First Name", "Last Name", "Address", "Phone"]
+I, [2016-12-17T12:05:44.058132 #42434]  INFO -- : Writing data to CSV: ["Peter", "Papas", "Schulstrasse 4, 32547 Bad Oyenhausen, Germany", "2323212"]
+I, [2016-12-17T12:05:44.058222 #42434]  INFO -- : Writing data to CSV: ["Mary", "Foo", "AGIA SOFIA 5, 19002, KOROPI, GREECE", "37839021"]
+I, [2016-12-17T12:05:44.058285 #42434]  INFO -- : Writing data to CSV: ["Paul", "Beach", "5TH AVENUE 121, NEW YORK, USA", "37994822"]
+I, [2016-12-17T12:08:27.443590 #42451]  INFO -- : Writing headers to CSV: ["First Name", "Last Name", "Address", "Phone"]
+I, [2016-12-17T12:08:27.444545 #42451]  INFO -- : Writing data to CSV: ["Peter", "Papas", "Schulstrasse 4, 32547 Bad Oyenhausen, Germany", "2323212"]
+I, [2016-12-17T12:08:27.444797 #42451]  INFO -- : Writing data to CSV: ["Mary", "Foo", "AGIA SOFIA 5, 19002, KOROPI, GREECE", "37839021"]
+I, [2016-12-17T12:08:27.445057 #42451]  INFO -- : Writing data to CSV: ["Paul", "Beach", "5TH AVENUE 121, NEW YORK, USA", "37994822"]
+I, [2016-12-17T12:09:54.324186 #42495]  INFO -- : Writing data to CSV: ["John", "Smith", "795 E DRAGRAM, TUCSON AZ 85705, USA", "5417543010"]
+I, [2016-12-17T12:09:54.324468 #42495]  INFO -- : Writing data to CSV: ["Peter", "Papas", "Schulstrasse 4, 32547 Bad Oyenhausen, Germany", "2323212"]
+I, [2016-12-17T12:09:54.324533 #42495]  INFO -- : Writing data to CSV: ["Mary", "Foo", "AGIA SOFIA 5, 19002, KOROPI, GREECE", "37839021"]
+I, [2016-12-17T12:09:54.324604 #42495]  INFO -- : Writing data to CSV: ["Paul", "Beach", "5TH AVENUE 121, NEW YORK, USA", "37994822"]
+E, [2016-12-17T12:16:59.865723 #42582] ERROR -- : You need to provide the input and the output csv filenames

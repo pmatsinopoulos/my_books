@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <!-- Bootstrap CSS files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/profile.css" type="text/css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/javascripts/profile.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+      <h1 class="page-header">Profile Details</h1>
+
+      <form id="profile-details-form">
+        <div class="form-group">
+          <label for="first-name">First Name *:</label>
+          <input type="text" class="form-control mandatory" id="first-name" placeholder="First Name" autofocus="autofocus"/>
+        </div>
+
+        <div class="form-group">
+          <label for="last-name">Last Name *:</label>
+          <input type="text" class="form-control mandatory" id="last-name" placeholder="Last Name"/>
+        </div>
+
+        <div class="form-group">
+          <label for="contact-phone">Contact Phone *:</label>
+          <input type="text" class="form-control mandatory" id="contact-phone" placeholder="Contact Phone"/>
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Gender *:</label>
+          <select id="gender" class="form-control mandatory">
+            <option></option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+          </select>
+        </div>
+
+        <div class="text-right">
+          <button type="submit" class="btn btn-primary btn-lg">Save</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

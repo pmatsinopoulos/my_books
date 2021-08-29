@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Off-Main Thread Image Manipulation with Workers</title>
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="assets/javascripts/main.js"></script>
+  </head>
+  <body>
+
+    <p>
+      <label>
+        Type an image URL to decode
+        <input type="url" id="image-url" list="image-list"/>
+        <datalist id="image-list">
+          <option value="http://localhost:8000/assets/images/lion.jpg"></option>
+          <option value="https://html.spec.whatwg.org/images/drawImage.png"></option>
+          <option value="https://html.spec.whatwg.org/images/robots.jpeg"></option>
+          <option value="https://html.spec.whatwg.org/images/arcTo2.png"></option>
+        </datalist>
+      </label>
+    </p>
+
+    <p>
+      <label>
+        Type a filter to apply
+        <select id="filter">
+          <option value="none">none</option>
+          <option value="grayscale">grayscale</option>
+          <option value="brighten">brighten by 20%</option>
+          <option value="darken">darken by 20%</option>
+        </select>
+      </label>
+    </p>
+
+    <p>
+      <button id="apply-filter">Apply</button>
+    </p>
+
+    <canvas id="output">
+    </canvas>
+
+  </body>
+</html>

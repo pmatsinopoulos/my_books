@@ -1,0 +1,524 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Ruby does not have things that are only classes.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If something is class of another thing, it can also be an instance of a third one.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Can I call `superclass` on an object instance that is not a class too?'
+    options:
+      - 'Yes'
+      - 'No'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What will the following program print?'
+      extra_text: |
+        ~~~ruby
+        class Dog
+        end
+
+        dog = Dog.new
+
+        puts dog.class
+        puts dog.instance_of?(Dog)
+        ~~~
+    options:
+      - 'Dog true'
+      - 'dog true'
+      - 'dog false'
+      - 'Class true'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Can I call `.new` on an object instance?'
+    options:
+      - 'No'
+      - 'Yes'
+      - 'Only if that is also a class'
+      - 'Only if that is also a module'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How many objects do you see here?'
+      extra_text: |
+        ~~~ruby
+        class Dog
+        end
+        dog = Dog.new
+        ~~~
+    options:
+      - 1
+      - 2
+      - 3
+      - None. I only see classes.
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Class` is only a class.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Class` is only an object.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Class` is both an object and a class.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Module` is only a class.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Module` is only an object.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Module` is both a class and an object.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'When I define a new module I create an instance of `Class`'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'When I define a new module I create an instance of `Module`'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'This is a valid definition of a class:'
+      extra_text: |
+        ~~~ruby
+        Cat = Class.new
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'This is not a valid definition of a module:'
+      extra_text: |
+        ~~~ruby
+        Queue = Module.new
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'These two are equivalent:'
+      extra_text: |
+        (1)
+
+        ``` ruby
+        class Animal
+        end
+
+        class Dog < Animal
+        end
+        ```
+
+        (2)
+
+        ``` ruby
+        class Animal
+        end
+
+        Dog = Class.new
+        Dog < Animal
+        ```
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'These two are equivalent'
+      extra_text: |
+        (1)
+
+        ``` ruby
+        class Animal
+        end
+
+        class Dog < Animal
+        end
+        ```
+
+        (2)
+
+        ``` ruby
+        class Animal
+        end
+
+        Dog = Class.new(Animal)
+        ```
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'These two are equivalent:'
+      extra_text: |
+        (1)
+
+        ~~~ruby
+        Encode = Module.new do
+          def encode
+          end
+        end
+        ~~~
+
+        (2)
+
+        ~~~ ruby
+        module Encode
+          def encode
+          end
+        end
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Module` is a module.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Module` is a class.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Module` is an object.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Module` is an instance of `Class`.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'We can create instances of classes.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'We can create instances of modules.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'We can create instances of `Class`.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'We can create instances of `Module`.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which class `Class` derives from?'
+    options:
+      - '`Object`'
+      - '`Module`'
+      - '`BasicObject`'
+      - '`self`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How do I get the list of instance methods of a class?'
+    options:
+      - 'Calling `instance_public_methods`'
+      - 'Calling `instance_methods`'
+      - 'Calling `methods`'
+      - 'Calling `class_methods`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'At top level of a Ruby program, `self` is an instance of `BasicObject`.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Object` is only a class.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Object` is only an object'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Object` is both a class and an object'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The parent class of `Module` is `BasicObject`'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The parent class of `Object` is `BasicObject`'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the parent class of class `Dog`?'
+      extra_text: |
+        ~~~ruby
+        class Dog
+        end
+        ~~~
+    options:
+      - '`BasicObject`'
+      - '`Object`'
+      - '`Class`'
+      - '`Module`'
+      - 'None. It does not derive from any class.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Is `MyClass` an `Object`?'
+      extra_text: |
+        ~~~ruby
+        class MyClass
+        end
+        ~~~
+    options:
+      - 'Yes'
+      - 'No'
+      - 'Not yet, we need to instantiate, e.g. with `my_class_instance = MyClass.new`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Kernel` is a Ruby defined class.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Kernel` is an object.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Kernel` is a Ruby defined module.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: '`Kernel` is mixed in into `Class`.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+
+
+
+
+
+
+

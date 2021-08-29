@@ -1,0 +1,13 @@
+# File: config/locales/es.yml
+#
+es:
+  hello: "Hola Mundo"
+  list_of_articles: "Lista de artículos"
+  article_has_been_destroyed: "El artículo ha sido destruido! Título del artículo: %{article_title}"
+  time:
+    formats:
+      default: "%A, %-d de %B de %Y %H:%M:%S %z"
+      short: "%-d de %b %H:%M"
+  errors:
+    messages:
+      blank: "No puede estar en blanco"

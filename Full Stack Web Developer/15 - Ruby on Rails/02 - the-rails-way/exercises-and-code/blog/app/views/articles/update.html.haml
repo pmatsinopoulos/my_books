@@ -1,0 +1,7 @@
+- # File: app/views/articles/update.html.erb
+%h1
+  Article with ID #{@article.id} has been updated
+%div
+  %a{:href => "/articles/#{@article.id}"} View Article Details
+%div
+  %a{:href => "/articles"} List Of Articles

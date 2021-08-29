@@ -1,0 +1,10 @@
+- # File: app/views/layouts/_search.html.haml
+- #
+= form_tag articles_path, method: :get, class: 'form-inline' do
+  .form-group
+    = label_tag :q, 'Search for:'
+    = text_field_tag :q, params[:q], class: 'form-control', placeholder: 'type a word or phrase'
+
+  = submit_tag 'Search', class: 'btn btn-default'
+
+%hr

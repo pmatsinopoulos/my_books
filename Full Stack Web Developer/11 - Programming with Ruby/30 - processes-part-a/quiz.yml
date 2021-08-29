@@ -1,0 +1,562 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Your program has direct access to the kernel"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The calls to kernel are called..."
+    options:
+      - 'User calls'
+      - 'Kernel calls'
+      - 'System calls'
+      - 'Ruby calls'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which shell command is not used to print the process table information?"
+    options:
+      - '`ps -ef`'
+      - '`ps -ahr`'
+      - '`ps -l`'
+      - '`processes-list`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the process id of the process `-bash` according to the following output?"
+      extra_text: |
+        ``` bash
+          PID TTY           TIME CMD
+        23295 ttys002    0:00.00 ps -ahr
+        23287 ttys002    0:00.04 ruby -e sleep 10
+        14359 ttys000    0:00.20 -bash
+        14358 ttys000    0:00.02 login -pf panayotismatsinopoulos
+         1589 ttys002    0:01.09 /bin/bash --login
+        ```
+    options:
+      - '23295'
+      - '23287'
+      - '14359'
+      - '14358'
+      - '1589'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the process id of the process `ruby -e sleep 10` according to the following output?"
+      extra_text: |
+        ``` bash
+          UID   PID  PPID        F CPU PRI NI       SZ    RSS WCHAN     S             ADDR TTY           TIME CMD
+          501 14359 14358     4006   0  31  0  2492780      8 -      S+                  0 ttys000    0:00.20 -bash
+          501  1589   480     4006   0  31  0  2500972   3768 -      Ss                  0 ttys002    0:01.10 /bin/bash --login
+          501 23313  1589     4046   0  31  0  2448856   7716 -      S                   0 ttys002    0:00.03 ruby -e sleep 10
+        ```
+    options:
+      - '14359'
+      - '1589'
+      - '23313'
+      - '14358'
+      - '480'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A process can have multiple parent processes?"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A process can have multiple child processes?"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the process identifier of the root operating system process?"
+    options:
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which Ruby statement returns the process identifier?"
+    options:
+      - '`Process.process_id`'
+      - '`Process.id`'
+      - '`Process.pid`'
+      - '`Process.process_identifier`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which Ruby statement returns the parent process identifier?"
+    options:
+      - '`Process.parent_process_id`'
+      - '`Process.pid`'
+      - '`Process.ppid`'
+      - '`Process.parent_process_identifier`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the Ruby statement to return the limits of the number of open file descriptors?"
+    options:
+      - '`Process.getNumberOfOpenFileDescriptiors(:NOFILE)`'
+      - '`Process.getrlimit(:NOFILE)`'
+      - '`Process.get_limit_of_open_files(:NOFILE)`'
+      - '`Process.get_resource_limit(:NOFILE)`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the parent process identifier of the command `-bash` according to the following output:"
+      extra_text: |
+        ``` bash
+          UID   PID  PPID   C STIME   TTY           TIME CMD
+            0 23372  1589   0  9:08AM ttys002    0:00.00 ps -harf
+          501 14359 14358   0 Sun06PM ttys000    0:00.20 -bash
+            0 14358   481   0 Sun06PM ttys000    0:00.02 login -pf panayotismatsinopoulos
+          501  1589   480   0 Sun06AM ttys002    0:01.11 /bin/bash --login
+        ```
+    options:
+      - '23372'
+      - '1589'
+      - '14359'
+      - '14358'
+      - '481'
+      - '480'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which Ruby statement sets the limit for the number of open file descriptors?"
+    options:
+      - '`Process.setNumberOfOpenFileDescriptiors(:NOFILE, <limit>)`'
+      - '`Process.set_limit_of_open_files(:NOFILE, <limit>)`'
+      - '`Process.set_resource_limit(:NOFILE, <limit>)`'
+      - '`Process.setrlimit(:NOFILE, <limit>)`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which standard stream do we usually use to send errors?"
+    options:
+      - 'stdin'
+      - 'stdout'
+      - 'stderr'
+    correct_options:
+      - 3
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following command so that the `puts` sends its output to standard error and the `gets` reads its input from standard input:"
+      text_area_pre_fill: |
+        ______.puts 'error 15'
+        answer = ______.gets 'what shall I do?'
+    correct_answers:
+      - |
+        $stderr.puts 'error 15'
+        answer = $stdin.gets 'what shall I do?'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following redirects standard output to `file.txt`:"
+      extra_text: |
+        ``` bash
+        $ ruby test.rb 2> file.txt
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following redirects standard error channel to whatever standard output is sent to:"
+      extra_text: |
+        ``` bash
+        $ ruby test.rb > file.txt 2>&1
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following redirects the standard output to file `file.txt`:"
+      extra_text: |
+        ``` bash
+        $ ruby test.rb > file.txt
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following so that both standard output and standard error are being sent to `file.txt`:"
+      text_area_pre_fill: "$ ruby test.rb ____ file.txt"
+    correct_answers:
+      - "$ ruby test.rb &> file.txt"
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following so that the output of the command `cat` to be sent to the input of the command `less`."
+      text_area_pre_fill: "$ cat long-file.txt ____ less"
+    correct_answers:
+      - "$ cat long-file.txt | less"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the tool that we use in Ruby to make our program work with piped input?"
+    options:
+      - '`ARGUMENTF`'
+      - '`ARGV`'
+      - '`ARGF`'
+      - '`ARGUMENTV`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which shell command lists the environment variables and their values?"
+    options:
+      - '`environment`'
+      - '`env`'
+      - '`environment_variables`'
+      - '`variables`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How can we start a shell command and pass an on-demand environment variable? Which example is correct?"
+    options:
+      - '`FOO-BAR ruby test.rb`'
+      - '`FOO BAR ruby test.rb`'
+      - '`FOO=BAR ruby test.rb`'
+      - '`FOO=>BAR ruby test.rb`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which shell command prints the value of the environment variable with name `FOO`?"
+    options:
+      - '`echo XFOO`'
+      - '`echo x-FOO`'
+      - '`echo $$FOO`'
+      - '`echo $FOO`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which Ruby construct bears the environment variables and their values?"
+    options:
+      - '`ENV`'
+      - '`$ENV`'
+      - '`$ENVIRON`'
+      - '`$ENVIRONMENT`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the Ruby construct that allows me to see and change the name of a process?"
+    options:
+      - '`PROGNAME`'
+      - '`$PROGRAM_NAME`'
+      - '`$PROGRAM`'
+      - '`$PROGRAMME`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The process exit code 1 denotes success."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The process exit code can be..."
+    options:
+      - 'From 1 up to 200'
+      - 'From 1 up to 256'
+      - 'From 0 up to 255'
+      - 'From 0 up to 256'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Ruby allows us to attach code on the exit points of a program. Which method does that?"
+    options:
+      - '`at_exit`'
+      - '`when_exit`'
+      - '`at_terminate`'
+      - '`when_terminate`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the exit code of the following Ruby program?"
+      extra_text: |
+        ``` ruby
+        exit!
+        ```
+    options:
+      - '0'
+      - '1'
+      - '255'
+      - '256'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the exit code of the following Ruby program?"
+      extra_text: |
+        ``` ruby
+        abort
+        ```
+    options:
+      - '0'
+      - '1'
+      - '255'
+      - '256'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When calling `exit!` all the exit hooks are being executed."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When calling `abort` all the exit hooks are being executed."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the basic Ruby command that creates a child process?"
+    options:
+      - '`fork_child`'
+      - '`child_fork`'
+      - '`create_child_process`'
+      - '`fork`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which string will be output by the parent process?"
+      extra_text: |
+        ``` ruby
+        if fork
+          puts 'Hello'
+        else
+          puts 'World!'
+        end
+        ```
+    options:
+      - "Hello"
+      - "World"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which string will be output by the child process?"
+      extra_text: |
+        ``` ruby
+        if fork
+          puts 'Hello'
+        else
+          puts 'World!'
+        end
+        ```
+    options:
+      - "Hello"
+      - "World"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Child will print..."
+      extra_text: |
+        ``` ruby
+        fork do
+          puts 'Hello World'
+        end
+        puts 'What is your name?'
+        ```
+    options:
+      - '"Hello World" and then "What is your name?"'
+      - '"What is your name?"'
+      - '"Hello World"'
+      - 'Child will not run because there is an error. `fork` does not take blocks.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: Child process has the same process id as its parent"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The parent process occupies 500MB of memory. Which of the following is correct?"
+    options:
+      - 'The child process will always occupy 500MB of memory too.'
+      - 'The child process starts with minimum, about 10MB, of memory consumption and can go up to 500MB.'
+      - 'The child process starts with minimum, about 10MB, of memory consumption and can go up to 1000MB.'
+      - 'The child process will initially occupy 500MB of memory too.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A child changes the array contents of an array inherited from parent process. Which one is true?"
+    options:
+      - 'The parent process copy of the array is not affected.'
+      - 'The parent process copy of the array is affected.'
+      - 'All the children processes of the parent are affected.'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "On a 4 core CPU I will spawn 3 children and that will make my program run 4 times faster."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When a parent process exits without waiting for the child to finish, then"
+    options:
+      - 'child process is abruptly terminated too.'
+      - 'child process is inherited by the root process with id 1.'
+      - 'child process is inherited by the root process with id 0.'
+      - 'child process will wait for the parent process to start again.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which Ruby statement tells us the exit code of the child process?"
+    options:
+      - '`Process.wait`'
+      - '`Process.waitpid`'
+      - '`Process.wait2`'
+      - '`Process.waitp`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which Ruby statement is suggested in order to wait for a specific child process to finish?"
+    options:
+      - '`Process.wait`'
+      - '`Process.waitpid`'
+      - '`Process.wait2`'
+      - '`Process.waitp`'
+    correct_options:
+      - 2

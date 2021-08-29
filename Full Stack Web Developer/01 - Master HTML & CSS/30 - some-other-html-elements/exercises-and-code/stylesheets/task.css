@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    margin-top: 2.0rem;
+    margin-bottom: 2.0rem;
+}
+
+html,
+input,
+textarea,
+select,
+option {
+    font-family: Comfortaa, Verdana, Arial, sans-serif;
+}
+
+input[type=submit] {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    -ms-appearance: button;
+    -o-appearance: button;
+    appearance: button;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+main {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    width: 50%;
+    float: left;
+    padding: 10px;
+}
+
+.clearfix {
+    clear: both;
+}
+
+section h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+section blockquote {
+    padding-left: 5px;
+    border-left: 5px solid gray;
+    margin-bottom: 20px;
+}
+
+section pre {
+    width: 100%;
+    overflow-x: auto;
+    background-color: lightblue;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+section iframe {
+    height: 300px;
+    width: 100%;
+}

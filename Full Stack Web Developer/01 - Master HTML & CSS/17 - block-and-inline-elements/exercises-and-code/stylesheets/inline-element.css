@@ -1,0 +1,12 @@
+* {
+    box-sizing: border-box;
+    margin: 0 0;
+}
+
+#my-span {
+    background-color: #4682B4;
+    color: White;
+    width: 300px;
+    height: 300px;
+    display: inline-block;
+}

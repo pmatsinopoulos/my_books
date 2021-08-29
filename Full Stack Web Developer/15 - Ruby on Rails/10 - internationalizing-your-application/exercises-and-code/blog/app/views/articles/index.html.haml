@@ -1,0 +1,21 @@
+- # File: app/views/articles/index.html.haml
+- #
+%h1= t 'list_of_articles'
+%table.table.table-striped
+  %thead
+    %tr
+      %th ID
+      %th Title
+      %th Text
+      %th Author
+      %th Created At
+      %th
+  %tbody
+    = render partial: 'articles/article', collection: @articles
+
+- content_for :menu do
+  - if current_user
+    %div
+      = link_to 'Create Another Article', new_article_path
+  %div
+    = link_to 'Home', root_path

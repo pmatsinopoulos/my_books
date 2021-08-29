@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#one {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    border: 1px solid black;
+    padding: 10px 10px;
+    z-index: 1;
+}
+
+#two {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    border: 1px solid blue;
+    padding: 10px 10px;
+    z-index: 0;
+}
+
+#two span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+#two-one {
+    position: absolute;
+    background-color: yellow;
+    border: 1px solid blue;
+    width: 400px;
+    height: 100px;
+    z-index: 2;
+}
+
+

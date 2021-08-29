@@ -1,0 +1,46 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: 'Write the Ruby command that prints the string "Hello World!" on the terminal. Use single quotes to enclose the string.'
+    correct_answers:
+      - "puts 'Hello World!'"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does the following Ruby program do?'
+      extra_text: |
+        ``` ruby
+        puts 'Give me your name:'
+        ```
+    options:
+      - "Prints the string 'Give me your name: including the quotes on the terminal"
+      - 'Asks you to type in your name'
+      - "Prints the string 'Give me your name:' on the terminal, but without the quotes"
+      - 'Prints your name on the terminal enclosed in single quotes'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Ruby program files suggested filename extension is:"
+    options:
+      - '`.rub`'
+      - '`.ruby`'
+      - '`.txt`'
+      - '`.rb`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'In order to run the program `hello_world_ruby.rb`, you need to type in the command `ruby hello_world_ruby.rb` on the operating system terminal prompt.'
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1

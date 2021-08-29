@@ -1,0 +1,23 @@
+body {
+    font-size: 24px;
+}
+
+a {
+    background-color: Lightblue;
+    color: white;
+    padding: 5px 10px;
+}
+
+a:link,
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:active {
+    background-color: darkblue;
+}
+
+a:hover {
+    background-color: #4682B4;
+}

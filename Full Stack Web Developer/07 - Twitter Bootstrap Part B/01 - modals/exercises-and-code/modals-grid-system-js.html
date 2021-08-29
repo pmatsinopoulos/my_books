@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modal Grid System Demo - JavaScript</title>
+
+    <!-- Bootstrap CSS files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/stylesheets/main.css">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+            crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JavaScript files AFTER jQuery -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="assets/javascripts/open-dialog.js"></script>
+
+  </head>
+
+  <body>
+    <button class="btn btn-lg btn-success" id="open-modal-button">Open Modal</button>
+
+    <div class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="glyphicon glyphicon-remove"></span></button>
+            <h4 class="modal-title">Greek Islands</h4>
+
+          </div>
+
+          <div class="modal-body text-center">
+
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <img src="assets/images/ithaki-1.jpg" alt="Ithaki"/>
+              </div>
+              <div class="col-md-6 text-center">
+                <img src="assets/images/elafonisos-2.jpg" alt="Elafonisos"/>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-6 text-center">
+                <img src="assets/images/karpathos-3.jpg" alt="Karpathos"/>
+              </div>
+              <div class="col-md-6 text-center">
+                <img src="assets/images/chios-4.jpg" alt="Chios"/>
+              </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

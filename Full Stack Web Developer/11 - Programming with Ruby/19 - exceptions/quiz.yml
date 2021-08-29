@@ -1,0 +1,223 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'In Ruby all exceptions are instances of an `Exception` class or any of its subclasses.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which method raises an exception?'
+    options:
+      - '`rise`'
+      - '`throw_exception`'
+      - '`raise`'
+      - '`raise_exception`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which piece of information is not part of the exception information?'
+    options:
+      - 'The line of code that raised the exception.'
+      - 'The Ruby file that raised the exception.'
+      - 'The user using the application while the exception was raised.'
+      - 'The class of the exception.'
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: 'Write the following Ruby statement in another way:'
+      extra_text: |
+        ~~~ruby
+        raise RuntimeError.new('This cannot be like that')
+        ~~~
+    correct_answers:
+      - "raise RuntimeError, 'This cannot be like that'"
+      - 'raise RuntimeError, "This cannot be like that"'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'You see the following backtrace information - Can you tell which line of code calls `foo3` method?'
+      extra_text: |
+        ``` bash
+        exception-5.rb:16:in `foo4': foo4 raised an error (StandardError)
+                from exception-5.rb:12:in `foo3'
+                from exception-5.rb:8:in `foo2'
+                from exception-5.rb:4:in `foo1'
+                from exception-5.rb:19:in `<main>'
+        ```
+    options:
+      - 19
+      - 4
+      - 8
+      - 12
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Read, the following program. Which line of code handles the exception?'
+      extra_text: |
+        ``` ruby
+        1. def foo
+        2.   raise 'dummy error'
+        3. end
+        4.
+        5. foo
+        ```
+    options:
+      - 2
+      - 5
+      - None
+      - 1
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Read the following program. Which method handles the error last?'
+      extra_text: |
+        ``` ruby
+        def foo1
+          foo2
+        rescue
+          puts 'Catch the error but do nothing with that'
+        end
+
+        def foo2
+          foo3
+        rescue => ex
+          puts ex.message
+          raise
+        end
+
+        def foo3
+          raise RuntimeError, 'this is an error condition'
+        end
+
+        foo1
+        ```
+    options:
+       - '`foo1`'
+       - '`foo2`'
+       - '`foo3`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The error is handled.'
+      extra_text: |
+        ``` ruby
+        def foo1
+          foo2
+        rescue UncaughtThrowError => ex
+          puts "I will handle this: #{ex.message}"
+        end
+
+        def foo2
+          raise EOFError, 'this is an eof error'
+        end
+
+        foo1
+        ```
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The error is handled.'
+      extra_text: |
+        ``` ruby
+        def foo1
+          foo2
+          begin
+            puts 'ready to rescue'
+          rescue EOFError => ex
+            puts "I will handle this: #{ex.message}"
+          end
+        end
+
+        def foo2
+          raise EOFError, 'this is an eof error'
+        end
+
+        foo1
+        ```
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What error class is raised here?'
+      extra_text: |
+        ~~~ruby
+        raise 'something went wrong'
+        ~~~
+    options:
+      - '`StandardError`'
+      - '`NoMethodError`'
+      - '`RuntimeError`'
+      - '`ZeroDivisionError`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Having an exception instance at hand, on variable `ex`, which is the method to print the back trace?'
+    options:
+      - '`ex.stacktrace`'
+      - '`ex.backtrace`'
+      - '`ex.callstack`'
+      - '`ex.print_stack_trace`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'In Ruby, I cannot define custom exception classes'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the recommended class to derive your custom exception class?'
+    options:
+      - '`Exception`'
+      - '`RuntimeError`'
+      - '`ArgumentError`'
+      - '`StandardError`'
+    correct_options:
+      - 4
+
+
+

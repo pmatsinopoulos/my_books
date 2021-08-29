@@ -1,0 +1,7 @@
+- # File: app/views/layouts/_select_time_zone.html.haml
+- #
+- if current_user
+  .text-right
+    = form_tag users_time_zone_path, class: 'form-inline' do
+      = label_tag :time_zone, 'Time Zone'
+      = select_tag :time_zone, options_for_select(ActiveSupport::TimeZone.all.map(&:name).sort, current_user.time_zone), class: 'form-control'

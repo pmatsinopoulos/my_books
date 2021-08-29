@@ -1,0 +1,111 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: "Open Sans", Arial, sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 2.0rem;
+    text-align: center;
+    padding-bottom: 1.0rem;
+    border-bottom: 0.1rem solid lightblue;
+    margin-bottom: 2.0rem;
+}
+
+h4 {
+    font-size: 1.2rem;
+    text-align: right;
+    padding-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.hotel-container {
+    width: 100%;
+    padding: 1.0rem;
+}
+
+.hotel-image img {
+    width: 100%;
+}
+
+.book-and-price-container {
+    margin-bottom: 1.0rem;
+}
+
+.book-container {
+    width: 50%;
+    float: left;
+}
+
+.book-container a {
+    display: inline-block;
+    width: 5.0rem;
+    padding: 0 0.5rem;
+    background-color: blue;
+    color: white;
+    text-decoration: none;
+    border: 0.1rem solid blue;
+    border-radius: 0.5rem;
+}
+
+.book-container a:hover {
+    background-color: white;
+    color: blue;
+}
+
+.price-container {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.4rem;
+    }
+    /* 2-columns layout */
+    .hotel-container {
+        width: 50%;
+        float: left;
+    }
+}
+
+@media (min-width: 992px) {
+    h1 {
+        font-size: 2.6rem;
+    }
+    /* 3-columns layout */
+    .hotel-container {
+        width: 33.33%;
+        float: left;
+    }
+    .hotel-container:nth-of-type(3n+4) {
+        clear: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    h1 {
+        font-size: 3.0rem;
+    }
+    /* 4-columns layout */
+    .hotel-container {
+        width: 25%;
+        float: left;
+    }
+    .hotel-container:nth-of-type(3n+4) {
+        clear: none;
+    }
+}
+

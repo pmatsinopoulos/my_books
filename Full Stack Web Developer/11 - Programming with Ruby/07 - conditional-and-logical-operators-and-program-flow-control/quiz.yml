@@ -1,0 +1,563 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The operator that compares two variables for equality is `==`.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the result of the following Ruby expression:'
+      extra_text: |
+        ~~~ ruby
+        1 == 2
+        ~~~
+    options:
+      - '`1`'
+      - '`2`'
+      - '`true`'
+      - '`false`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program:'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 5
+        puts a == b
+        ~~~
+    options:
+      - '`5`'
+      - '`true`'
+      - '`false`'
+      - '`0`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        puts a != b
+        ~~~
+    options:
+      - '`5`'
+      - '`false`'
+      - '`true`'
+      - '`6`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 6
+        b = 6
+        puts a != b
+        ~~~
+    options:
+      - '`6`'
+      - '`true`'
+      - '`false`'
+      - '`0`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        puts a > b
+        ~~~
+    options:
+      - '`true`'
+      - '`false`'
+      - '`yes`'
+      - '`no`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        puts b > a
+        ~~~
+    options:
+      - '`6`'
+      - '`true`'
+      - '`5`'
+      - '`false`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        puts a < b
+        ~~~
+    options:
+      - '`6`'
+      - '`true`'
+      - '`5`'
+      - '`false`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        puts b < a
+        ~~~
+    options:
+      - '`6`'
+      - '`true`'
+      - '`5`'
+      - '`false`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 6
+        b = 6
+        puts a >= b
+        ~~~
+    options:
+      - '`6`'
+      - '`true`'
+      - '`yes`'
+      - '`false`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        puts a <= b
+        ~~~
+    options:
+      - '`6`'
+      - '`true`'
+      - '`5`'
+      - '`false`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        if a <= b
+          puts "a less than or equal to b"
+        else
+          puts "a greater than b"
+        end
+        ~~~
+    options:
+      - '`true`'
+      - '`a less than or equal to b`'
+      - '`false`'
+      - '`a greater than b`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 7
+        b = 6
+        if a <= b
+          puts "a less than or equal to b"
+        else
+          puts "a greater than b"
+        end
+        ~~~
+    options:
+      - '`true`'
+      - '`a less than or equal to b`'
+      - '`false`'
+      - '`a greater than b`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 4
+        if b >= a
+          puts "Hello"
+        end
+        ~~~
+    options:
+      - 'Program outputs nothing'
+      - '`Hello`'
+      - '`4 >= 5`'
+      - '`5 >=4`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 5
+        b = 6
+        puts "a is greater than b" if a > b
+        ~~~
+    options:
+      - '`5`'
+      - '`6`'
+      - 'Prints nothing to the output'
+      - '`true`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The following two programs are equivalent:'
+      extra_text: |
+        ~~~ ruby
+        # 1st program:
+        a = 5
+        b = 6
+        puts "a greater than b" if a > b
+        #
+        # 2nd program:
+        #
+        a = 5
+        b = 6
+        if a > b
+          puts "a greater than b"
+        else
+          puts "a less than b"
+        end
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The following two programs are equivalent:'
+      extra_text: |
+        ~~~ ruby
+        # 1st program:
+        a = 5
+        b = 6
+        puts "a greater than b" if a > b
+        #
+        # 2nd program:
+        #
+        a = 5
+        b = 6
+        if a > b
+          puts "a greater than b"
+        end
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following program?'
+      extra_text: |
+        ~~~ ruby
+        a = 3
+        b = 4
+        if a > b
+          puts "a is greater than b"
+        elsif a == b
+          puts "a equals b"
+        else
+          puts "a less than b"
+        end
+        ~~~
+    options:
+      - '`3`'
+      - '`a is greater than b`'
+      - '`a less than b`'
+      - '`a equals b`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of this Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        a = 10
+        unless a >= 18
+          puts "You are not an adult"
+        end
+        ~~~
+    options:
+      - 'Nothing is printed on the output of this program'
+      - 'You are not an adult'
+      - '`10`'
+      - '`18`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'These two programs are equivalent:'
+      extra_text: |
+        ~~~ ruby
+        # 1st program:
+        a = 18
+        puts "You are too old" if !(a < 20)
+        #
+        # 2nd program:
+        a = 18
+        puts "You are too old" unless a < 20
+        ~~~
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does this program do?'
+      extra_text: |
+        ~~~ ruby
+        print "Give me your salary please:"
+        salary = gets.to_i
+        unless salary >= 800
+          puts "You are below average"
+        end
+        ~~~
+    options:
+      - 'Asks user their salary and if it is less than 800 it prints the message "You are below average"'
+      - 'Asks user their salary and if it is greater than 800 it prints the message "You are below average"'
+      - 'Prints nothing on the screen'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The `gets.chomp` call removes any new line characters that might exist at the end of the string that is typed in by the user when they are prompt to give input.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which is equivalent to the boolean condition? `a > 2`'
+    options:
+      - '`a < 2`'
+      - '`a <= 2`'
+      - '`!(a <= 2)`'
+      - '`a >= 2`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Write the following if statement with an unless'
+      extra_text: |
+        ~~~ ruby
+        puts "a is greater than 2" if a > 2
+        ~~~
+    options:
+      - '`puts "a is greater than 2" unless a<=2`'
+      - '`puts "a is greater than 2" unless !(a>2)`'
+      - '`puts "a is greater than 2" unless !(a<=2)`'
+      - '`Cannot be written with an unless because it does not have the not operator`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ~~~ ruby
+        day = 'Monday'
+        case
+          when day == 'Sunday' || day == 'Saturday' || day == 'Monday'
+            puts "Not working day"
+          else
+            puts "Working day"
+        end
+        ~~~
+    options:
+      - '`Sunday`'
+      - '`Not working day`'
+      - '`Monday`'
+      - '`Working Day`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Write the following using the ternary operator:'
+      extra_text: |
+        ~~~ ruby
+        if a >= 3
+          puts "a is greater than or equal to 3"
+        else
+          puts "a is less than 3"
+        end
+        ~~~
+    options:
+      - '`a >= 3 ? puts("a is greater than or equal to 3") : puts("a is less than 3")`'
+      - '`case a>=3 when "a is greater than or equal to 3" else "a is less than 3"`'
+      - '`a>=3 ? "a is greater than or equal to 3" : "a is less than 3"`'
+      - '`a>=3 ? puts : puts("a is less than 3")`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The operator that uses both a `?` and a `:` is called ternary operator.'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does the following Ruby program do?'
+      extra_text: |
+        ~~~ ruby
+        color1 ='White'
+        color2 = 'Blue'
+        color3 = color1 == 'White' ? color2 : color1
+        ~~~
+    options:
+      - 'Does nothing'
+      - 'sets `color3` to the value `"White"`'
+      - 'sets `color3` to the value `"Blue"`'
+      - 'sets `color3` to `true`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What will the following program print?'
+      extra_text: |
+        ~~~ ruby
+        a = nil
+        if a
+          puts 'Well Done!'
+        else
+          puts 'Why not?'
+        end
+        ~~~
+    options:
+      - '`nil`'
+      - '`Well Done!`'
+      - '`Why not?`'
+      - 'It will print nothing'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What will the following program print?'
+      extra_text: |
+        ~~~ ruby
+        a = 0
+        if a
+          puts 'Well Done!'
+        else
+          puts 'Why not?'
+        end
+        ~~~
+    options:
+      - '`0`'
+      - '`Well Done!`'
+      - '`Why not?`'
+      - 'It will print nothing'
+    correct_options:
+      - 2
+
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+- # File: app/views/articles/_form.html.haml
+- #
+= form_for @article do |f|
+  = render partial: 'shared/errors', locals: {model: @article, explanation: 'prohibited this Article from being saved:'}
+
+  .form-group
+    = f.label :title
+    = f.text_field :title, placeholder: 'Give Title of Article', class: 'form-control'
+
+  .form-group
+    = f.label :text
+    = f.text_area :text, placeholder: 'Type in the text of the Article', class: 'form-control'
+
+  %div
+    = f.submit class: 'btn btn-success'

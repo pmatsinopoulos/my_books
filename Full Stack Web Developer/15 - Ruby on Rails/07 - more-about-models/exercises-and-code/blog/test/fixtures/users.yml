@@ -1,0 +1,9 @@
+# File: test/fixtures/users.yml
+#
+peter:
+  email: peter@gmail.com
+  password_digest: <%= SecureRandom.urlsafe_base64 %>
+
+mary:
+  email: mary@gmail.com
+  password_digest: <%= SecureRandom.urlsafe_base64 %>

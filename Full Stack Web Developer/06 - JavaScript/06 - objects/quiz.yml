@@ -1,0 +1,267 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The following statement is either true or false: "An object is an ordered collection of properties"'
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'An object property has a name and a value.'
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Which of the following are valid names for what an object is? Select as many as you see fit.'
+    options:
+      - 'object literal'
+      - 'hash'
+      - 'dictionary'
+      - 'stack'
+      - 'associative array'
+      - 'queue'
+      - 'hashtable'
+    correct_options:
+      - 2
+      - 3
+      - 5
+      - 7
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Which of the following are objects? Select as many as you see fit.'
+    options:
+      - '`"hello world"`'
+      - '`{a: 1, b: 2}`'
+      - '`1`'
+      - '`true`'
+      - '`Object.create({a: true, b: false})`'
+      - '`false`'
+      - '`null`'
+      - '`undefined`'
+      - '`{}`'
+    correct_options:
+      - 2
+      - 5
+      - 9
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Which of the following is a method to create an object? Select as many as you see fit.'
+    options:
+      - 'using object literals.'
+      - 'using `object::create()` function.'
+      - 'using `new` keyword and function constructors'
+      - 'using `construct` keyword.'
+      - 'using `Object.create()` function.'
+    correct_options:
+      - 1
+      - 3
+      - 5
+  -
+    input_type: text
+    question:
+      text: 'Create an empty object using object literals. Save it in a variable named "o".'
+    correct_answers:
+      - 'var o = {};'
+      - 'let o = {};'
+      - 'const o = {};'
+  -
+    input_type: text
+    question:
+      text: 'Create an object with two properties, `firstName` and `lastName`. Save it in a variable named "o".'
+    correct_answers:
+      - '/var o = {firstName: "\w+", lastName: "\w+"};/'
+      - "/var o = {firstName: '\\w+', lastName: '\\w+'};/"
+  -
+    input_type: text_area
+    question:
+      text: 'Create an object with three properties, using the `new` keyword. Fill in the blanks (underscores)'
+      text_area_pre_fill: |
+        var Employee = ____________ (firstName, lastName, salary) {
+          _________________________
+          _________________________
+          _________________________
+        };
+        var employee = ________________("Panos", "M", "2000");
+    correct_answers:
+      - |
+        var Employee = function (firstName, lastName, salary) {
+          this.firstName = firstName;
+          this.lastName = lastname;
+          this.salary = salary;
+        };
+        var employee = new Employee("Panos", "M", "2000");
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The following statement is correct: "Object inherits properties from its prototype"'
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: 'Object literals have the same prototype object and we can refer to this prototype object with the following statement:'
+    correct_answers:
+      - 'Object.prototype'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which object does `new Date()` inherit from?'
+    options:
+      - '`Date.constructor`'
+      - '`Date.prototype`'
+      - '`Date.Prototype`'
+      - '`Date.initialize`'
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following code so that the object `school` is properly created.'
+      text_area_pre_fill: 'var school = Object._______({name: "British School of Economics", address: "25-29 Queensborough Terrace"});'
+    correct_answers:
+      - 'var school = Object.create({name: "British School of Economics", address: "25-29 Queensborough Terrace"});'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which is the correct piece of code to assign the value `ABC123` to the property `invoiceNumber`?'
+    options:
+      - '`order.invoiceNumber := "ABC123"`'
+      - '`order.invoice_number = "ABC123"`'
+      - '`order.invoiceNumber = "ABC123"`'
+      - '`order["invoice_number"] = "ABC123"`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Is the following piece of code correct?'
+      extra_text: |
+        ```javascript
+
+        var device = {
+          number: "ABD213",
+          width: 300mm,
+          height: 400mm,
+          depth: 300mm
+        };
+        device["n" + "u" + "mber"] = "ABD214"
+        ```
+    options:
+      - 'Yes'
+      - 'No'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What will the next program print?'
+      extra_text: |
+        ```javascript
+
+        var animal = {
+          numberOfLegs: 0,
+          numberOfEyes: 0,
+          tailLength: "0cm"
+        };
+
+        var dog = Object.create(animal);
+
+        dog.numberOfLegs = 4;
+        dog.numberOfEyes = 2;
+        dog.tailLength   = "30cm";
+
+        var bird = Object.create(animal);
+        bird.numberOfLegs = 2;
+        bird.numberOfEyes = 2;
+        bird.tailLength = "1cm";
+        bird.numberOfWings = 2;
+
+        console.log(bird.numberOfLegs);
+        console.log(bird.numberOfEyes);
+        console.log(bird.tailLength);
+        console.log(bird.numberOfWings);
+
+        console.log(dog.numberOfEyes);
+        console.log(dog.numberOfLegs);
+        console.log(dog.tailLength);
+        console.log(dog.numberOfWings);
+        ```
+    options:
+      - '`2, 2, "2cm", 2, 2, 4, "20cm", 2`'
+      - '`4, 4, "2cm", 4, 2, 4, "20cm", 2`'
+      - '`2, 2, "1cm", 2, 2, 4, "30cm", undefined"`'
+      - '`2, undefined, "1cm", 2, 4, "2cm", undefined, 2`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which are the properties of the object `b`?'
+      extra_text: |
+        ```javascript
+
+        var a = {"1": "one", "2": "two"};
+        var b = Object.create(a);
+        b["3"] = "three";
+        var c = Object.create(b);
+        c["4"] = "four";
+        ```
+    options:
+      - '"1", "2"'
+      - '"1", "2", "3"'
+      - '"1", "2", "3", "4"'
+      - '1, 2'
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Create an object with two properties, `a` and `b` and a method `add()` that returns their sum. Also, demonstrate that it works and does its job correctly. Define a constructor function."
+      text_area_pre_fill: |
+        var Addition = ____________ (a, b) {
+          ___________
+          ___________
+          this.add = ______________() {
+              _______________________________
+          }
+        };
+
+        var addition = _______________(5, 6);
+        console.log(addition.add());
+    correct_answers:
+      - |
+        var Addition = function (a, b) {
+          this.a = a;
+          this.b = b;
+          this.add = function() {
+              return this.a + this.b;
+          }
+        };
+
+        var addition = new Addition(5, 6);
+        console.log(addition.add());

@@ -1,0 +1,48 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: text
+    question:
+      text: |
+        You need to create the table `products`. Products should have
+        `id` as the primary key (integer, not null and auto incremented),
+        the `name` of type varchar with maximum length 255, and the `price` of
+        type numeric with 15 digits and 2 decimals. Both `name` and `price` should not be null.
+    correct_answers:
+      - 'create table products (id int(11) not null auto_increment, name varchar(255) not null, price numeric(15,2) not null, primary key(id));'
+  -
+    input_type: text
+    question:
+      text: 'Fill in the following so that the command creates a unique index on column `name` of table `products`.'
+    correct_answers:
+      - 'create unique index products_name_uidx on products(name);'
+  -
+    input_type: text
+    question:
+      text: 'Fill in the following so that it counts the entries in the `products` table.'
+    correct_answers:
+      - 'select count(*) from products;'
+  -
+    input_type: text
+    question:
+      text: 'Fill in the following so that the command returns the number of products whose `price` is greater than 10.'
+    correct_answers:
+      - 'select count(*) from products where price > 10;'
+  -
+    input_type: text
+    question:
+      text: 'Fill in the following so that you get the list of products ordered by the `name` attribute.'
+    correct_answers:
+      - 'select * from products order by name;'
+  -
+    input_type: text
+    question:
+      text: 'Assuming that the `products` table has a column `price`, how will you get the products sorted by `price` but with the most expensive one at the top?'
+    correct_answers:
+      - 'select * from products order by price desc;'
+  -
+    input_type: text
+    question:
+      text: 'How can you get the most expensive product from the list of products? Hint: limit the result that select will reply back to you.'
+    correct_answers:
+      - 'select * from products order by price desc limit 1;'

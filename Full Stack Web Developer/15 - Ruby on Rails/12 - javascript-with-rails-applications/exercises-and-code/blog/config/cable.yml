@@ -1,0 +1,13 @@
+# File: config/cable.yml
+#
+development:
+  url: redis://localhost:6379/1
+  channel_prefix: blog_development
+
+test:
+  adapter: async
+
+production:
+  adapter: redis
+  url: redis://localhost:6379/1
+  channel_prefix: blog_production

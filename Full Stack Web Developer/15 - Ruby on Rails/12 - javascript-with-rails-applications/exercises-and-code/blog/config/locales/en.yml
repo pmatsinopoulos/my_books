@@ -1,0 +1,7 @@
+# File: config/locales/en.yml
+#
+en:
+  hello: "Hello World"
+  list_of_articles: "List of Articles"
+  article_has_been_destroyed: "Article has been destroyed! Article Title: %{article_title}"
+

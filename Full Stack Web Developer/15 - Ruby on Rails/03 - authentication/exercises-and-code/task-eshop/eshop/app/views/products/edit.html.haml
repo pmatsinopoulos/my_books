@@ -1,0 +1,7 @@
+%h1
+  Edit Product with Id: #{@product.id}
+
+= render partial: 'products/form'
+
+.text-right
+  = link_to 'List Of Products', products_path

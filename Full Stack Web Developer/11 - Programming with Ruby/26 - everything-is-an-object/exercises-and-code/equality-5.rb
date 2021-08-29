@@ -1,0 +1,30 @@
+# File: equality-5.rb
+#
+class Person
+  attr_reader :name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def ==(other)
+    @name == other.name
+  end
+
+  def ===(other)
+    self.==(other) && other.instance_of?(self.class)
+  end
+
+  alias eql? ==
+end
+
+john = Person.new('John')
+another_john = Person.new('John')
+
+puts "John is == to Another John? #{john == another_john}"
+puts "John is eql? to Another John? #{john.eql? another_john}"
+
+h = {john => 36}
+
+puts h[john]
+puts h[another_john]

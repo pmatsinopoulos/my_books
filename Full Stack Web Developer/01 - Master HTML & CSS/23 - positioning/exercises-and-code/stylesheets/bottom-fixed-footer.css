@@ -1,0 +1,52 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 38px 0 38px;
+}
+
+#footer {
+    text-align: center;
+    background-color: Maroon;
+    color: White;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+#main-content {
+    font-size: 18px;
+}
+
+#header {
+    background-color: darkblue;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+#header a {
+    padding: 10px 10px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+#header a:hover {
+    background-color: white;
+    color: darkblue;
+}
+
+.bookmark {
+    padding-top: 38px;
+    margin-top: -38px;
+}
+

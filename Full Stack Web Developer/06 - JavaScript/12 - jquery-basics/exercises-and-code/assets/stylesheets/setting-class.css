@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+#buttons-container {
+    min-height: 30px;
+}
+
+#text-container {
+    margin: 30px;
+    height: 70%;
+    padding: 30px;
+}
+
+.monospace {
+    font-family: monospace;
+    font-size: 32px;
+    color: Blue;
+    background-color: Gray;
+}
+
+.serif {
+    font-family: "Times New Roman", serif;
+    font-size: 38px;
+    color: Green;
+    background-color: Maroon;
+}
+
+.sans-serif {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 48px;
+    color: White;
+    background-color: DarkBlue;
+}

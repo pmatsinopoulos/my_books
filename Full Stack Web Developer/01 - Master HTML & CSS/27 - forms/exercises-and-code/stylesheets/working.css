@@ -1,0 +1,49 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    font-size: 1.4rem;
+    margin-bottom: 5px;
+}
+
+input, select {
+    width: 200px;
+}
+
+label {
+    display: inline-block;
+    text-align: right;
+    width: 67px;
+}
+
+.input-group.last {
+    margin-bottom: 10px;
+}
+
+form input[type='submit'] {
+    font-size: 1.8rem;
+    background-color: Maroon;
+    color: White;
+}
+
+form input[type='submit']:hover {
+    background-color: Black;
+    cursor: pointer;
+}

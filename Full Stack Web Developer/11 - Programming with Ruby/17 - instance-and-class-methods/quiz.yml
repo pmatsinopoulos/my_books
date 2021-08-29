@@ -1,0 +1,122 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The state is being defined by the values of the attributes of the object"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the prefix for class variable names?"
+    options:
+      - '`@`'
+      - '`$`'
+      - '`@@`'
+      - '`$$`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Instance methods do not have access to instance variables"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Instance methods have access to class variables."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Instance methods are called on classes."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Class methods are called on instances."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Instance methods have access to both instance and class variables."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Class methods have access to both instance and class variables."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the `main` object?"
+    options:
+      - 'It is the main function, like in C programs'
+      - 'It is the object that we instantiate with `Main.new`'
+      - 'It is the object that we instantiate with `self.new`'
+      - 'It is the object that is referenced by `self` at the top-level of our Ruby program.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Read the following program. How many methods does the `my_object` respond to at the end of the program?"
+      extra_text: |
+        ``` ruby
+        class MyClass
+          def foo
+          end
+        end
+
+        my_object = MyClass.new
+
+        class MyClass
+          def bar
+          end
+        end
+        ```
+    options:
+      - "1"
+      - "2"
+      - "3"
+      - "4"
+    correct_options:
+      - 2

@@ -1,0 +1,15 @@
+- # File: app/views/articles/_article.html.haml
+- #
+%tr
+  %td= article.id
+  %td= article.title
+  %td= article.text
+  %td= article.user.email
+  %td= l article.created_at, format: :short
+  %td
+    = link_to 'Show', article_path(article)
+    - if current_user && current_user.can_write_article?(article)
+      &nbsp;&nbsp;
+      = link_to 'Edit', edit_article_path(article)
+      &nbsp;&nbsp;
+      = link_to 'Delete', article_path(article), method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure that you want to delete this Article?'}

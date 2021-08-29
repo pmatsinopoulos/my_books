@@ -1,0 +1,191 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The remote repository is only a backup of the source code which is periodically updated. Developers exchange source code changes via email."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A Git server is responsible to serve more than one Git projects."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A Git Server is not enough to host our Git project, we need to prepare the remote repository too."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Which is the command to add a new remote with name `foo` and remote repo URL `git@github.com:mary/foo.git`?"
+    correct_answers:
+      - "git remote add foo git@github.com:mary/foo.git"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A project can have multiple remote repositories."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "How can I get the list of remote repositories setup for my project?"
+    correct_answers:
+      - "git remote -v"
+  -
+    input_type: text
+    question:
+      text: "How do we push our first commit to the remote repository with name `foo`. Assume that we are on branch `feature-search-accounts`?"
+    correct_answers:
+      - "git push -u foo feature-search-accounts"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does it mean that a local branch tracks a remote branch?"
+    options:
+      - 'It means that changes in our local branch are compared to changes to the corresponding branch when executing `git status`.'
+      - 'It means that if I delete the remote branch the local branch will be deleted too.'
+      - 'It means that if I delete the local branch the remote branch will be deleted too.'
+      - 'It means that if a change occurs on the remote branch, the local branch is automatically updated.'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Remote repositories work as a backup of the source code too."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "What is the command to get the list of local branches of my project?"
+    correct_answers:
+      - "git branch -l"
+      - "git branch --list"
+      - "git branch"
+  -
+    input_type: text
+    question:
+      text: "What is the command to get the list of remote branches of my project?"
+    correct_answers:
+      - "git branch -r"
+      - "git branch --remote"
+  -
+    input_type: text
+    question:
+      text: "What is the command to get the list of all branches of my project?"
+    correct_answers:
+      - "git branch -a"
+      - "git branch --all"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "I can have more local branches than remote branches."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "I can have more remote branches than local branches."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming that a developer pushes changes to `origin/master`, other developers do not get that code automatically."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Which command pushes changes from the local Git database to remote Git database?"
+    correct_answers:
+      - "git push"
+  -
+    input_type: text
+    question:
+      text: "Which command fetches changes from the remote Git database to the local Git database?"
+    correct_answers:
+      - "git fetch"
+  -
+    input_type: text
+    question:
+      text: "Which command downloads the whole Git remote repository locally, in order for somebody to start working on the project for the first time?"
+    correct_answers:
+      - "git clone"
+  -
+    input_type: text
+    question:
+      text: "Clone the remote repository on url `https://github.com/foo/hello.git` into your local folder `hello2`."
+    correct_answers:
+      - "git clone https://github.com/foo/hello.git hello2"
+  -
+    input_type: text
+    question:
+      text: "How do I create a new local branch that would track the remote branch with name `origin/feature-search-invoices`?"
+    correct_answers:
+      - "git checkout -b feature-search-invoices"
+      - "git checkout -b feature-search-invoices --track origin/feature-search-invoices"
+      - "git checkout feature-search-invoices"
+  -
+    input_type: text
+    question:
+      text: "How do we push the tags to remote repository with name `origin`?"
+    correct_answers:
+      - "git push --tags origin"
+  -
+    input_type: text
+    question:
+      text: "How can you compare the local branch `feature-search-invoices` to the remote branch `origin/feature-search-invoices`?"
+    correct_answers:
+      - "git diff feature-search-invoices..origin/feature-search-invoices"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When merging remote branches to local branches, you can use two methods. One is `git merge`. Which is the other?"
+    options:
+      - '`git merge-remote --no-ff <remote branch name>`'
+      - '`git checkout <remote branch name>`'
+      - '`git rebase <remote branch name>`'
+      - '`git checkout -b <remote branch name>`'
+    correct_options:
+      - 3
+

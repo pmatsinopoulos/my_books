@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Invoice Template</title>
+    <link rel="stylesheet" href="stylesheets/task.css" type="text/css">
+  </head>
+
+  <body>
+    <table class="whole-width" border="0" cellspacing="0">
+      <tr>
+        <td rowspan="2" colspan="2" id="company-name">Company Name</td>
+        <td colspan="2">INVOICE#________________</td>
+      </tr>
+      <tr>
+        <td colspan="2">INVOICE DATE:___________</td>
+      </tr>
+
+      <tr class="billing-details">
+        <td colspan="3"></td>
+        <td class="bold-text bottom-border">BILL TO:</td>
+      </tr>
+
+      <tr class="billing-details">
+        <td colspan="3">Street Address</td>
+        <td>Name</td>
+      </tr>
+
+      <tr class="billing-details">
+        <td colspan="3">City, ST ZIP CODE</td>
+        <td>Company Name</td>
+      </tr>
+
+      <tr class="billing-details">
+        <td colspan="3">Phone [(000) 00 - 00000]</td>
+        <td>Street Address</td>
+      </tr>
+
+      <tr class="billing-details">
+        <td colspan="3">Fax [(000) 00 - 00000]</td>
+        <td>Phone</td>
+      </tr>
+
+      <tr>
+        <td colspan="4">Payment Terms: Invoice Date + 30days</td>
+      </tr>
+
+      <tr>
+        <th class="column-header">LINE</th>
+        <th class="column-header">QTY ORDERED</th>
+        <th class="column-header">PRICE/EXT</th>
+        <th class="column-header">PRICE</th>
+      </tr>
+
+      <tr class="odd order-item">
+        <td class="row-index">1</td>
+        <td class="number">1,000.00</td>
+        <td class="number">$1.50</td>
+        <td class="number">$1,500.00</td>
+      </tr>
+
+      <tr class="even order-item">
+        <td class="row-index">2</td>
+        <td class="number">3,000.00</td>
+        <td class="number">$4.00</td>
+        <td class="number">$12,000.00</td>
+      </tr>
+
+      <tr class="odd order-item">
+        <td class="row-index">3</td>
+        <td class="number">3,000.00</td>
+        <td class="number">$2.00</td>
+        <td class="number">$6,000.00</td>
+      </tr>
+
+      <tr class="even order-item">
+        <td class="row-index">4</td>
+        <td class="number">500.00</td>
+        <td class="number">$1.00</td>
+        <td class="number">$500.00</td>
+      </tr>
+
+      <tr class="odd order-item last-row">
+        <td class="row-index">5</td>
+        <td class="number">800.00</td>
+        <td class="number">$2.00</td>
+        <td class="number">$1,600.00</td>
+      </tr>
+
+      <tr class="even order-item">
+        <td colspan="3" class="text-align-right">Subtotal:</td>
+        <td class="number">$21,600.00</td>
+      </tr>
+
+      <tr class="odd order-item">
+        <td colspan="3" class="text-align-right">Tax Rate:</td>
+        <td class="text-align-right">23%</td>
+      </tr>
+
+      <tr class="even order-item">
+        <td colspan="3" class="text-align-right">Total:</td>
+        <td class="number">$26,568.00</td>
+      </tr>
+
+      <tr class="odd order-item">
+        <td colspan="3" class="text-align-right">Make all checks payable to:</td>
+        <td id="company-name-on-footer">Company Name</td>
+      </tr>
+
+    </table>
+
+    <p class="thank-you">Thank you for your business.</p>
+
+  </body>
+
+</html>

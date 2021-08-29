@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 3rem;
+}
+
+p {
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+    text-align: justify;
+}
+
+#rectangle {
+    width: 375px;
+    border: 1px solid red;
+}

@@ -1,0 +1,182 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will this program print?"
+      extra_text: |
+        ``` ruby
+        puts 'Hello'.blank?
+        ```
+    options:
+      - '`true`'
+      - '`blank`'
+      - '`present`'
+      - '`false`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will this program print?"
+      extra_text: |
+        ``` ruby
+        puts 'Hello'.present?
+        ```
+    options:
+      - '`true`'
+      - '`blank`'
+      - '`present`'
+      - '`false`'
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "The variable `@customer` is `nil`. How can you call the method `#first_name` on it without raising any exception?"
+    correct_answers:
+      - "@customer.try(:first_name)"
+      - "@customer&.first_name"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method converts an object to a query string parameter value?"
+    options:
+      - '`#to_parameter`'
+      - '`#to_param`'
+      - '`#to_query`'
+      - '`#to_query_string`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Write `['a', 'b', 'c'].include?('a')` using `in?`:"
+    correct_answers:
+      - "'a'.in?(['a', 'b', 'c'])"
+      - "'a'.in? ['a', 'b', 'c']"
+      - "'a'.in? w[a b c]"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How can we forward a method call to an embedded/associated object?"
+    options:
+      - 'with `forward`'
+      - 'with `send_to`'
+      - 'with `delegate`'
+      - 'with `delegate_to`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How can I create a class attribute that wouldn't be affected by subclasses?"
+    options:
+      - 'with `cattr_accessor`'
+      - 'with `mattr_accessor`'
+      - 'with `mattr_attribute`'
+      - 'with `class_attribute`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "If we call `subclasses` on `A`, it will return the class `B`."
+      extra_text: |
+        ``` ruby
+        class A; end;
+        class A2 < A; end;
+        class B < A2; end;
+        ```
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "If we call `descendants` on `A`, it will return the class `B`."
+      extra_text: |
+        ``` ruby
+        class A; end;
+        class A2 < A; end;
+        class B < A2; end;
+        ```
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Convert `long sentence` string to `lo...`:"
+    correct_answers:
+      - "'long sentence'.truncate(5)"
+      - '"long sentence".truncate(5)'
+  -
+    input_type: text
+    question:
+      text: "Convert `getting_started` string to `GettingStarted`:"
+    correct_answers:
+      - "'getting_started'.camelize"
+      - '"getting_started".camelize'
+  -
+    input_type: text
+    question:
+      text: "Convert `GettingStarted` string to `getting_started`:"
+    correct_answers:
+      - "'GettingStarted'.underscore"
+      - '"GettingStarted".underscore'
+  -
+    input_type: text
+    question:
+      text: "Convert `NicePerson` to `nice_people`:"
+    correct_answers:
+      - "'NicePerson'.tableize"
+      - '"NicePerson".tableize'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method converts a string to an existing constant?"
+    options:
+      - '`constantize`'
+      - '`constant`'
+      - '`constantise`'
+      - '`return_constant`'
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Convert `Order` to `order_id`:"
+    correct_answers:
+      - "'Order'.foreign_key"
+      - '"Order".foreign_key'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the class that treats keys of the Hash as both symbols and strings?"
+    options:
+      - '`ActiveSupport::HashWithIndifferentAccess`'
+      - '`Hash`'
+      - '`ActiveSupport::Hash`'
+      - '`HashWithIndifferentAccess`'
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "How to get the current Date taking into account the current time zone?"
+    correct_answers:
+      - "Date.current"

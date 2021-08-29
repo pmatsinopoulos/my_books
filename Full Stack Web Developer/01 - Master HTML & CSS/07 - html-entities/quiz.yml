@@ -1,0 +1,32 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: "What is the HTML Entity for a blank space?"
+    correct_answers:
+      - "&nbsp;"
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "Which one of the following you should replace with its HTML Entity equivalent when used inside the text of your page?"
+    options:
+      - 'A'
+      - '-'
+      - '<'
+      - 'V'
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: "How should I write `<title>` as part of the text of the page?"
+    correct_answers:
+      - "&lt;title&gt;"
+  -
+    input_type: text
+    question:
+      text: "What is the HTML entity for the registered trademark symbol?"
+    correct_answers:
+      - "&trade;"

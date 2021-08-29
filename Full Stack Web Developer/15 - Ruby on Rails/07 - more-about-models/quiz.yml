@@ -1,0 +1,378 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: "Which is the class that Active Record Models derive from?"
+    correct_answers:
+      - "ActiveRecord::Base"
+  -
+    input_type: text
+    question:
+      text: "Which is the name of the table the following class will correspond to?"
+      extra_text: |
+        ``` ruby
+        class FraudAssessment < ApplicationRecord
+        end
+        ```
+    correct_answers:
+      - "fraud_assessments"
+  -
+    input_type: text
+    question:
+      text: "How should you name your model class if the table is called `customer_invoices`?"
+      extra_text: |
+        ``` ruby
+        class _____________________________ < ApplicationRecord
+        end
+        ```
+    correct_answers:
+      - "CustomerInvoice"
+  -
+    input_type: text
+    question:
+      text: "Which is the method that turns a string to its plural form?"
+    correct_answers:
+      - "pluralize"
+  -
+    input_type: text
+    question:
+      text: "Which method converts a CamelCase string to its snake format equivalent?"
+    correct_answers:
+      - "underscore"
+  -
+    input_type: text_area
+    question:
+      text: "Make sure that the name of the table for the next model is `com_invoices`:"
+      text_area_pre_fill: |
+        class Invoice < ApplicationRecord
+          _________________________________
+        end
+    correct_answers:
+      - |
+        class Invoice < ApplicationRecord
+          self.table_name = 'com_invoices'
+        end
+      - |
+        class Invoice < ApplicationRecord
+          self.table_name = "com_invoices"
+        end
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which are the methods that are usually used to persist the state of a Model into the database?"
+    options:
+      - '`persist`, `persist!`'
+      - '`commit`, `commit!`'
+      - '`save`, `save!`, `create`, `create!`'
+      - '`store`, `store!`'
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: "Given an Active Record class `Invoice`, how would you locate the first invoice?"
+    correct_answers:
+      - "Invoice.first"
+  -
+    input_type: text
+    question:
+      text: "Given an Active Record class `Invoice`, how would you count the number of records in the database?"
+    correct_answers:
+      - "Invoice.count"
+  -
+    input_type: text
+    question:
+      text: "Given an Active Record class `Invoice`, how would you locate the last invoice?"
+    correct_answers:
+      - "Invoice.last"
+  -
+    input_type: text
+    question:
+      text: "Given an Active Record class `Invoice`, how would you locate an invoice with `invoice_number` equal to `'ABC12345678`?"
+    correct_answers:
+      - "Invoice.find_by(invoice_number: 'ABC12345678')"
+      - 'Invoice.find_by(invoice_number: "ABC12345678")'
+      - 'Invoice.find_by_invoice_number("ABC12345678")'
+      - "Invoice.find_by_invoice_number('ABC12345678')"
+      - "Invoice.find_by invoice_number: 'ABC12345678'"
+      - 'Invoice.find_by invoice_number: "ABC12345678"'
+      - 'Invoice.find_by_invoice_number "ABC12345678"'
+      - "Invoice.find_by_invoice_number 'ABC12345678'"
+  -
+    input_type: text
+    question:
+      text: "Given an Active Record class `Shirt`, how would you locate all the shirts that they have color `red`?"
+    correct_answers:
+      - "Shirt.where(color: 'red').all"
+      - 'Shirt.where(color: "red").all'
+      - "Shirt.where(color: 'red')"
+      - 'Shirt.where(color: "red")'
+  -
+    input_type: text
+    question:
+      text: "Given that you have a `Book` referenced by the variable `book`, how would you delete it from the database?"
+    correct_answers:
+      - "book.destroy"
+  -
+    input_type: text
+    question:
+      text: "Which is the name of the table that Rails keeps track of the schema migrations executed?"
+    correct_answers:
+      - "schema_migrations"
+  -
+    input_type: text
+    question:
+      text: "Which is the command to roll back the last migration executed?"
+    correct_answers:
+      - "bin/rake db:rollback"
+      - "rake db:rollback"
+      - "bundle exec rake db:rollback"
+      - "bin/rails db:rollback"
+      - "rails db:rollback"
+      - "bundle exec rails db:rollback"
+  -
+    input_type: text
+    question:
+      text: "Which is the file that contains the current schema state?"
+    correct_answers:
+      - "db/schema.rb"
+  -
+    input_type: text
+    question:
+      text: "Destroy the migration with name `create_customer_invoices`:"
+    correct_answers:
+      - "bin/rails destroy migration create_customer_invoices"
+      - "rails destroy migration create_customer_invoices"
+      - "bundle exec rails destroy migration create_customer_invoices"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following commands trigger validations?"
+    options:
+      - '`update_all`'
+      - '`update_attribute`'
+      - '`update`'
+      - '`update_column`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method returns the validation errors of an Active Record instance?"
+    options:
+      - '`validation_errors`'
+      - '`errors_on_validation`'
+      - '`valid?`'
+      - '`errors`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "You want your users to confirm that they are above 18 years old. Which validation would you choose?"
+    options:
+      - '`presence`'
+      - '`acceptance`'
+      - '`format`'
+      - '`uniqueness`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which validation is useful when you want the user to enter a form value twice as confirmation?"
+    options:
+      - '`confirmation`'
+      - '`inclusion`'
+      - '`exclusion`'
+      - '`numericality`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the correct order these callbacks are being called?"
+    options:
+      - '`after_save`, `after_create`'
+      - '`after_validation`, `before_validation`'
+      - '`before_save`, `before_validation`'
+      - '`before_save`, `before_create`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This callback is called whenever an Active Record instance is initialized."
+    options:
+      - '`before_initialize`'
+      - '`after_initialize`'
+      - '`after_new`'
+      - '`after_find`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This callback is called whenever an Active Record locates a record in the database."
+    options:
+      - '`after_create`'
+      - '`after_initialize`'
+      - '`after_new`'
+      - '`after_find`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "If a callback raises an exception, all the callback actions are rolled back."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Table `invoices` has a foreign key to `customers`. Which model, `Invoice` or `Customer`, should bear the `belongs_to` association?"
+    options:
+      - '`Invoice`'
+      - '`Customer`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `Book.find(3)` command will return `nil` if there is no book with id `3`:"
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Find the book with id `3` but make sure that no exception is raised if the book is not present in the database:"
+    correct_answers:
+      - 'Book.find_by_id(3)'
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following with the best method to parse all the `Book` instances:"
+      text_area_pre_fill: |
+        ______________ do |book|
+        ...
+        end
+    correct_answers:
+      - |
+        Book.find_each do |book|
+        ...
+        end
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the worst approach to build the following Active Record query?"
+    options:
+      - '`Book.where(title: params[:title])`'
+      - '`Book.where("title = :title", title: params[:title])`'
+      - '`Book.where("title = ?", params[:title])`'
+      - '`Book.where("title = #{params[:title}")`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method can be used to select specific columns to be returned?"
+    options:
+      - '`only`'
+      - '`select`'
+      - '`fetch`'
+      - '`columns`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method can limit the number of records returned?"
+    options:
+      - '`offset`'
+      - '`number`'
+      - '`limit`'
+      - '`records`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method can fetch records starting from specific offset?"
+    options:
+      - '`offset`'
+      - '`row`'
+      - '`first`'
+      - '`where`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which locking mechanism requires an appropriate change in the schema of the database?"
+    options:
+      - 'Optimistic Locking'
+      - 'Pessimistic Locking'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method helps us solve the `N+1` queries problem?"
+    options:
+      - '`joins`'
+      - '`includes`'
+      - '`left_joins`'
+      - '`where`'
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Find the book (class `Book`) with ISBN (attribute `isbn`) `12345678901234567890`, and if you don't find it, create it with title `'Of Mice And Men'`"
+      text_area_pre_fill: |
+        ________________________________________________________________________________________
+    correct_answers:
+      - "Book.create_with(title: 'Of Mice And men').find_or_create_by(isbn: '12345678901234567890')"
+      - 'Book.create_with(title: "Of Mice And men").find_or_create_by(isbn: "12345678901234567890")'
+  -
+    input_type: text
+    question:
+      text: "Check whether any book exists (class `Book`)."
+    correct_answers:
+      - "Book.exists?"
+      - "Book.any?"
+  -
+    input_type: text_area
+    question:
+      text: "Make class `RegistrationForm` an Active Model:"
+      text_area_pre_fill: |
+        class RegistrationForm
+          _______________________________________
+    correct_answers:
+      - |
+        class RegistrationForm
+          include ActiveModel::Model

@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    margin-top: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+.input-group {
+    margin-bottom: 5px;
+}
+
+.input-group.last {
+    margin-bottom: 20px;
+}
+
+label {
+    display: inline-block;
+    width: 41px;
+    padding-left: 3px;
+    text-align: left;
+}
+form input[type='submit'] {
+    font-size: 1.8rem;
+    background-color: Maroon;
+    color: White;
+    padding: 5px 10px;
+}
+
+form input[type='submit']:hover {
+    background-color: Black;
+    cursor: pointer;
+}

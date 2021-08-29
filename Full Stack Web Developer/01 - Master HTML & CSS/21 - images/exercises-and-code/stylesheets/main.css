@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 10px 0 10px;
+}
+
+#lion {
+    width: 150px;
+    float: left;
+    margin-right: 10px;
+    border: 1px solid darkgray;
+    border-radius: 30px 10px;
+}
+
+#lion:hover {
+    opacity: 0.8;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}

@@ -1,0 +1,18 @@
+/* Styling all links irrespective of their state */
+a {
+    text-decoration: none; /* this will remove the underline effect from the links */
+    color: #5F5F5F;
+    padding: 10px 20px; /* this will give some space around the text of the links and make the current page link and the mouseover link look better */
+}
+
+/* Styling the link when the mouse goes over the link */
+a:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Styling the link for the current page */
+.active-page {
+    background-color: #73AD21;
+    color: white;
+}

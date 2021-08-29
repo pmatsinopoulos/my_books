@@ -1,0 +1,182 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "An RDBMS server is a program/process that runs forever and makes sure that our data are stored persistently on the hard disk."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A database server can manage only one database."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A database server can serve only one client at the same time."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The clients using the services of an RDBMS server can be remotely located faraway from the server. They don't have to be on the same machine like the server is."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the language that clients use in order to send requests to database server?"
+    options:
+      - 'Java'
+      - 'IQL - Interface Query Language'
+      - 'CQL - Cypher Query Language'
+      - 'SQL - Structured Query Language'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "SQL is divided in two main categories: 1) Data Definition Language and 2) Data Manipulation Language."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following statements is correct?"
+    options:
+      - 'A database has many tables'
+      - 'A table has only one column'
+      - 'A database has only one table'
+      - 'A table has only one row'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Tables belonging to the same database are completely unrelated to each other."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Unlike EXCEL, table columns can not hold different types of data."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Like EXCEL, table can hold small amounts of data."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the type of relationship of the orders table in relation to products table, according to the model below:"
+      extra_text: |
+        ![Orders And Products](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/09-introduction-to-testing-jasmine/chapters/02-advanced-jasmine/assets/images/orders-and-products.png)
+    options:
+      - |
+        One Order Many Products, i.e. a specific Order can contain many Products (one-to-many) and One Product Many Orders (one-to-many), i.e. a specific
+        Product can be contained in many Orders. Hence we can say that, in general, the relationship is many-to-many.
+      - |
+        One Order One Product, i.e. a specific Order can contain one Product (one-to-one) and One Product Many Orders (one-to-manny), i.e. a specific Product
+        can be contained in many orders.
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What purpose does the primary key serve?"
+    options:
+      - 'It is the parent of the secondary key.'
+      - 'It uniquely identifies a row in a table.'
+      - 'It can point to another table.'
+      - 'It is unique across the whole database.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "I can have two rows inside the table customers with the same primary key."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the column of orders table that identifies the product that the order is related with?"
+      extra_text: |
+        ![Orders and Products](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/09-introduction-to-testing-jasmine/chapters/02-advanced-jasmine/assets/images/orders-and-products-relationship.png)
+    options:
+      - 'id'
+      - 'created_at'
+      - 'product_id'
+      - 'product'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is an RDBMS?"
+    options:
+      - 'C++'
+      - 'Java'
+      - 'MySQL'
+      - 'Ruby'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the client program that we use to send requests to MySQL server?"
+    options:
+      - '`irb`'
+      - '`mysql`'
+      - '`ruby`'
+      - '`send`'
+    correct_options:
+      - 2

@@ -1,0 +1,14 @@
+* {
+    box-sizing: border-box; /* so that width and height take into account padding and border too */
+    /* all elements to have 0 padding and margin by default */
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+}

@@ -1,0 +1,306 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is a correct definition of a class."
+      extra_text: |
+        ``` ruby
+        class car
+        end
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is a correct definition of a class"
+      extra_text: |
+        ``` ruby
+        class Car
+        end
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is a correct definition of a class"
+      extra_text: |
+        ``` ruby
+        object Car
+        end
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Given the following class definition"
+      extra_text: |
+        ``` ruby
+        class Car
+          def ignite
+          end
+        end
+        ```
+        the ignite is an attribute.
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the blanks so that the following program is correct:"
+      text_area_pre_fill: |
+        ______ Point
+
+          def init_____(x, y)
+            @x = x
+            @y = y
+          end
+        end
+
+        p = Point.___(3, 5)
+    correct_answers:
+      - |
+        class Point
+
+          def initialize(x, y)
+            @x = x
+            @y = y
+          end
+        end
+
+        p = Point.new(3, 5)
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Here is a class definition with two methods. Which one is the constructor?"
+      extra_text: |
+        ``` ruby
+        class Car
+          def initialize
+          end
+
+          def ignite
+          end
+        end
+        ```
+    options:
+      - "`initialize`"
+      - "`ignite`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Whenever we have a function definition inside a class, we call it a method"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following tell you about the contents of a memory position?"
+      extra_text: |
+        ``` ruby
+        #<Point:0x00000001ca1ba0 @x=3, @y=4>
+        ```
+    options:
+      - 'We have two variables: `x` and `y`'
+      - 'We have three variables: `Point`, `x` and `y`'
+      - 'We have three variables: `Point` that has the value `0x00000001ca1ba0`, `x` with value `3` and `y` with value `4`'
+      - 'We have an object of class `Point`. The object is uniquely identified in memory by `0x00000001ca1ba0`, and it has two attributes, the `x` with value `3` and the `y` with value `4`.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Given the following class definition, Which of the following is an instance variable?"
+      extra_text: |
+        ``` ruby
+        class Car
+          def initialize
+            a = 5
+            @b = 100
+            c = 6
+            d = 8
+          end
+        end
+        ```
+    options:
+      - '`a`'
+      - '`b`'
+      - '`c`'
+      - '`d`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print on the output?"
+      extra_text: |
+        ``` ruby
+        class Point
+          def initialize(x, y)
+            @x = x
+            @y = y
+          end
+        end
+
+        point = Point.new(2, 3)
+
+        puts point.y
+        ```
+    options:
+      - '2'
+      - '3'
+      - 'This program has an error. We get information about the error.'
+      - 'Nothing'
+    correct_options:
+      - 3
+  -
+    input_type: text_area
+    question:
+      text: "Fill the missing parts so that this program does not throw an error"
+      text_area_pre_fill: |
+        _____ Point
+          def i_________(x, _)
+            @x = x
+            @y = y
+          end
+
+          def y
+            __
+          end
+        end
+
+        point = Point.___(2, 3)
+
+        puts point.y
+    correct_answers:
+      - |
+        class Point
+          def initialize(x, y)
+            @x = x
+            @y = y
+          end
+
+          def y
+            @y
+          end
+        end
+
+        point = Point.new(2, 3)
+
+        puts point.y
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print on the output?"
+      extra_text: |
+        ```ruby
+        class Point
+          def initialize(x, y)
+            @x = x
+            @y = y
+          end
+        end
+
+        point = Point.new(2, 3)
+
+        point.y = 5
+
+        puts point.y
+        ```
+    options:
+      - '5'
+      - '3'
+      - 'Nothing'
+      - 'Throws an error'
+    correct_options:
+      - 4
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the blanks so that the following program is correct."
+      text_area_pre_fill: |
+        _____ Point
+          def in________(x, _)
+            @x = x
+            ______
+          end
+
+          def y=(value)
+            ___________
+          end
+
+          def y
+            @y
+          end
+        end
+
+        point = Point.new(2, 3)
+
+        point.y = 5
+
+        puts point.y
+    correct_answers:
+      - |
+        class Point
+          def initialize(x, y)
+            @x = x
+            @y = y
+          end
+
+          def y=(value)
+            @y = value
+          end
+
+          def y
+            @y
+          end
+        end
+
+        point = Point.new(2, 3)
+
+        point.y = 5
+
+        puts point.y
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following class definition so that it automatically gets a setter and a getter for the attribute with name `color`:"
+      text_area_pre_fill: |
+        class Square
+          ______________________________
+        end
+    correct_answers:
+      - |
+        class Square
+          attr_accessor :color
+        end

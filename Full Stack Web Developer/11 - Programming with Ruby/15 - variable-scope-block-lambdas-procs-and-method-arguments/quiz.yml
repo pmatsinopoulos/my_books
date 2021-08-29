@@ -1,0 +1,301 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the variable scope?"
+    options:
+      - 'It is the length of the variable name.'
+      - 'It is the number of lines a variable stays visible.'
+      - 'It is the range of code in the program that has access to the variable content.'
+      - 'It is the fact that we can access a variable from wherever we like.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Generally, variables are global, unless precisely defined as local."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Look at the following program. Is the variable `var` accessible on line 5?"
+      extra_text: |
+        ``` ruby
+        1. def foo
+        2.   var = 5
+        3. end
+        4.
+        5. puts "Var is #{var}"
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Look at the following program. Which line will throw an error?"
+      extra_text: |
+        ``` ruby
+        1. def hello(first_name)
+        2.   last_name = 'Unknown'
+        3.   puts "Hello #{first_name} #{last_name}"
+        4. end
+        5.
+        6. hello('Peter')
+        ```
+    options:
+      - '2'
+      - 'None. Everything is ok.'
+      - '3'
+      - '6'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Is the following program correct?"
+      extra_text: |
+        ``` ruby
+        1. customer = 'John Smith'
+        2.
+        3. def print_customer_greeting
+        4.   puts "Dear #{customer}"
+        5. end
+        6.
+        7. print_customer_greeting
+        ```
+    options:
+      - 'Yes'
+      - 'No, because the `puts` argument needs to be enclosed in single quotes.'
+      - 'No, because `customer = ` should be `customer == ` instead.'
+      - 'No, because `customer` variable is not visible on line 4.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which are the local variables?"
+      extra_text: |
+        ``` ruby
+        $number_of_customers = 100
+        customer = 'John Smith'
+
+        def print_greeting(customer_name)
+          puts "Dear #{customer_name}"
+        end
+
+        cust = customer
+        print_greeting cust
+        ```
+    options:
+      - '`$number_of_customers`.'
+      - '`customer`, `customer_name`, `cust`.'
+      - '`customer`.'
+      - '`customer_name`.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        def increment(a)
+          a += 1
+        end
+
+        b = 2
+        increment(b)
+
+        puts b
+        ```
+    options:
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        $a = 2
+
+        def increment
+          $a += 1
+        end
+
+        increment
+
+        puts $a
+        ```
+    options:
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the block argument?"
+      extra_text: |
+        ``` ruby
+        def foo (a, &b)
+        end
+        ```
+    options:
+      - '`a`'
+      - '`b`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Blocks are..."
+    options:
+      - '`Proc` objects'
+      - '`Procedure` objects'
+      - '`Block` objects'
+      - '`Function` objects'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Is the `&block` argument necessary here?"
+      extra_text: |
+        ``` ruby
+        def foo(a, &block)
+          block.call
+        end
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Is the `&block` argument necessary here?"
+      extra_text: |
+        ``` ruby
+        def foo(a, &block)
+          yield
+        end
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Is the `yield` call correct?"
+      extra_text: |
+        ``` ruby
+        def foo(a)
+          yield
+        end
+
+        foo(5) do |var|
+          puts var
+        end
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which style is preferred?"
+      extra_text: |
+        ``` ruby
+        # STYLE 1:
+        #
+        [1, 2, 3].each do |i|
+           a = i * 2
+           b = i * 3
+           puts "Double of item is: #{a}"
+           puts "Triple of item is: #{b}"
+        end
+        #
+        # STYLE 2:
+        #
+        [1, 2, 3].each { |i|
+          a = i * 2
+          b = i * 3
+          puts "Double of item is: #{a}"
+          puts "Triple of item is: #{b}"
+        }
+        ```
+    options:
+      - "Style 1"
+      - "Style 2"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which method can be used to check whether a block is given or not?"
+    options:
+      - '`block_given`'
+      - '`block_present?`'
+      - '`block_given?`'
+      - '`block_present`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which one defines a `Proc` object?"
+    options:
+      - '`Procedure { |a| puts a }`'
+      - '`Proc.new { |a| puts a }`'
+      - '`Procedure.new { |a| puts a }`'
+      - '`Proc.new { puts a end`.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which one defines a `lambda` object?"
+    options:
+      - '`-> { |a| puts a }`'
+      - '`lambda { |a| puts a }`'
+      - '`->() { puts a end`.'
+      - '`lambda(a) { puts a }`'
+    correct_options:
+      - 4

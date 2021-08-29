@@ -1,0 +1,153 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The starting tag of a table is:"
+    options:
+      - '`<tr>`'
+      - '`<table>`'
+      - '`<td>`'
+      - '`<tablet>`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Enclose the following into a table row"
+      extra_text: |
+        ```html
+        <td>John Papas</td>
+        ```
+    correct_answers:
+      - "<tr><td>John Papas</td></tr>"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Is this a correct table?"
+      extra_text: |
+        ``` html
+
+        <table>
+            <tr><td>This is part 1</td></tr>
+            <tr>This is part 2</tr>
+        </table>
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Is this a correct table?"
+      extra_text: |
+        ``` html
+
+        <table>
+          <tr><td>This is part 1</td>
+          <tr><td>This is part 2</td></tr>
+        </table>
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Is this a correct table?"
+      extra_text: |
+        ``` html
+
+        <table>
+          <tr><td>This is part 1</td></tr>
+          <tr><td>This is part 2</td></tr>
+        </table>
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many rows does the following table have?"
+      extra_text: |
+        ``` html
+
+        <table>
+          <tr><td>Col 1</td></tr>
+          <tr><td>Col 2</td><td>Col3</td></tr>
+          <tr><td>Col 3</td></tr>
+        </table>
+        ```
+    options:
+      - 3
+      - 2
+      - 1
+      - "wrong table"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many rows and columns does the following table have?"
+      extra_text: |
+        ``` html
+
+        <table>
+           <tr><td>Col 1</td><td>Col 4</td></tr>
+           <tr><td>Col 2</td><td>Col 5</td></tr>
+           <tr><td>Col 3</td><td>Col 6</td></tr>
+        </table>
+        ```
+    options:
+      - '2 rows with 3 columns each'
+      - '3 rows with 2 columns each'
+      - '3 rows and 3 columns'
+      - '3 rows and 5 columns'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A `<tr>` element can have 0 `<td>` elements inside"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Make the following cell span 5 columns."
+      extra_text: |
+        ``` html
+        <tr><td      ></td></tr>
+        ```
+    correct_answers:
+      - '<tr><td colspan="5"></td></tr>'
+  -
+    input_type: text_area
+    question:
+      text: "Add a 3-wide border on the following table:"
+      text_area_pre_fill: |
+        <table ________>
+           <tr><td>Column 1</td></tr>
+        </table>
+    correct_answers:
+      - |
+        <table border="3">
+           <tr><td>Column 1</td></tr>
+        </table>

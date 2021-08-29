@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %title Bookstore
+    = csrf_meta_tags
+    = stylesheet_link_tag    'application', media: 'all'
+    = javascript_include_tag 'application'
+  %body
+    = yield
+    = link_to 'List of Books', books_path
+    &nbsp;
+    = link_to 'New Book', new_book_path

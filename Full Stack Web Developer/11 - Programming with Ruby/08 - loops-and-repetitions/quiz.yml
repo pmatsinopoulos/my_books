@@ -1,0 +1,320 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the blank to repeat the block given 7 times using the "times" command:'
+      text_area_pre_fill: |
+        __________ do
+          puts "Hello There"
+        end
+    correct_answers:
+      - |
+        7.times do
+          puts "Hello There"
+        end
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following program?'
+      extra_text: |
+        ``` ruby
+        2.times do |i|
+          puts i
+        end
+        ```
+    options:
+      - 'Prints the number 1 and then the number 0.'
+      - 'Prints the number 2 and then the number 1.'
+      - 'Prints the number 1 and then the number 2.'
+      - 'Prints the number 0 and then the number 1.'
+    correct_options:
+      - 4
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that it repeats 10 times starting from 5 and using upto:'
+      text_area_pre_fill: |
+        ________ do |i|
+          puts i
+        end
+    correct_answers:
+      - |
+        5.upto 14 do |i|
+          puts i
+        end
+      - |
+        5.upto(14) do |i|
+          puts i
+        end
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that it repeats 10 times starting from 20 and ending to 11 using downto:'
+      text_area_pre_fill: |
+        ___________ do |i|
+          puts i
+        end
+    correct_answers:
+      - |
+        20.downto 11 do |i|
+          puts i
+        end
+      - |
+        20.downto(11) do |i|
+          puts i
+        end
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that it prints the numbers starting from 10 up to and including 20, using a step of 2.'
+      text_area_pre_fill: |
+        ____________ do |i|
+          puts i
+        end
+    correct_answers:
+      - |
+        10.step 20, 2 do |i|
+          puts i
+        end
+      - |
+        10.step(20, 2) do |i|
+          puts i
+        end
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that it repeats 10 times starting from 5 and using step:'
+      text_area_pre_fill: |
+        __________ do |i|
+          puts i
+        end
+    correct_answers:
+      - |
+        5.step 14 do |i|
+          puts i
+        end
+      - |
+        5.step(14) do |i|
+          puts i
+        end
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that it repeats 10 times starting from 20 and ending to 11 using step:'
+      text_area_pre_fill: |
+        ___________ do |i|
+          puts i
+        end
+    correct_answers:
+      - |
+        20.step 11, -1 do |i|
+          puts i
+        end
+      - |
+        20.step(11, -1) do |i|
+          puts i
+        end
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does the following program do?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        while i <= 10
+          puts "Hello"
+          i += 1
+        end
+        ```
+    options:
+      - 'Prints 9 times the word Hello.'
+      - 'Prints 10 times the word Hello.'
+      - 'Does nothing.'
+      - 'Prints 11 times the word Hello.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does the following program do?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        while i < 10
+          puts "Hello"
+          i += 1
+        end
+        ```
+    options:
+      - 'Prints the word Hello 9 times.'
+      - 'Prints the word Hello 10 times.'
+      - 'Does nothing.'
+      - 'Prints the word Hello 11 times.'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does the following program do?'
+      extra_text: |
+        ``` ruby
+        i = 10
+        while i <= 10
+          puts "Hello"
+          i += 1
+        end
+        ```
+    options:
+      - 'Prints the word Hello 10 times.'
+      - 'Prints the word Hello once.'
+      - 'Does nothing.'
+      - 'Prints the word Hello 9 times.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does the following program do?'
+      extra_text: |
+        ``` ruby
+        i = 11
+        while i <= 10
+          puts "Hello"
+          i += 1
+        end
+        ```
+    options:
+      - 'Prints the word Hello 11 times.'
+      - 'Prints the word Hello 10 times.'
+      - 'Nothing is printed on the output.'
+      - 'Prints the word Hello 9 times.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How many times does the following loop execute?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        while i <= 10
+          puts i
+          i += 2
+        end
+        ```
+    options:
+      - '10'
+      - 'Forever'
+      - 'Never'
+      - '5'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How many times does the following loop execute?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        while i <= 10
+          puts i
+          i += 1
+        end
+        ```
+    options:
+      - 10
+      - Forever
+      - Never
+      - 5
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How many times does the following loop execute?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        until i <= 10
+          puts i
+          i += 2
+        end
+        ```
+    options:
+      - 'Never'
+      - '10'
+      - 'Forever'
+      - '5'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How many times does the following loop execute?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        until i >= 10
+          puts i
+          i += 2
+        end
+        ```
+    options:
+      - 'Never'
+      - '5'
+      - 'Forever'
+      - '6'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How many times does the following loop execute?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        while i <= 10
+          puts i
+          i += 1
+          break if i == 8
+        end
+        ```
+    options:
+      - 'Forever'
+      - '10'
+      - '8'
+      - '7'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How many times does the following loop execute?'
+      extra_text: |
+        ``` ruby
+        i = 1
+        while i <= 10
+          puts i
+          break if i == 8
+          i += 1
+        end
+        ```
+    options:
+      - '10'
+      - '9'
+      - '8'
+      - '7'
+    correct_options:
+      - 3

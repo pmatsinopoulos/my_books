@@ -1,0 +1,5 @@
+# File: Gemfile for billing project
+#
+source "https://rubygems.org"
+
+gem 'tcb_letter_spacing'

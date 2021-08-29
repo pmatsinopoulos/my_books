@@ -1,0 +1,165 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is a Ruby reserved word?"
+    options:
+      - '`customer`'
+      - '`while`'
+      - '`Peter`'
+      - '`:peter`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Read the following Ruby program and choose the one that is a variable:"
+      extra_text: |
+        ``` ruby
+        a = 2
+        while a <= 5
+          puts a
+          a += 1
+        end
+        ```
+    options:
+      - '`5`'
+      - '`puts`'
+      - '`while`'
+      - '`a`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Read the following Ruby program and choose the one that is a literal:"
+      extra_text: |
+        ``` ruby
+        a = 2
+        while a <= 5 do
+          puts a
+          a += 1
+        end
+        ```
+    options:
+      - '`5`'
+      - '`a`'
+      - '`while`'
+      - '`puts`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Read the following program and choose the one that is a symbol"
+      extra_text: |
+        ``` ruby
+        p = :oranges
+        a = 20
+        puts "#{p} cost #{a}"
+        ```
+    options:
+      - '`a`'
+      - '`20`'
+      - '`:oranges`'
+      - '`puts`'
+    correct_options:
+      - 3
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the program below so that it prints "Peter Woo is 13 years old and is paid 1000":'
+      text_area_pre_fill: |
+        peter = {:first_name => 'Peter', :last_name => 'Woo', :age => 13, :salary => 1000}
+        puts "_____________________________________________________________________________________"
+    correct_answers:
+      - |
+        peter = {:first_name => 'Peter', :last_name => 'Woo', :age => 13, :salary => 1000}
+        puts "#{peter[:first_name]} #{peter[:last_name]} is #{peter[:age]} years old and is paid #{peter[:salary]}"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Given the hash peter below, the two ruby statements return the same result:"
+      extra_text: |
+        ``` ruby
+        peter = {:first_name => 'Peter'}
+        ```
+        1) `peter[:first_name]`
+        2) `peter['first_name']`
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A hash can contain keys that have values another hash."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The value of a hash key can be an array of values.'
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will this program print?"
+      extra_text: |
+        ``` ruby
+        peter = {:first_name => 'Peter', :last_name => 'Woo'}
+        maria = {:first_name => 'Maria', :last_name => 'Foo'}
+        john = {:first_name => 'John', :last_name => 'Xoo'}
+        customers = [peter, maria, john]
+
+        puts customers[1][:last_name]
+        ```
+    options:
+      - '`John`'
+      - '`Maria`'
+      - '`Foo`'
+      - '`Woo`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following hash definitions are not equivalent:"
+      extra_text: |
+        1) `peter = {:first_name => 'Peter', :last_name => 'Woo'}`
+        2) `peter = {first_name: 'Peter', last_name: 'Woo'}`
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Why do we prefer symbols instead of string literals?"
+    options:
+      - 'Because they are less to type.'
+      - 'Because they have less object and memory management overhead.'
+      - 'Because they are easier to remember.'
+      - 'Because they are easier to read.'
+    correct_options:
+      - 2

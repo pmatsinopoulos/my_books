@@ -1,0 +1,11 @@
+th {
+    background-color: maroon;
+    color: white;
+    font-size: 16px;
+}
+
+.odd {
+    background-color: lightblue;
+    color: black;
+}
+

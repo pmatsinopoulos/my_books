@@ -1,0 +1,324 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the Web site for Ruby Gems?"
+    options:
+      - 'http://www.ruby.org'
+      - 'http://www.gems.org'
+      - 'http://www.ruby-gems.org'
+      - 'https://rubygems.org'
+    correct_options:
+      - 4
+  -
+    input_type: text
+    question:
+      text: "What is the correct command to install the gem `rails`?"
+    correct_answers:
+     - "gem install rails"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the latest version of the gem `activerecord` if its page displays the following?"
+      extra_text: |
+        ![activerecord Gem Page](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/11-programming-with-ruby/chapters/33-ruby-gems-bundler-rvm/assets/images/activerecord-gem-page.jpg)
+    options:
+      - '`5.0.0`'
+      - '`pre`'
+      - '`5.0.1`'
+      - '`2.2.2`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `activerecord` gem has the following Ruby Gems page. It is dependent on the `i18n` gem."
+      extra_text: |
+        ![activerecord Gem Page](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/11-programming-with-ruby/chapters/33-ruby-gems-bundler-rvm/assets/images/activerecord-gem-page.jpg)
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which command does it give us the list of gems locally installed?"
+    correct_answers:
+      - "gem list"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following command installs the gem `activerecord`, but not its dependencies. Its dependencies need to be installed separately."
+      extra_text: |
+        ```
+        gem install activerecord
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following screenshot shows the output of the command `gem list`. According to this, `activerecord` gem is already installed"
+      extra_text: |
+        ![gem list Output](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/11-programming-with-ruby/chapters/33-ruby-gems-bundler-rvm/assets/images/gem-list-output.jpg)
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Check whether the gem `activerecord` is installed without listing all the gems"
+    correct_answers:
+      - "gem list activerecord"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Bundler is not a gem"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "In which file do we declare the gem dependencies of our application?"
+    options:
+      - '`gem`'
+      - '`Gemfile`'
+      - '`Gemfile.lock`'
+      - '`bundler`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which is the Ruby command that would reveal the file path to the `money` gem that our application is using?"
+    correct_answers:
+      - "Gem.datadir 'money'"
+      - 'Gem.datadir "money"'
+  -
+    input_type: text
+    question:
+      text: "Which command installs the `money` gem on version `6.0.1`?"
+    correct_answers:
+      - "gem install money --version=6.0.1"
+      - "gem install money --v 6.0.1"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many versions of `money` gem are installed?"
+      extra_text: |
+        ![Gem List Question](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/11-programming-with-ruby/chapters/33-ruby-gems-bundler-rvm/assets/images/gem-list-question-1.png)
+    options:
+      - 'None'
+      - '1'
+      - '2'
+      - '3'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "If we have the following gems installed, and we start an `irb` console and we issue a require 'money' command, then which version of the money gem will be loaded ready to be used?"
+      extra_text: |
+        ![Gem List Question](http://tech-career-booster-courses.s3.amazonaws.com/01-full-stack-web-developer/sections/11-programming-with-ruby/chapters/33-ruby-gems-bundler-rvm/assets/images/gem-list-question-1.png)
+    options:
+      - 'None, `money` gem is not installed'
+      - '`6.0.1`'
+      - '`6.5.0`'
+      - 'Both `6.0.1` and `6.5.0` will be loaded'
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: "Assuming that we are on the irb console. How can we ask the application to use version `6.0.1` from the `money` gem, when both `6.5.1` and `6.0.1` are installed?"
+    correct_answers:
+      - "gem 'money', '6.0.1'"
+      - 'gem "money", "6.0.1"'
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the contents of the following `Gemfile` so that it makes the application depend on the `money` gem version 6.0.1:"
+      text_area_pre_fill: |
+        _____________________________________
+        _____________________________________
+    correct_answers:
+      - |
+        source "https://rubygems.org"
+
+        gem "money", "6.0.1"
+      - |
+        source 'https://rubygems.org'
+
+        gem 'money', '6.0.1'
+      - |
+        source 'https://rubygems.org'
+        gem 'money', '6.0.1'
+      - |
+        source "https://rubygems.org"
+        gem "money", "6.0.1"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "In order to run the bundler you need to have the file `Gemfile` ready on your root folder of your application."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Which command one gives in order to ask bundler to download dependencies of application?"
+    correct_answers:
+      - "bundle"
+  -
+    input_type: text
+    question:
+      text: "When we run bundle, bundler generates a file with all the gems that our application depends on and their corresponding versions. This file is:"
+    correct_answers:
+      - "Gemfile.lock"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When we want to use a new version of a gem, we have to edit file `Gemfile.lock` and specify the new version, accordingly."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which command can tell us which version of `money` gem our application is going to load, if we start it with the help of the bundler?"
+    correct_answers:
+      - "bundle show money"
+  -
+    input_type: text
+    question:
+      text: "If our application can be started with the name/command `crm`, how do we start it if we want it to be started using bundler?"
+    correct_answers:
+      - "bundle exec crm"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "RVM allows you to have multiple Rubies installed on your machine"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The RVM local gem repositories are called..."
+    options:
+      - 'Gemrepos'
+      - 'Rvmrepos'
+      - 'Rvmgems'
+      - 'Gemsets'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A gemset can belong to multiple Rubies"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Which files bind a Ruby project to an RVM Ruby and Gemset?"
+      text_area_pre_fill: |
+        1. _____________
+        2. _____________
+    correct_answers:
+      - |
+        1. .ruby-version
+        2. .ruby-gemset
+  -
+    input_type: text
+    question:
+      text: "Which command lists the Rubies that your RVM installation knows about?"
+    correct_answers:
+      - "rvm list known"
+  -
+    input_type: text
+    question:
+      text: "Which command lists the Rubies that you have installed using RVM?"
+    correct_answers:
+      - "rvm list"
+  -
+    input_type: text
+    question:
+      text: "Which command will install Ruby 2.1.2 using RVM?"
+    correct_answers:
+      - "rvm install ruby-2.1.2"
+      - "rvm install 2.1.2"
+  -
+    input_type: text
+    question:
+      text: "Which command displays your current RVM Ruby and Gemset?"
+    correct_answers:
+      - "rvm current"
+  -
+    input_type: text
+    question:
+      text: "Which command switches your current Ruby and Gemset to Ruby 2.1.0 and gemset `billing` ?"
+    correct_answers:
+      - "rvm use ruby-2.1.0@billing"
+      - "rvm use 2.1.0@billing"
+  -
+    input_type: text
+    question:
+      text: "Which command lists the gemsets of the current Ruby?"
+    correct_answers:
+      - "rvm gemset list"
+  -
+    input_type: text
+    question:
+      text: "Which command creates a new gemset (with name 'invoicing') on your current Ruby?"
+    correct_answers:
+      - "rvm gemset create invoicing"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Each Ruby has a `global` gemset that stores the gems common to all gemsets of this Ruby."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Which command creates the template for you to develop a new gem named `foo`?"
+    correct_answers:
+      - "bundle gem foo"

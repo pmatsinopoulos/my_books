@@ -1,0 +1,5 @@
+# Logfile created on 2016-12-21 19:20:22 +0000 by logger.rb/47272
+I, [2016-12-21T19:20:56.641850 #25508]  INFO -- : CREATE: Created customer Name: Barbara Main, email: barbara_main@mailinator.com
+I, [2016-12-21T19:23:04.872926 #25550]  INFO -- : DELETE: deleted customer with email barbara_main@mailinator.com
+I, [2016-12-21T19:23:35.141207 #25550]  INFO -- : UPDATE: updated customer with email peter_olaf@mailinator.com
+I, [2016-12-22T06:11:14.653915 #28798]  INFO -- : CREATE: created order Order No: DDD543, customer: peter_pan@mailinator.com, date: 2016-12-22, order_items: Item: The Best Man, Price: 6.5, Currency: GBP, Item: Best of The Best, Price: 10.0, Currency: GBP

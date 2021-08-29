@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    border: 1px solid maroon;
+}
+
+.image-container {
+    position: relative;
+}
+
+.add-right-link-container {
+    position: absolute;
+    top: 35%;
+    right: 17px;
+}
+
+.remove-left-link-container {
+    position: absolute;
+    top: 35%;
+    left: 17px;
+}

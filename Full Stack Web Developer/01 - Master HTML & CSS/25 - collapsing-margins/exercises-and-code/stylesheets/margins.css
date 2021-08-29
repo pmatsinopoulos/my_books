@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+#left, #right {
+    width: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#left {
+    float: left;
+    background-color: blue;
+}
+#right {
+    float: right;
+    background-color: maroon;
+}

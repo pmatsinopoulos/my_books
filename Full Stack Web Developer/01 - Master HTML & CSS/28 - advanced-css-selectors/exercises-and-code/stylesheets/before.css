@@ -1,0 +1,17 @@
+body {
+    text-align: center;
+}
+
+a::before {
+    content: "";
+    background-image: url(../images/pdf-download.png);
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center;
+    background-size: 100% 100%;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    vertical-align: middle;
+}

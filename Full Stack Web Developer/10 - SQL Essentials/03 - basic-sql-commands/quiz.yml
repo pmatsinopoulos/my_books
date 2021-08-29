@@ -1,0 +1,146 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which `mysql` command lists the databases defined and managed by the database server?'
+    options:
+      - '`list databases;`'
+      - '`databases;`'
+      - '`show databases;`'
+      - '`show all;`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which of the following databases exist on every MySQL installation and they should be managed only by advanced users?'
+    options:
+      - '`customers`, `products`'
+      - '`information_schema`, `mysql`'
+      - '`orders`, `mysql`'
+      - '`customers`, `information_schema`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: 'Which is the command to create `customers_db` database:'
+    correct_answers:
+      - 'create database customers_db default character set utf8 collate utf8_unicode_ci;'
+  -
+    input_type: text
+    question:
+      text: 'Which is the command to start using the database `customers_db`?'
+    correct_answers:
+      - 'use customers_db;'
+  -
+    input_type: text
+    question:
+      text: 'Which is the command to find out the list of tables a database has?'
+    correct_answers:
+      - 'show tables;'
+  -
+    input_type: text
+    question:
+      text: 'Which is the command to verify the structure of a table named `customers`?'
+    correct_answers:
+      - 'show create table customers;'
+  -
+    input_type: text
+    question:
+      text: 'Assuming that we have the table `customers` with columns `id` and `name`. The `id` column is the primary key and it is auto incremented. What is the command to insert the customer with name "John Woo"?'
+    correct_answers:
+      - "insert into customers (name) values ('John Woo');"
+  -
+    input_type: text
+    question:
+      text: "Given the table `customers` which command will bring all the rows of this table?"
+    correct_answers:
+      - 'select * from customers;'
+  -
+    input_type: text
+    question:
+      text: "Assuming that the `customers` table has an `id` and a `name` column, which command will bring the names of all the customers?"
+    correct_answers:
+      - 'select name from customers;'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming that we have `customers` table with columns `id` and `name`, the following two commands are equivalent: 1) `select id, name from customers;`, 2) `select * from customers;`"
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Which command will bring all the customers that have name 'John Papas'?"
+    correct_answers:
+      - "select * from customers where name = 'John Papas';"
+  -
+    input_type: text
+    question:
+      text: "Given the table `customers` with `name` column, which command brings the customers that have name either 'John Woo' or 'Maria Foo'?"
+    correct_answers:
+      - "select * from customers where name = 'John Woo' or name = 'Maria Foo';"
+  -
+    input_type: text
+    question:
+      text: "If the `customers` table contains the customer with name 'John Woo', how can we delete this customer?"
+    correct_answers:
+      - "delete from customers where name = 'John Woo';"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this command do?"
+      extra_text: "`delete from customers;`"
+    options:
+      - "Does nothing because it is missing the where clause to specify which customers entries to delete."
+      - "Deletes all entries from customers table but, first, it asks for confirmation."
+      - "Deletes all entries from customers table without asking any confirmation."
+      - "Will ask the ids of the customers to delete and then it deletes them."
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: |
+        Assuming that we have a table customers with the following two entries:
+
+            id: 1, name: 'John Woo'
+            id: 2, name: 'Maria Foo'
+
+        and we execute the command: `delete from customers where name = 'Maria Foo'`.
+        Then we insert a new customer. What will the new customer id be? Assume that id is an integer that is auto increment by MySQL.
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: "Change the name of the customer with id 5, so that it has the value 'John Woo' (assume that the table is `customers`)"
+    correct_answers:
+      - "update customers set name = 'John Woo' where id = 5;"
+  -
+    input_type: text
+    question:
+      text: "Bring all the customers from `customers` table that their name ends with 'Woo'"
+    correct_answers:
+      - "select * from customers where name like '%Woo';"
+  -
+    input_type: text
+    question:
+      text: "Bring all the customers from table `customers`, so that their name includes 'pou':"
+    correct_answers:
+      - "select * from customers where name like '%pou%';"

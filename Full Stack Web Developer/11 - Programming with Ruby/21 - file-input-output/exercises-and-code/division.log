@@ -1,0 +1,8 @@
+# Logfile created on 2016-12-17 10:19:47 +0000 by logger.rb/47272
+I, [2016-12-17T10:19:49.949544 #40783]  INFO -- : Dividend given: 100
+I, [2016-12-17T10:19:51.893528 #40783]  INFO -- : Divisor given: 20
+I, [2016-12-17T10:19:58.641400 #40783]  INFO -- : Dividend given: 40
+I, [2016-12-17T10:20:01.305655 #40783]  INFO -- : Divisor given: 0
+E, [2016-12-17T10:20:01.305822 #40783] ERROR -- : You didn't give correct numbers: error message: divided by 0
+I, [2016-12-17T10:20:07.929265 #40783]  INFO -- : Dividend given: 40
+I, [2016-12-17T10:20:09.241162 #40783]  INFO -- : Divisor given: 4

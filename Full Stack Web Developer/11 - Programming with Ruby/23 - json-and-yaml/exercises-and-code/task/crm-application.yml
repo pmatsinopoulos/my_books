@@ -1,0 +1,7 @@
+database:
+  customers: customers.json
+  orders: orders.json
+credentials:
+  username: foo
+  password: bar
+log: crm-application.log

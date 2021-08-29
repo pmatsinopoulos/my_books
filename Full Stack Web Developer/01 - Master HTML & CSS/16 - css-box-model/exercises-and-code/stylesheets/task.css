@@ -1,0 +1,20 @@
+body {
+    box-sizing: border-box;
+    margin: 0 0;
+
+    padding: 40px 40px;
+}
+
+body * {
+    box-sizing: inherit;
+    margin: inherit;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+ul li {
+    margin: 5px 0;
+}
+

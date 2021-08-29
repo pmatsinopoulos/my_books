@@ -1,0 +1,233 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: "The command that will print the present working directory is _____________."
+    correct_answers:
+      - "pwd"
+  -
+    input_type: text
+    question:
+      text: "If the present working directory is `/home/panayotis/my_documents`, the parent folder of `my_documents` is _____________."
+    correct_answers:
+      - "panayotis"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A directory can have only one child directory."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A directory can have only one parent directory."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A directory can contain files or other directories."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "A file can contain other directories."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "If we want to see a list of the contents of the present working directory, we type in the command _____________."
+    correct_answers:
+      - "ls"
+  -
+    input_type: text
+    question:
+      text: "The Linux command that will list all the contents of a folder and tell us which entries are files and which entries are directories is _____________."
+    correct_answers:
+      - "ls -l"
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "Which of the following directory entries is a file?"
+    options:
+      - '`drwxr-xr-x  2 panayotis panayotis   4096 Feb  9  2014 Desktop`'
+      - '`-rw-rw-r--  1 panayotis panayotis   1226 Dec 20 08:54 notes.txt`'
+      - '`drwxrwxr-x  7 panayotis panayotis   4096 Dec 14 17:37 workspace`'
+      - '`drwxrwxr-x  3 panayotis panayotis   4096 Dec 20 12:45 tmp`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "Which of the following directory entries is a directory?"
+    options:
+      - '`-rw-------  1 panayotis panayotis   1188 Dec 13 00:00 pythia.yml`'
+      - '`-rw-rw-r--  1 panayotis panayotis   5328 Jun 30 07:02 pgadmin.log`'
+      - '`-rw-------  1 panayotis panayotis   1671 Sep 16 10:19 fraudpointer.pem`'
+      - '`drwxr-xr-x  2 panayotis panayotis   4096 Feb  9  2014 Desktop`'
+    correct_options:
+      - 4
+  -
+    input_type: text
+    question:
+      text: "If you want to clear the contents of the terminal, you can issue the command _____________."
+    correct_answers:
+      - "clear"
+  -
+    input_type: text
+    question:
+      text: "If you want to create a new directory, you can use the command _____________."
+    correct_answers:
+      - "mkdir"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "I have just created the directory with name `introduction`. Which is the command that will tell me whether the directory has been really created or not?"
+    options:
+      - '`cut introduction`'
+      - '`ls -l`'
+      - '`rmdir introduction`'
+      - '`mkdir introduction`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the command that will list the contents of a directory, sorted in reverse time order (so, the most recent one is at the end of the list)?"
+    options:
+      - '`ls -ltr`'
+      - '`rmdir`'
+      - '`cut`'
+      - '`cat`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the command used to change your present working directory?"
+    options:
+      - '`pwd`'
+      - '`ls`'
+      - '`mkdir`'
+      - '`cd`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which symbol is used to denote the home directory of the currently logged in user?"
+    options:
+      - '`~`'
+      - '`#`'
+      - '`&`'
+      - '`*`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: |
+        Assuming that my present working directory is `/home/panayotis`, and that there is a child directory named `introduction`,
+        and that there is a child directory inside `introduction` directory which is called `chapter1`, then, which command takes me to the `chapter1` directory?
+    options:
+      - '`mkdir -p introduction/chapter1`'
+      - '`cd introduction/chapter1`'
+      - '`ls -l introduction/chapter1`'
+      - '`rmdir introduction/chapter1`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "The command _____________ takes me to the parent directory of the present working directory."
+    correct_answers:
+      - "cd .."
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is a program that can be used to edit files in Debian/Linux or Mac?"
+    options:
+      - '`chrome`'
+      - '`vstudio`'
+      - '`gimp`'
+      - '`nano`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following commands will print the contents of the file `sample.txt` on the terminal?"
+    options:
+      - '`cat sample.txt`'
+      - '`cut sample.txt`'
+      - '`ls sample.txt`'
+      - '`ls -l sample.txt`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the command to delete the file with name `sample.txt`?"
+    options:
+      - '`rmdir sample.txt`'
+      - '`rm sample.txt`'
+      - '`ls sample.txt`'
+      - '`ls -l sample.txt`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The command `rm chapter1` will delete the directory with name `chapter1`."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The command `rm -R chapter1` will delete the directory with name `chapter1`."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+
+
+
+
+
+
+

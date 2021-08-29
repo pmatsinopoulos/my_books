@@ -1,0 +1,219 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: "Assuming that we have two tables, customers and orders as follows:"
+      extra_text: |
+        ``` sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, order_number varchar(255) not null, primary key(id));?
+        alter table orders add constraint orders_customer_fk foreign key(customer_id) references customers(id);
+        ```
+        What is the command to retrieve all the customers together with their orders?
+    correct_answers:
+      - 'select * from customers join orders on orders.customer_id = customers.id;'
+      - 'select * from customers join orders on customers.id = orders.customer_id;'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Assuming that we have two tables, customers and orders as follows:'
+      extra_text: |
+        ``` sql
+        create table customers (id int(11) not null auto_increment, name varchar(255) not null, primary key(id));
+        create table orders (id int(11) not null auto_increment, customer_id int(11) not null, order_number varchar(255) not null, primary key(id));?
+        alter table orders add constraint orders_customer_fk foreign key(customer_id) references customers(id);
+        ```
+
+        Assume also that we have 2 customers and first customer has 3 orders and second customer has 5 orders. How many rows will the following select query bring?
+
+        ```
+        select * from customers join orders on orders.customer_id = customers.id;
+        ```
+    options:
+      - 3
+      - 5
+      - 8
+      - 15
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming the following query:"
+      extra_text: |
+        ``` sql
+        select * from customers join orders on orders.customer_id = customers.id;
+        ```
+        It will not bring the customers that they have never put any order.
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the two is the correct sql statement to count the customers that they have put at least one order?"
+    options:
+      - '`select count(*) from customers join orders on orders.customer_id = customers.id;`'
+      - '`select count(distinct customers.id) from customers join orders on orders.customer_id = customers.id;`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following query lists all the customers that they have never put any order in our CRM:"
+      extra_text: |
+        ``` sql
+        select * from customers left join orders on orders.customer_id = customers.id where orders.id is null;
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which select statement brings both the customers with and those without an order?"
+    options:
+      - '`select * from customers left join orders on orders.customer_id = customers.id where orders.id is null;`'
+      - '`select * from customers join orders on orders.customer_id = customers.id;`'
+      - '`select * from customers left join orders on orders.customer_id = customers.id;`'
+      - '`select * from customers left join orders on orders.customer_id = customers.id where orders.id is not null;`'
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: "Give the query that returns the number of orders."
+    correct_answers:
+      - 'select count(*) from orders;'
+      - 'select count(orders.id) from orders;'
+  -
+    input_type: text
+    question:
+      text: "If we have the table orders and order_items as designed in the chapter, how do we get the total amount for the order with id 3?"
+    correct_answers:
+      - '/select sum\((?:order_items\.)?price \* (?:order_items\.)?quantity\) from order_items where (?:order_items\.)?order_id = 3;/i'
+  -
+    input_type: text
+    question:
+      text: "Assuming that we have the order_items table as designed in the chapter, how do we get the total amount of each order?"
+    correct_answers:
+      - '/select (?:order_items\.)?order_id, sum\((?:order_items\.)?price \* (?:order_items\.)?quantity\) from order_items group by (?:order_items\.)?order_id;/i'
+      - '/select sum\((?:order_items\.)?price \* (?:order_items\.)?quantity\), (?:order_items\.)?order_id from order_items group by (?:order_items\.)?order_id;/i'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this query do?"
+      extra_text: |
+        ``` sql
+        select sum(order_items.price * order_items.quantity) as total_amount,
+        order_id from order_items
+        group by order_id;
+        ```
+    options:
+      - 'Returns the order ids alongside their total amount.'
+      - 'Returns all the order item ids.'
+      - 'Returns all the total amounts.'
+      - 'Returns all the order items.'
+    correct_options:
+      - 1
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the following query so that it groups the total amounts by the order_id:"
+      text_area_pre_fill: |
+        select sum(order_items.price * order_items.quantity) as total_amount,
+        order_id from order_items
+        ______________________________;
+    correct_answers:
+      - |
+        select sum(order_items.price * order_items.quantity) as total_amount,
+        order_id from order_items
+        group by order_id;
+      - |
+        select sum(order_items.price * order_items.quantity) as total_amount,
+        order_id from order_items
+        group by order_items.order_id;
+      - |
+        select sum(order_items.price * order_items.quantity) as total_amount,
+        order_items.order_id from order_items
+        group by order_items.order_id;
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sql contains 1 sql sub-query"
+      extra_text: |
+        ``` sql
+        select customers.first_name from customers join orders on orders.customer_id = customer.id;
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following sql statement contains 1 sql sub-query:"
+      extra_text: |
+        ``` sql
+        select * from orders join(
+           select sum(order_items.price * order_items.quantity) as total_amount,
+                  order_id
+             from order_items
+             group by order_id
+        ) orders_total_amounts on orders.id = orders_total_amounts.order_id;
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following query bring?"
+      extra_text: |
+        ``` sql
+        select sum(order_items.price * order_items.quantity) as total_amount, order_id from order_items
+        group by order_id order by total_amount desc limit 1;
+        ```
+    options:
+      - 'Brings one row with the worst order.'
+      - 'Brings one row with the best order.'
+      - 'Brings all the orders with the best one on top.'
+      - 'Brings all the orders with the worst one on top.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following query bring?"
+      extra_text: |
+        ``` sql
+        select orders.* from orders join (
+          select sum(order_items.price * order_items.quantity) as total_amount, order_id from order_items
+                 group by order_id order by total_amount desc limit 1
+          ) as best_order on orders.id = best_order.order_id;
+        ```
+    options:
+      - 'It brings the order header of the top 10 best orders.'
+      - 'It brings the details of the top 10 best orders.'
+      - 'It brings only one row with the header details of the worst order.'
+      - 'It brings only one row with the header details of the best order.'
+    correct_options:
+      - 4

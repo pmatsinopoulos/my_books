@@ -1,0 +1,60 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is true?"
+    options:
+      - 'JavaScript is a statically typed compiled language.'
+      - 'JavaScript is a dynamically typed script language and one needs a JavaScript runtime engine, interpreter, in order to execute JavaScript programs.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following have JavaScript as their core language"
+    options:
+      - 'The application Microsoft Word.'
+      - 'The application Java.'
+      - 'The browsers.'
+      - 'The terminal.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following made JavaScript popular on the back-end tier?"
+    options:
+      - 'Browser Chrome.'
+      - 'Node.js'
+      - 'Ruby on Rails.'
+      - 'Angular JS.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which is the JavaScript command that can be used on the Chrome Developer Tools and create a pop up with a message "Hello Danny"?'
+    options:
+      - '`alarm("Hello Danny");`'
+      - '`alert("Hello Danny");`'
+      - '`logit("Hello Danny");`'
+      - '`log("Hello Danny");`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which is the JavaScript command that we can use to write the message "Program starting..." on the console?'
+    options:
+      - '`alarm("Program starting...");`'
+      - '`alert("Program starting...");`'
+      - '`console.log("Program starting...");`'
+      - '`log("Program starting...");`'
+    correct_options:
+      - 3

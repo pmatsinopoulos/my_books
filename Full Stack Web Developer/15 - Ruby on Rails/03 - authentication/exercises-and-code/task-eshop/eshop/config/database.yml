@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql 
+  encoding: unicode
+
+development:
+  <<: *default
+  database: kumquat_shop_development
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: kumquat_shop_test 
+
+production:
+  <<: *default
+  adapter: postgresql
+  encoding: unicode
+  database: kumquat_shop_production
+  username: kumquat_shop
+  password: <%= ENV['KUMQUAT_SHOP_DATABASE_PASSWORD'] %>

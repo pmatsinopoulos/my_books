@@ -1,0 +1,257 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which is the way to initialize an array with name customers?'
+    options:
+      - '`customers = Array`'
+      - '`customers = "Peter, Jim"`'
+      - '`customers = ["Peter Woo", "Jim Voo"]`'
+      - '`customers = {"Peter", "jim"}`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the value of the variable `p`?'
+      extra_text: |
+        ``` ruby
+        customers = ["Peter Woo", "Maria Foo"]
+        p = customers.size
+        ```
+    options:
+      - '`"size"`'
+      - '`2`'
+      - '`"Peter Woo"`'
+      - '`1`'
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that the customers array gets the new customer `"Maria Foo"`:'
+      text_area_pre_fill: |
+        customers = ["Peter Woo"]
+        ______________________________________
+    correct_answers:
+      - |
+        customers = ["Peter Woo"]
+        customers << "Maria Foo"
+      - |
+        customers = ["Peter Woo"]
+        customers.push "Maria Foo"
+      - |
+        customers = ["Peter Woo"]
+        customers.push("Maria Foo")
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that you assign the customer `"Maria Foo"` to the variable `p`'
+      text_area_pre_fill: |
+        customers = ["Maria Foo", "Peter Woo"]
+        _______________________________________
+    correct_answers:
+      - |
+        customers = ["Maria Foo", "Peter Woo"]
+        p = customers[0]
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'How do we get the last customer if'
+      extra_text: |
+        ``` ruby
+        customers = ["Maria Foo", "Peter Woo", "John Xoo"]
+        ```
+    options:
+      - '`customers[3]`'
+      - '`customers[2]`'
+      - '`customers["John Xoo"]`'
+      - '`customers[0]`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does the following program do?'
+      extra_text: |
+        ``` ruby
+        customers = ["Peter", "Mary", "George"]
+        customers.each do |customer|
+          print "#{customer.upcase} "
+        end
+        ```
+    options:
+      - 'Prints `PETER, MARY, GEORGE`'
+      - 'Prints `Peter, Mary, George`'
+      - 'Prints `0, 1, 2`'
+      - 'Prints `PETER MARY GEORGE`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following program?'
+      extra_text: |
+        ``` ruby
+        numbers = [0, 5, 10, 30, 20]
+        sum = 0
+        numbers.each do |num|
+          sum += num
+        end
+
+        puts sum
+        ```
+    options:
+      - '`30`'
+      - '`50`'
+      - '`65`'
+      - '`0`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Given the customers array, what is the statement to print its contents as one string separated by commas and a space, such as "Peter, Mary, George"?'
+      extra_text: |
+        ``` ruby
+        customers = ["Peter", "Mary", "George"]
+        ```
+    options:
+      - '`print customers.join(", ")`'
+      - '`print customers.inspect`'
+      - '`print customers.join`'
+      - '`print customers.join(",")`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which one gives the last element of the array:'
+      extra_text: |
+        ``` ruby
+        customers = ["Maria", "John", "Jim"]
+        ```
+    options:
+      - '`customers[0]`'
+      - '`customers[1]`'
+      - '`customers[customers.size - 1]`'
+      - '`customers[3]`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which one gives the last element of the array? Hint: This has not been taught in this chapter. Try that out on your irb console.'
+      extra_text: |
+        ``` ruby
+        customers = ["Maria", "John", "Jim"]
+        ```
+    options:
+      - '`customers[0]`'
+      - '`customers[1]`'
+      - '`customers[3]`'
+      - '`customers[-1]`'
+    correct_options:
+      - 4
+  -
+    input_type: text_area
+    question:
+      text: 'Add "Maria" to the customers array below:'
+      extra_text: |
+        ```ruby
+        customers = ["Peter", "George"]
+        ```
+      text_area_pre_fill: |
+        customers.____("Maria")
+    correct_answers:
+      - 'customers.push("Maria")'
+  -
+    input_type: text_area
+    question:
+      text: 'Given the array below, remove its last element:'
+      extra_text: |
+        ``` ruby
+        customers = ["Peter", "George", "Maria"]
+        ```
+      text_area_pre_fill: 'customers.______'
+    correct_answers:
+      - 'customers.pop'
+  -
+    input_type: text_area
+    question:
+      text: 'Assuming the following two arrays'
+      extra_text: |
+        ``` ruby
+        smart = ["Peter", "Maria", "Jim", "George"]
+        quick = ["Maria", "George"]
+        ```
+        fill in the operator that would give both smart and quick ones:
+      text_area_pre_fill: 'smart ___ quick'
+    correct_answers:
+      - 'smart & quick'
+  -
+    input_type: text_area
+    question:
+      text: 'Assuming the following two arrays'
+      extra_text: |
+        ``` ruby
+        smart = ["Peter", "Maria", "Jim", "George"]
+        quick = ["Maria", "George"]
+        ```
+        fill in the operator that would give either smart or quick ones:
+      text_area_pre_fill: 'smart ___ quick'
+    correct_answers:
+      - 'smart | quick'
+  -
+    input_type: text_area
+    question:
+      text: 'Assuming the following two arrays'
+      extra_text: |
+        ``` ruby
+        smart = ["Peter", "Maria", "Jim", "George"]
+        quick = ["Maria", "George"]
+        ```
+        fill in the operator that would give the smart but not quick ones:
+      text_area_pre_fill: 'smart ___ quick'
+    correct_answers:
+      - 'smart - quick'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What does this program print?'
+      extra_text: |
+        ``` ruby
+        customers = ["Peter", "Maria", "George"]
+        customers.each_with_index do |customer, index|
+          puts index
+        end
+        ```
+    options:
+      - 'Prints the names of the customers'
+      - 'Prints the indexes of the customers: 0 1 2'
+      - 'Prints the indexes of the customers: 1 2 3'
+      - 'Prints ["Peter", "Maria", "George"]'
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: 'Fill in the following program so that the customers are sorted and joined with a comma and a space. So, the program should print "George, Maria, Peter":'
+      extra_text: |
+        ``` ruby
+        customers = ["Peter", "Maria", "George"]
+        ```
+      text_area_pre_fill: 'print _______________________________'
+    correct_answers:
+      - "print customers.sort.join(', ')"
+      - 'print customers.sort.join(", ")'

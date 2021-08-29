@@ -1,0 +1,23 @@
+- # File: app/views/sign_in/new.html.haml
+- #
+
+%h1 Sign In
+
+= form_for @sign_in, url: sign_in_path, method: :post do |f|
+
+  = render partial: 'shared/errors', locals: {model: @sign_in, explanation: 'prohibited User from signing in:'}
+
+  = hidden_field_tag :return_to, params[:return_to]
+
+  .form-group
+    = f.label :email
+    = f.email_field :email, placeholder: 'Type in your email', class: 'form-control'
+    
+  .form-group
+    = f.label :password
+    = f.password_field :password, placeholder: 'Type in your password', class: 'form-control'
+    
+  = f.submit 'Sign In', class: 'btn btn-success'
+
+%div
+  = link_to 'Home', root_path

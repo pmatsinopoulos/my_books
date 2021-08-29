@@ -1,0 +1,177 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Usually, when we start developing a new feature, we start a new branch"
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "Give the command to create the new branch with name `feature-view-order-online`."
+    correct_answers:
+      - "git checkout -b feature-view-order-online"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "On `gitk`, the current branch is displayed with normal font weight, whereas the others are displayed with bold font weight."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "How do we switch back to existing branch `feature-email-notifications`?"
+    correct_answers:
+      - "git checkout feature-email-notifications"
+  -
+    input_type: text
+    question:
+      text: "What is the command that lists the branches of my project?"
+    correct_answers:
+      - "git branch"
+  -
+    input_type: text_area
+    question:
+      text: "I am on the `feature-email-notifications` branch and I want to merge my work into `master` branch. What do I do?"
+      text_area_pre_fill: |
+        __________________________________
+        __________________________________
+    correct_answers:
+      - |
+        git checkout master
+        git merge feature-email-notifications
+  -
+    input_type: text_area
+    question:
+      text: "I am on the `feature-email-notifications` branch and I want to merge my work into `master` branch and keep visual history of the commits that contributed to my feature work. What do I do?"
+      text_area_pre_fill: |
+        __________________________________
+        __________________________________
+    correct_answers:
+      - |
+        git checkout master
+        git merge --no-ff feature-email-notifications
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `git merge` command always does fast-forward merge."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What are the tags?"
+    options:
+      - 'Tags are labels that we can attach to branches.'
+      - 'Tags are labels that we can insert into the source code.'
+      - 'Tags are descriptive names that we can attach to commits.'
+      - 'Tags are bookmarks in our source code that we can use to locate specific points very quickly.'
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: "Which command returns the list of all the tags in our project?"
+    correct_answers:
+      - "git tag --list"
+  -
+    input_type: text
+    question:
+      text: "How do we merge changes that have occurred in the `master` branch while we are working on the `feature-billing` branch? Assume that the current branch is `feature-billing`."
+    correct_answers:
+      - "git merge master"
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "You get the following output while trying to merge a feature branch into `master` branch. What do you understand from that?"
+      extra_text: |
+        ```bash
+        Auto-merging anti_virus.rb
+        CONFLICT (content): Merge conflict in anti_virus.rb
+        Automatic merge failed; fix conflicts and then commit the result.
+        ```
+    options:
+      - 'There is a conflict in the source file `anti_virus.rb` but merge finally did the conflict resolution automatically and you do not have to do anything.'
+      - 'Everything went successfully.'
+      - 'Merge has failed and my changes on `anti_virus.rb` file have been lost. Next time I have to be careful for conflicts before trying any merge.'
+      - 'There is a conflict in the source file `anti_virus.rb` and merge cannot continue unless conflicts are first resolved.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "You see the following in a source file named `anti_virus.rb`. What do you get out of it? Assume that your current branch is `master`."
+      extra_text: |
+        ```ruby
+
+        class AntiVirus
+        <<<<<<< HEAD
+          attr_reader :type
+        =======
+          attr_reader :classification
+        >>>>>>> feature-anti-virus-protection
+        end
+        ```
+    options:
+      - "There is a merge conflict. `master` branch has the line `attr_reader :type` whereas `feature-anti-virus-protection`, that I am merging from, has the line `attr_reader :classification`."
+      - "There is a merge conflict. I am trying to merge branch `master` to branch `feature-anti-virus-protection`. I have to include both lines into the destination branch, i.e. into `feature-anti-virus-protection`."
+      - "There is a merge conflict. I am trying to merge branch `feature-anti-virus-protection` to branch `master`. I have to include both lines into the destination branch, i.e. into `master`."
+      - "I have to move line `<<<<<<< HEAD` and line `>>>>>>> feature-anti-virus-protection` two spaces to the right in order to fix indentation. Otherwise, there is no problem."
+    correct_options:
+      - 1
+  -
+    input_type: text_area
+    question:
+      text: "What are the commands to rename the branch `feature-foo` to `feature-bar`? Assume that you are on branch `master`."
+      text_area_pre_fill: |
+        _____________________________________
+        _____________________________________
+    correct_answers:
+      - |
+        git checkout feature-foo
+        git branch -m feature-bar
+      - |
+        git checkout feature-foo
+        git branch --move feature-bar
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "In order to rename a branch you need to be on another branch, i.e. the branch you want to rename should not be your current branch."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "You can delete the current branch you are on and you will automatically be switched to `master` branch."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which is the command to delete the branch with name `feature-crm`?"
+    correct_answers:
+      - "git branch -d feature-crm"

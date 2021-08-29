@@ -1,0 +1,16 @@
+-# File: app/views/books/_form.html.haml
+-#
+= form_for @book do |f|
+  = f.label :title
+  = f.text_field :title, placeholder: 'book title'
+  %br
+  = f.label :author
+  = f.text_field :author, placeholder: 'author of book'
+  %br
+  = f.label :publisher
+  = f.collection_select :publisher_id, Publisher.all, :id, :name, prompt: 'Publisher?'
+  %br
+  = f.label :tags
+  = f.text_field :tags_joined, placeholder: 'comma separated list of tags'
+  %br
+  = f.submit

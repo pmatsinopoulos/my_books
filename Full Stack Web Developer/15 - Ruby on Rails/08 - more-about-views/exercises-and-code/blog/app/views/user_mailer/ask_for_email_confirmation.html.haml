@@ -1,0 +1,13 @@
+- # File: app/views/user_mailer/ask_for_email_confirmation.html.haml
+-
+%h1
+  Welcome!
+%p
+  = "Dear #{@user.email}"
+%p
+  Please, confirm your email address by clicking on this link here:
+%p
+  = link_to 'Click Here To Confirm Your Email Address', confirm_email_address_url(email: @user.email, email_confirmation_token: @user.email_confirmation_token)
+%p
+  TCB Customer Success
+

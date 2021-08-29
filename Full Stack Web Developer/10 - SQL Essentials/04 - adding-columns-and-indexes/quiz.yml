@@ -1,0 +1,100 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming that we have the table `students`, the command to add a new column with name `address`, of type `varchar(255)` and that cannot be null is..."
+    options:
+      - "`alter students add column (address varchar(255));`"
+      - "`alter table students add column (address varchar(255) not null);`"
+      - "`alter table students insert column (address varchar(255) not null);`"
+      - "`alter table students add one column (address varchar(255) not null);`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'When our `customers` table has 2 million rows, without having any index, and we are trying to locate a customer by its name, then'
+    options:
+      - 'MySQL will find it very quickly'
+      - 'It might take too long to be located, because MySQL will have to scan the table from top to bottom until it matches the customer by name'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: 'Create an index on the column `name` of the table `customers`. Name the index using the convention given in the lecture'
+    correct_answers:
+      - 'create index customers_name_idx on customers(name);'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Assuming that you see the following table definition. How many indexes do you recognise?'
+      extra_text: |
+          ```
+          CREATE TABLE `orders` (
+          `id` int(11) NOT NULL AUTO_INCREMENT,
+          `ordered_at` datetime NOT NULL,
+          `created_at` datetime NOT NULL,
+          `updated_at` datetime NOT NULL,
+          `state_responsible_id` int(11) DEFAULT NULL,
+          `customer_id` int(11) DEFAULT NULL,
+          `customer_type` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+          `brand_id` int(11) DEFAULT NULL,
+          `country_id` int(11) DEFAULT NULL,
+          `language_id` int(11) DEFAULT NULL,
+          `currency_id` int(11) DEFAULT NULL,
+          PRIMARY KEY (`id`),
+          KEY `orders_state_responsible_fk` (`state_responsible_id`),
+          KEY `customer_order_idx` (`customer_id`,`customer_type`),
+          KEY `orders_brand_fk` (`brand_id`),
+          KEY `orders_country_fk` (`country_id`),
+          KEY `orders_language_fk` (`language_id`),
+          KEY `orders_currency_fk` (`currency_id`),
+          CONSTRAINT `orders_brand_fk` FOREIGN KEY (`brand_id`) REFERENCES `brands` (`id`),
+          CONSTRAINT `orders_country_fk` FOREIGN KEY (`country_id`) REFERENCES `countries` (`id`),
+          CONSTRAINT `orders_currency_fk` FOREIGN KEY (`currency_id`) REFERENCES `currencies` (`id`),
+          CONSTRAINT `orders_language_fk` FOREIGN KEY (`language_id`) REFERENCES `languages` (`id`),
+          CONSTRAINT `orders_state_responsible_fk` FOREIGN KEY (`state_responsible_id`) REFERENCES `people` (`id`)
+          ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci ;
+          ```
+    options:
+      - 5
+      - 6
+      - 7
+      - 8
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'We see that our query to retrieve a customer by name takes ages to finish. What are we looking for when trying to solve this problem?'
+    options:
+      - 'We are trying to delete the customers that are not active'
+      - 'We are trying to migrate to a more powerful machine'
+      - 'We are introducing an index on column `name` of table `customers`'
+      - 'We upgrade the MySQL server version'
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: 'Destroy the index `customers_name_idx` from `customers` table'
+    correct_answers:
+      - 'drop index customers_name_idx on customers;'
+  -
+    input_type: text
+    question:
+      text: 'Write the command that will enhance table `customers` so that no duplicate customers with same name are ever inserted into the table.'
+    correct_answers:
+      - 'create unique index customers_name_uidx on customers(name);'
+  -
+    input_type: text
+    question:
+      text: 'Assuming that we have the table `students` with columns `id`, `first_name` and `last_name`. Which command would create an index on both `last_name` and `first_name`? Use the correct convention for naming the index'
+    correct_answers:
+      - 'create index students_last_name_first_name_idx on students(last_name, first_name);'

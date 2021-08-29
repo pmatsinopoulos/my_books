@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1.6em;
+    background-image: url("../images/cairo.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    background-size: cover;
+}
+
+#city {
+    font-size: 1.8rem;
+    font-family: Verdana, Arial, sans-serif;
+    margin-bottom: 1.6rem;
+}
+
+#country {
+    font-size: 2.0rem;
+    font-family: "Open Sans", Arial, sans-serif;
+    margin-bottom: 1.8rem;
+}
+
+#price, #airline {
+    font-size: 3.2rem;
+    font-family: "Lucida Console", Monaco, monospace;
+}
+
+#airline {
+    font-size: 0.8rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+

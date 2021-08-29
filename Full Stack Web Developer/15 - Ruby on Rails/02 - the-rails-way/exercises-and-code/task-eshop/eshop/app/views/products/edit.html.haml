@@ -1,0 +1,30 @@
+%h1
+  Edit Product with Id: #{@product.id}
+
+= form_for @product, url: product_path(@product), method: :put do |f|
+  - if @product.errors.any?
+    #error-explanation.alert.alert-danger.alert-dismissible{:role => "alert"}
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      %h2
+        = pluralize(@product.errors.count, "error")
+        prohibited this product from being saved:
+      %ul
+        - @product.errors.full_messages.each do |msg|
+          %li= msg
+
+  .form-group
+    = f.label :code
+    = f.text_field :code, placeholder: 'Type product code', type: 'text', class: 'form-control'
+
+  .form-group
+    = f.label :display_name
+    = f.text_field :display_name, placeholder: 'Type the display name of the product', class: 'form-control'
+
+  .form-group
+    = f.label :display_description
+    = f.text_area :display_description, placeholder: 'Type the display description of the product', class: 'form-control'
+  = f.submit class: 'btn btn-success'
+
+.text-right
+  = link_to 'List Of Products', products_path

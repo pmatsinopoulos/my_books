@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+img {
+    width:  420px;
+    height: 350px;
+}
+
+.column {
+    width: 50%;
+}
+
+#left-column {
+    float: left;
+    text-align: right;
+}
+
+#right-column {
+    float: left;
+}
+
+.text-center {
+    text-align: center;
+}

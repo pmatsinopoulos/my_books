@@ -1,0 +1,176 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming the following function definition, which argument is optional?"
+      extra_text: |
+        ~~~ruby
+        def foo (a, b = 3)
+          a + b
+        end
+        ~~~
+    options:
+      - '`a`'
+      - '`b`'
+      - 'All mandatory.'
+      - 'All optional. '
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does program define here?"
+      extra_text: |
+        ~~~ ruby
+        def foo
+          puts "foo"
+        end
+        ~~~
+    options:
+      - 'A Hash.'
+      - 'An Array.'
+      - 'A function.'
+      - 'A variable.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the name of the function defined below?"
+      extra_text: |
+        ~~~ ruby
+        def print_maximum
+        end
+        ~~~
+    options:
+      - '`def`'
+      - '`end`'
+      - '`print_maximum`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the name of the function defined in the program below?"
+      extra_text: |
+        ~~~ruby
+        definition sum
+          1 + 1
+        end
+        ~~~
+    options:
+      - '`definition`'
+      - '`sum`'
+      - 'Does not define any function, because it has an error.'
+      - '`def`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the next program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def print_line
+          puts "H" * 5
+        end
+
+        print_line
+        ~~~
+    options:
+      - '`H`'
+      - '`HHHHH`'
+      - '`5`'
+      - 'Nothing will be printed. The program has an error.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print on the output?"
+      extra_text: |
+        ~~~ ruby
+        def print_line
+          puts "Hello"
+        end
+        ~~~
+    options:
+      - 'Nothing.'
+      - '`Hello`.'
+      - 'A blank line.'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following lines of the program below, are the lines in which the function is called?"
+      extra_text: |
+        ~~~ ruby
+        1. def foo
+        2.   puts "Foo"
+        3. end
+        4. foo
+        5. while true
+        6.   foo
+        7. end
+        8. # foo
+        ~~~
+    options:
+      - '4, 6'
+      - '1, 2, 4, 6, 8'
+      - '1, 2, 4, 6'
+      - '1, 2, 4'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print on the output?"
+      extra_text: |
+        ~~~ruby
+        def print_line(number_of_times)
+          puts "*" * number_of_times
+        end
+
+        print_line(0)
+        ~~~
+    options:
+      - 'A blank line.'
+      - '`A *`            '
+      - '`5 times *`      '
+      - '`number of times`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When is the exit code of a program equivalent to success termination?"
+    options:
+      - 'When the exit code is `success`.'
+      - 'When the exit code is `0`.'
+      - 'When the exit code is `1`.'
+      - 'When the exit code is `-1`.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is constant used for `π`?"
+    options:
+      - '`Mathematics.Pi` '
+      - '`Mathematics::Pi`'
+      - '`Maths::pi`'
+      - '`Maths::PI`'
+    correct_options:
+      - 4

@@ -1,0 +1,7 @@
+- # File: app/views/layouts/_select_language.html.haml
+- #
+- if current_user
+  .text-right
+    = form_tag users_locale_path(locale: nil), class: 'form-inline' do
+      = label_tag :locale, 'Language'
+      = select_tag :locale, options_for_select([['English', 'en'], ['Spanish', 'es']], current_user.locale), class: 'form-control'

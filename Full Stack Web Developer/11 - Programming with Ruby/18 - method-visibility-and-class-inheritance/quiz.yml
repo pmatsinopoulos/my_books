@@ -1,0 +1,401 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which methods can be called by external objects?"
+      extra_text: |
+        ``` ruby
+        class Student
+          def address
+            "5th Avenue, NYC"
+          end
+
+          private
+
+          def grade
+            10
+          end
+        end
+        ```
+    options:
+      - '`#address`'
+      - '`#grade`'
+      - '`#address`, `#grade`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which lines will raise error?"
+      extra_text: |
+        ``` ruby
+         1. class Animal
+         2.   protected
+         3.
+         4.   def loud_bark
+         5.   end
+         6. end
+         7.
+         8. class Pet < Animal
+         9.   def bark
+        10.     animal = Animal.new
+        11.     animal.loud_bark
+        12.   end
+        13. end
+        14.
+        15. pet = Pet.new
+        16. pet.bark
+        17.
+        18. animal = Animal.new
+        19. animal.loud_bark
+        ```
+    options:
+      - '11'
+      - '16'
+      - '19'
+      - '11 and 19'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "We should expose as public only the methods that are useful for the other objects"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Ruby allows Multiple Inheritance"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Ruby allows Multi-level Inheritance"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the output of this program?"
+      extra_text: |
+        ``` ruby
+        class MyClass
+          def foo
+            "#{self.class} foo"
+          end
+        end
+
+        class MySubClass < MyClass
+          def foo
+            "foo"
+          end
+        end
+
+        puts MySubClass.new.foo
+        ```
+    options:
+      - 'Nothing the program has an error'
+      - '`foo`'
+      - '`MyClass foo`'
+      - '`MySubClass foo`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the output of this program?"
+      extra_text: |
+        ``` ruby
+        class MyClass
+          def foo
+            "#{self.class} foo"
+          end
+        end
+
+        class MySubClass
+        end
+
+        puts MySubClass.new.foo
+        ```
+    options:
+      - 'Nothing the program has an error'
+      - '`foo`'
+      - '`MyClass foo`'
+      - '`MySubClass foo`'
+    correct_options:
+      - 1
+  -
+    input_type: text_area
+    question:
+      text: "Implement a method on class `Student` that would allow this program to print `Welcome John Smith!`:"
+      text_area_pre_fill: |
+        class Student
+          def initialize(first_name, last_name)
+            @first_name = first_name
+            @last_name = last_name
+          end
+
+          ________________________________
+          ________________________________
+          ________________________________
+        end
+
+        student = Student.new('John', 'Smith')
+
+        puts "Welcome #{student}!"
+    correct_answers:
+      - |
+        class Student
+          def initialize(first_name, last_name)
+            @first_name = first_name
+            @last_name = last_name
+          end
+
+          def to_s
+            "#{@first_name} #{@last_name}"
+          end
+        end
+
+        student = Student.new('John', 'Smith')
+
+        puts "Welcome #{student}!"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the output of this program?"
+      extra_text: |
+        ``` ruby
+        class MyClass
+          def foo
+            "#{self.class} foo"
+          end
+        end
+
+        class MySubClass < MyClass
+          def foo
+            "#{super} bar."
+          end
+        end
+
+        puts MySubClass.new.foo
+        ```
+    options:
+      - 'Nothing the program has an error'
+      - '`foo.`'
+      - '`foo bar.`'
+      - '`MyClass foo.`'
+      - '`MyClass foo bar.`'
+      - '`MySubClass foo bar.`'
+    correct_options:
+      - 6
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is not allowed in Ruby"
+      extra_text: |
+        ``` ruby
+        class Animal
+        end
+
+        class Dog < Animal
+        end
+
+        class Beagle < Dog
+        end
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print?"
+      extra_text: |
+        ``` ruby
+        class User
+        end
+
+        class Customer < User
+        end
+
+        class Residential < Customer
+        end
+
+        customer = Customer.new
+        puts customer.is_a?(User)
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+      - 'Nothing. Program has an error'
+      - '`User`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print?"
+      extra_text: |
+        ``` ruby
+        class User
+        end
+
+        class Customer < User
+        end
+
+        class Residential < Customer
+        end
+
+        customer = Customer.new
+        puts customer.instance_of?(User)
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+      - 'Nothing. Program has an error'
+      - '`User`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print?"
+      extra_text: |
+        ``` ruby
+        class User
+        end
+
+        class Customer < User
+        end
+
+        class Residential < Customer
+        end
+
+        residential = Residential.new
+        puts residential.kind_of?(User)
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+      - 'Nothing. Program has an error'
+      - '`User`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print?"
+      extra_text: |
+        ``` ruby
+        class User
+        end
+
+        class Customer < User
+        end
+
+        class Residential < Customer
+        end
+
+        residential = Residential.new
+        puts residential.kind_of?(Customer)
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+      - 'Nothing. Program has an error'
+      - '`Customer`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print?"
+      extra_text: |
+        ``` ruby
+        class User
+        end
+
+        class Customer < User
+        end
+
+        class Residential < User, Customer
+        end
+
+        residential = Residential.new
+        puts residential.class
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+      - 'Nothing. Program has an error'
+      - '`Customer`'
+    correct_options:
+      - 3
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the program so that you can call the private method `eat_food`."
+      text_area_pre_fill: |
+        class Dog
+          def have_lunch
+            eat_food
+            drink_water
+          end
+
+          private
+
+          def eat_food
+          end
+
+          def drink_water
+          end
+        end
+
+        dog = Dog.new
+        dog.______ :eat_food
+    correct_answers:
+      - |
+        class Dog
+          def have_lunch
+            eat_food
+            drink_water
+          end
+
+          private
+
+          def eat_food
+          end
+
+          def drink_water
+          end
+        end
+
+        dog = Dog.new
+        dog.send :eat_food

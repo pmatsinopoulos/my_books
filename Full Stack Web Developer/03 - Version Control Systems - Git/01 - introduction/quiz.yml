@@ -1,0 +1,215 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Why do we need a version control system for?"
+    options:
+      - 'Show the code to the customer.'
+      - 'To prevent multiple changes to the code at the same time.'
+      - 'Revert back to a previous version.'
+      - 'To ask username and password in order for the code to be changed.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "With Git you can have a look only at the latest version of a file."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Git can tell you when a change was introduced and by whom."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Git does not offer a user friendly command to compare two versions of the same project. You have to do it manually."
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "Centralized Version Control Systems..."
+    options:
+      - 'They use many servers to store the history of the project.'
+      - 'They allow each developer to pick up which server will host their changes.'
+      - 'They use a central server to store the history of the project.'
+      - 'They allow the developer to keep the changes locally and others to access it from there.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "Distributed Version Control Systems..."
+    options:
+      - 'Each developer has access to his own changes only.'
+      - 'Each developer can push to many servers but only one project.'
+      - 'Each project can be stored only in one remote server.'
+      - 'Can have many repositories storing the history of the same project.'
+    correct_options:
+      - 4
+  -
+    input_type: text
+    question:
+      text: "Type the command that prints the version of the Git installed on your machine:"
+    correct_answers:
+      - "git --version"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the command `git status` do?"
+    options:
+      - 'It shows the number of Git files.'
+      - 'It shows the working tree status.'
+      - 'It shows the Git files and their size.'
+      - 'It shows the Git working folder.'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which is the command to initialize a `git` project?"
+    correct_answers:
+      - "git init"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "With Git, your local version control database is created..."
+    options:
+      - 'inside your home directory.'
+      - 'inside your home directory, in the sub-folder with name `.git-ignore`.'
+      - 'inside the root folder of your project, in the sub-folder with name `git`.'
+      - 'inside the root folder of your project, in the sub-folder with name `.git`.'
+    correct_options:
+      - 4
+  -
+    input_type: text
+    question:
+      text: "I ran a `git` command and I saw the following output. Which command did I run?"
+      extra_text: |
+        ``` bash
+
+        On branch master
+
+        Initial commit
+
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+
+                .idea/
+                index.html
+
+        nothing added to commit but untracked files present (use "git add" to track)
+        ```
+    correct_answers:
+      - "git status"
+  -
+    input_type: text
+    question:
+      text: "You see the following output. Which branch are you currently working on?"
+      extra_text: |
+        ``` bash
+
+        On branch master
+
+        Initial commit
+
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+
+                .idea/
+                index.html
+
+        nothing added to commit but untracked files present (use "git add" to track)
+        ```
+    correct_answers:
+      - "master"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "You see the following output. All the files are being tracked by Git."
+      extra_text: |
+        ``` bash
+
+        On branch master
+
+        Initial commit
+
+        Untracked files:
+          (use "git add <file>..." to include in what will be committed)
+
+                .idea/
+                index.html
+
+        nothing added to commit but untracked files present (use "git add" to track)
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the command that is related to Git configuration?"
+    options:
+      - '`git configuration`'
+      - '`git config`'
+      - '`git conf`'
+      - '`git global`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which is the command to list all the configuration variables (and their values) of `git` at the system level?"
+    correct_answers:
+      - "git config --system --list"
+  -
+    input_type: text
+    question:
+      text: "Which is the command to list all the configuration variables (and their values) of `git` configured at the level the user that is currently logged in?"
+    correct_answers:
+      - "git config --global --list"
+  -
+    input_type: text
+    question:
+      text: "Which is the command to list all the configuration variables (and their values) of `git` configured at the project level we are currently working on?"
+    correct_answers:
+      - "git config --local --list"
+  -
+    input_type: text
+    question:
+      text: |
+        Which is the command to list all the configuration variables (and their values) of `git` when working on a particular project? It should include all the
+        configuration variables of system and current user.
+    correct_answers:
+      - "git config --list"
+  -
+    input_type: text
+    question:
+      text: "Which is the command to get the value of the configuration variable `user.email`?"
+    correct_answers:
+      - "git config --get user.email"

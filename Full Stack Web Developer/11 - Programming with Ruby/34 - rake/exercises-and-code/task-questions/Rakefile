@@ -1,0 +1,14 @@
+file 'test1.txt' do |t|
+  File.write(t.name, "line 1\n")
+end
+
+file 'test2.txt' do |t|
+  File.write(t.name, "line 2\n")
+end
+
+file 'test.txt' => ['test1.txt', 'test2.txt'] do
+  sh 'cat test1.txt >> test.txt'
+  sh 'cat test2.txt >> test.txt'
+end
+
+task default: 'test.txt'

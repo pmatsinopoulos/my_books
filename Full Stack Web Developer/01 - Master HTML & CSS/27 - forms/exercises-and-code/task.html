@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Task with Forms</title>
+    <link rel="stylesheet" href="stylesheets/task.css" type="text/css"/>
+  </head>
+
+  <body>
+      <h2>US Domestic Flights</h2>
+      <form>
+        <fieldset id="first-row-left-column">
+          <legend>Flight Details</legend>
+          <div class="input-group">
+            <label for="city-from">Departure (*):</label>
+            <select id="city-from" required="required" autofocus="autofocus" title="Select Departure City">
+              <option>Departure City...</option>
+              <option>Boston</option>
+              <option>Los Angeles</option>
+              <option>New York</option>
+              <option>Phoenix</option>
+              <option>San Diego</option>
+              <option>Santa Barbara</option>
+              <option>Tijuana</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label for="city-to">Destination (*):</label>
+            <select id="city-to" required="required" title="Select Destination City">
+              <option>Destination City...</option>
+              <option>Boston</option>
+              <option>Los Angeles</option>
+              <option>New York</option>
+              <option>Phoenix</option>
+              <option>San Diego</option>
+              <option>Santa Barbara</option>
+              <option>Tijuana</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <input type="checkbox" id="one-way" title="Is this One Way Flight? If yes, check this one"/>
+            <label for="one-way" id="one-way-label" title="Is this One Way Flight? If yes, check this one">One Way</label>
+          </div>
+
+          <div class="input-group">
+            <label for="dep-date">Dep. Date (*):</label>
+            <input type="date" id="dep-date" required="required" title="Select Departure Date"/>
+          </div>
+
+          <div class="input-group">
+            <label for="return-date">Ret. Date:</label>
+            <input type="date" id="return-date" title="Select Return Date"/>
+          </div>
+
+        </fieldset>
+
+        <fieldset id="first-row-right-column">
+          <legend>Contact Details</legend>
+          <div class="input-group">
+            <label for="email">Email (*):</label>
+            <input type="email" id="email" required="required" title="Fill in with the contact email"/>
+          </div>
+
+          <div class="input-group">
+            <label for="mobile-phone">Mobile (*):</label>
+            <input type="tel" id="mobile-phone" required="required" title="Fill in with the contact mobile number"/>
+          </div>
+
+          <div class="input-group">
+            <label for="address">Address:</label>
+            <input type="text" id="address" title="Fill in with the contact address" />
+          </div>
+
+          <div class="input-group">
+            <label for="city">City:</label>
+            <input type="text" id="city" title="Fill in with the contact city"/>
+          </div>
+
+          <div class="input-group">
+            <label for="zip-code">Zip Code:</label>
+            <input type="text" id="zip-code" title="Fill in with the contact zip code" />
+          </div>
+
+          <div class="input-group">
+            <label for="country">Country:</label>
+            <select id="country" title="Fill in with the contact country">
+              <option>Select Country...</option>
+              <option>Afghanistan</option>
+              <option>Åland Islands</option>
+              <option>Albania</option>
+              <option>Algeria</option>
+              <option>American Samoa</option>
+              <option>Andorra</option>
+              <option>Angola</option>
+              <option>Anguilla</option>
+              <option>Antarctica</option>
+              <option>Antigua and Barbuda</option>
+              <option>Argentina</option>
+              <option>Armenia</option>
+              <option>Aruba</option>
+              <option>Australia</option>
+              <option>Austria</option>
+              <option>Azerbaijan</option>
+              <option>Bahamas</option>
+              <option>Bahrain</option>
+              <option>Bangladesh</option>
+              <option>Barbados</option>
+              <option>Belarus</option>
+              <option>Belgium</option>
+              <option>Belize</option>
+              <option>Benin</option>
+              <option>Bermuda</option>
+              <option>Bhutan</option>
+              <option>Bolivia, Plurinational State of</option>
+              <option>Bonaire, Sint Eustatius and Saba</option>
+              <option>Bosnia and Herzegovina</option>
+              <option>Botswana</option>
+              <option>Bouvet Island</option>
+              <option>Brazil</option>
+              <option>British Indian Ocean Territory</option>
+              <option>Brunei Darussalam</option>
+              <option>Bulgaria</option>
+              <option>Burkina Faso</option>
+              <option>Burundi</option>
+              <option>Cambodia</option>
+              <option>Cameroon</option>
+              <option>Canada</option>
+              <option>Cape Verde</option>
+              <option>Cayman Islands</option>
+              <option>Central African Republic</option>
+              <option>Chad</option>
+              <option>Chile</option>
+              <option>China</option>
+              <option>Christmas Island</option>
+              <option>Cocos (Keeling) Islands</option>
+              <option>Colombia</option>
+              <option>Comoros</option>
+              <option>Congo</option>
+              <option>Congo, the Democratic Republic of the</option>
+              <option>Cook Islands</option>
+              <option>Costa Rica</option>
+              <option>Côte d'Ivoire</option>
+              <option>Croatia</option>
+              <option>Cuba</option>
+              <option>Curaçao</option>
+              <option>Cyprus</option>
+              <option>Czech Republic</option>
+              <option>Denmark</option>
+              <option>Djibouti</option>
+              <option>Dominica</option>
+              <option>Dominican Republic</option>
+              <option>Ecuador</option>
+              <option>Egypt</option>
+              <option>El Salvador</option>
+              <option>Equatorial Guinea</option>
+              <option>Eritrea</option>
+              <option>Estonia</option>
+              <option>Ethiopia</option>
+              <option>Falkland Islands (Malvinas)</option>
+              <option>Faroe Islands</option>
+              <option>Fiji</option>
+              <option>Finland</option>
+              <option>France</option>
+              <option>French Guiana</option>
+              <option>French Polynesia</option>
+              <option>French Southern Territories</option>
+              <option>Gabon</option>
+              <option>Gambia</option>
+              <option>Georgia</option>
+              <option>Germany</option>
+              <option>Ghana</option>
+              <option>Gibraltar</option>
+              <option>Greece</option>
+              <option>Greenland</option>
+              <option>Grenada</option>
+              <option>Guadeloupe</option>
+              <option>Guam</option>
+              <option>Guatemala</option>
+              <option>Guernsey</option>
+              <option>Guinea</option>
+              <option>Guinea-Bissau</option>
+              <option>Guyana</option>
+              <option>Haiti</option>
+              <option>Heard Island and McDonald Islands</option>
+              <option>Holy See (Vatican City State)</option>
+              <option>Honduras</option>
+              <option>Hong Kong</option>
+              <option>Hungary</option>
+              <option>Iceland</option>
+              <option>India</option>
+              <option>Indonesia</option>
+              <option>Iran, Islamic Republic of</option>
+              <option>Iraq</option>
+              <option>Ireland</option>
+              <option>Isle of Man</option>
+              <option>Israel</option>
+              <option>Italy</option>
+              <option>Jamaica</option>
+              <option>Japan</option>
+              <option>Jersey</option>
+              <option>Jordan</option>
+              <option>Kazakhstan</option>
+              <option>Kenya</option>
+              <option>Kiribati</option>
+              <option>Korea, Democratic People's Republic of</option>
+              <option>Korea, Republic of</option>
+              <option>Kuwait</option>
+              <option>Kyrgyzstan</option>
+              <option>Lao People's Democratic Republic</option>
+              <option>Latvia</option>
+              <option>Lebanon</option>
+              <option>Lesotho</option>
+              <option>Liberia</option>
+              <option>Libya</option>
+              <option>Liechtenstein</option>
+              <option>Lithuania</option>
+              <option>Luxembourg</option>
+              <option>Macao</option>
+              <option>Macedonia, the former Yugoslav Republic of</option>
+              <option>Madagascar</option>
+              <option>Malawi</option>
+              <option>Malaysia</option>
+              <option>Maldives</option>
+              <option>Mali</option>
+              <option>Malta</option>
+              <option>Marshall Islands</option>
+              <option>Martinique</option>
+              <option>Mauritania</option>
+              <option>Mauritius</option>
+              <option>Mayotte</option>
+              <option>Mexico</option>
+              <option>Micronesia, Federated States of</option>
+              <option>Moldova, Republic of</option>
+              <option>Monaco</option>
+              <option>Mongolia</option>
+              <option>Montenegro</option>
+              <option>Montserrat</option>
+              <option>Morocco</option>
+              <option>Mozambique</option>
+              <option>Myanmar</option>
+              <option>Namibia</option>
+              <option>Nauru</option>
+              <option>Nepal</option>
+              <option>Netherlands</option>
+              <option>New Caledonia</option>
+              <option>New Zealand</option>
+              <option>Nicaragua</option>
+              <option>Niger</option>
+              <option>Nigeria</option>
+              <option>Niue</option>
+              <option>Norfolk Island</option>
+              <option>Northern Mariana Islands</option>
+              <option>Norway</option>
+              <option>Oman</option>
+              <option>Pakistan</option>
+              <option>Palau</option>
+              <option>Palestinian Territory, Occupied</option>
+              <option>Panama</option>
+              <option>Papua New Guinea</option>
+              <option>Paraguay</option>
+              <option>Peru</option>
+              <option>Philippines</option>
+              <option>Pitcairn</option>
+              <option>Poland</option>
+              <option>Portugal</option>
+              <option>Puerto Rico</option>
+              <option>Qatar</option>
+              <option>Réunion</option>
+              <option>Romania</option>
+              <option>Russian Federation</option>
+              <option>Rwanda</option>
+              <option>Saint Barthélemy</option>
+              <option>Saint Helena, Ascension and Tristan da Cunha</option>
+              <option>Saint Kitts and Nevis</option>
+              <option>Saint Lucia</option>
+              <option>Saint Martin (French part)</option>
+              <option>Saint Pierre and Miquelon</option>
+              <option>Saint Vincent and the Grenadines</option>
+              <option>Samoa</option>
+              <option>San Marino</option>
+              <option>Sao Tome and Principe</option>
+              <option>Saudi Arabia</option>
+              <option>Senegal</option>
+              <option>Serbia</option>
+              <option>Seychelles</option>
+              <option>Sierra Leone</option>
+              <option>Singapore</option>
+              <option>Sint Maarten (Dutch part)</option>
+              <option>Slovakia</option>
+              <option>Slovenia</option>
+              <option>Solomon Islands</option>
+              <option>Somalia</option>
+              <option>South Africa</option>
+              <option>South Georgia and the South Sandwich Islands</option>
+              <option>South Sudan</option>
+              <option>Spain</option>
+              <option>Sri Lanka</option>
+              <option>Sudan</option>
+              <option>Suriname</option>
+              <option>Svalbard and Jan Mayen</option>
+              <option>Swaziland</option>
+              <option>Sweden</option>
+              <option>Switzerland</option>
+              <option>Syrian Arab Republic</option>
+              <option>Taiwan, Province of China</option>
+              <option>Tajikistan</option>
+              <option>Tanzania, United Republic of</option>
+              <option>Thailand</option>
+              <option>Timor-Leste</option>
+              <option>Togo</option>
+              <option>Tokelau</option>
+              <option>Tonga</option>
+              <option>Trinidad and Tobago</option>
+              <option>Tunisia</option>
+              <option>Turkey</option>
+              <option>Turkmenistan</option>
+              <option>Turks and Caicos Islands</option>
+              <option>Tuvalu</option>
+              <option>Uganda</option>
+              <option>Ukraine</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>United States Minor Outlying Islands</option>
+              <option>Uruguay</option>
+              <option>Uzbekistan</option>
+              <option>Vanuatu</option>
+              <option>Venezuela, Bolivarian Republic of</option>
+              <option>Viet Nam</option>
+              <option>Virgin Islands, British</option>
+              <option>Virgin Islands, U.S.</option>
+              <option>Wallis and Futuna</option>
+              <option>Western Sahara</option>
+              <option>Yemen</option>
+              <option>Zambia</option>
+              <option>Zimbabwe</option>
+            </select>
+          </div>
+        </fieldset>
+
+        <div style="clear: both;"></div>
+
+        <fieldset id="second-row">
+          <legend>Ticket Details</legend>
+
+          <div class="input-group">
+            <label for="number-of-tickets"># of Tickets (*):</label>
+            <input type="number" id="number-of-tickets" placeholder="Number of tickets" min="1" max="2" value="1" required="required" title="Specify Number of Tickets"/>
+          </div>
+
+          <fieldset id="second-row-left-column">
+            <legend>Passenger #1</legend>
+
+            <div class="input-group">
+              <label for="first-name-1">First Name (*):</label>
+              <input type="text" id="first-name-1" required="required" title="Specify First Passenger First Name"/>
+            </div>
+
+            <div class="input-group">
+              <label for="last-name-1">Last Name (*):</label>
+              <input type="text" id="last-name-1" required="required" title="Specify First Passenger Last Name"/>
+            </div>
+
+            <div class="input-group">
+              <label for="passport-1">Passport (*):</label>
+              <input type="text" id="passport-1" required="required" title="Specify First Passenger Passport Number"/>
+            </div>
+
+            <div class="input-group">
+              <label for="date-of-birth-1">DoB (*):</label>
+              <input type="date" id="date-of-birth-1" required="required" title="Specify First Passenger Date of Birth"/>
+            </div>
+
+            <div class="input-group">
+              <label for="male-1" class="gender-label">Male</label>
+              <input type="radio" id="male-1" name="gender-1" class="gender-radio"/>
+              <label for="female-1" class="gender-label">Female</label>
+              <input type="radio" id="female-1" name="gender-1" class="gender-radio"/>
+            </div>
+          </fieldset>
+
+
+          <fieldset id="second-row-right-column">
+            <legend>Passenger #2</legend>
+
+            <div class="input-group">
+              <label for="first-name-2">First Name:</label>
+              <input type="text" id="first-name-2" title="Specify Second Passenger First Name"/>
+            </div>
+
+            <div class="input-group">
+              <label for="last-name-2">Last Name:</label>
+              <input type="text" id="last-name-2" title="Specify Second Passenger Last Name"/>
+            </div>
+
+            <div class="input-group">
+              <label for="passport-2">Passport:</label>
+              <input type="text" id="passport-2" title="Specify Second Passenger Passport Number"/>
+            </div>
+
+            <div class="input-group">
+              <label for="date-of-birth-1">DoB:</label>
+              <input type="date" id="date-of-birth-2" title="Specify Second Passenger Date of Birth"/>
+            </div>
+
+            <div class="input-group">
+              <label for="male-2" class="gender-label">Male</label>
+              <input type="radio" id="male-2" name="gender-2" class="gender-radio"/>
+              <label for="female-2" class="gender-label">Female</label>
+              <input type="radio" id="female-2" name="gender-2" class="gender-radio"/>
+            </div>
+          </fieldset>
+
+        </fieldset>
+
+        <div style="clear: both;"></div>
+
+        <div class="input-group vertical">
+          <label for="message">Your Message To Booking Agent:</label>
+          <textarea id="message" rows="5" placeholder="Type in a message to booking agent (optional)"></textarea>
+        </div>
+
+        <div class="input-group">
+          <input type="submit" value="Search"/>
+        </div>
+
+      </form>
+
+  </body>
+
+</html>

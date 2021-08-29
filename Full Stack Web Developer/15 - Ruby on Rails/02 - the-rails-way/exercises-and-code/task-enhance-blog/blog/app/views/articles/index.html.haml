@@ -1,0 +1,22 @@
+- # File: app/views/articles/index.html.erb
+%h1 List Of Articles
+%table.table.table-striped
+  %thead
+    %tr
+      %th ID
+      %th Title
+      %th Text
+      %th
+  %tbody
+    - @articles.each do |article|
+      %tr
+        %td= article.id
+        %td= article.title
+        %td= article.text
+        %td
+          = link_to 'Show', article_path(article)
+            
+          \#{link_to 'Edit', edit_article_path(article)}   
+          \#{link_to 'Delete', article_path(article), method: :delete, class: 'btn btn-danger', data: {confirm: 'Are you sure that you want to delete this Article?'}}
+%div
+  = link_to 'Create Another Article', new_article_path

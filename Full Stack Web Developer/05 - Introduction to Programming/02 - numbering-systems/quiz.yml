@@ -1,0 +1,184 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the base of decimal numbering system?"
+    options:
+      - '2'
+      - '8'
+      - '10'
+      - '16'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many digits does decimal numbering system have?"
+    options:
+      - '2'
+      - '8'
+      - '10'
+      - '16'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the first and what is the last digit of decimal numbering system?"
+    options:
+      - '1, 10'
+      - '1, A'
+      - '1, 0'
+      - '0, 9'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The first digit of a numbering system is always 0"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the last digit of a numbering system?"
+    options:
+      - 'base - 10'
+      - 'base - 16'
+      - 'base - 8'
+      - 'base - 1'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the most popular numbering system in the digital world?"
+    options:
+      - 'Binary'
+      - 'Octal'
+      - 'Decimal'
+      - 'Hexadecimal'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the first digit and which is the last digit of the binary numbering system?"
+    options:
+      - '0, 1'
+      - '1, 2'
+      - '1, 1'
+      - 'A, B'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The base of the binary system is 1"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the base of the octal numbering system?"
+    options:
+      - '2'
+      - '8'
+      - '10'
+      - '16'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the first and which is the last digit of the octal numbering system?"
+    options:
+      - '1, 7'
+      - '0, 7'
+      - '1, 8'
+      - '0, 8'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the base of the hexadecimal numbering system?"
+    options:
+      - '2'
+      - '8'
+      - '10'
+      - '16'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the first and which is the last digit of the hexadecimal numbering system?"
+    options:
+      - '0, F'
+      - '0, 16'
+      - '1, F'
+      - '1, 16'
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "The decimal number 25 is represented as...in the binary system."
+    correct_answers:
+      - "11001"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the first largest binary number that follows `1011`?"
+    options:
+      - '1111'
+      - '1110'
+      - '1100'
+      - '1000'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the decimal equivalent of the octal number 10?"
+    options:
+      - '7'
+      - '77'
+      - '17'
+      - '8'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the decimal equivalent of the `1A` hexadecimal?"
+    options:
+      - '10'
+      - '26'
+      - '1010'
+      - '11'
+    correct_options:
+      - 2

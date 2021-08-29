@@ -1,0 +1,16 @@
+- # File: app/views/welcome/index.html.haml
+- #
+%h1 Welcome
+%div
+  = link_to 'List Of Articles', articles_path
+- if current_user
+  %div
+    = link_to 'Create New Article', new_article_path
+- unless current_user
+  %div
+    = link_to 'Sign Up', sign_up_path
+  %div
+    = link_to 'Sign In', sign_in_path
+- if current_user
+  %div
+    = link_to 'Sign Out', sign_out_path, method: :delete

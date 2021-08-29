@@ -1,0 +1,98 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following commands can tell you whether MySQL server is locally running or not?"
+    options:
+      - '`mysql running status`'
+      - '`processes | grep mysql`'
+      - "`ps -ef | grep 'mysql'`"
+      - '`service status`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command turns you to a root/administrator user?"
+    options:
+      - '`root`'
+      - '`su root`'
+      - '`cu root`'
+      - '`su administrator`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command stops MySQL server on Mac OS X?"
+    options:
+      - '`sudo launchctl unload /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+      - '`unload /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+      - '`sudo launchctl restart /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+      - '`mysql stop -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command stops MySQL server on Linux (e.g. Debian) - assume that you are a `root` user?"
+    options:
+      - '`mysql restart`'
+      - '`mysql stop`'
+      - '`service mysql stop`'
+      - '`mysql service stop`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command starts MySQL server on Mac OS X?"
+    options:
+      - '`load /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+      - '`sudo launchctl restart /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+      - '`sudo launchctl load /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+      - '`mysql start -F /Library/LaunchDaemons/com.oracle.oss.mysql.mysqld.plist`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which command starts MySQL server on Linux (e.g. Debian) - assume that you are a `root` user?"
+    options:
+      - '`service mysql start`'
+      - '`mysql restart`'
+      - '`mysql start`'
+      - '`mysql service start`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the program that we use to communicate with MySQL server in order to issue SQL commands?"
+    options:
+      - '`ruby`'
+      - '`mysql`'
+      - '`irb`'
+      - '`mysql-server`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the command to exit mysql command line interface and go back to the operating system/terminal prompt?"
+    options:
+      - '`linux`'
+      - '`forget`'
+      - '`exit`'
+      - '`bye`'
+    correct_options:
+      - 3

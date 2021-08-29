@@ -1,0 +1,90 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When we start a Ruby application with `ruby main.rb`..."
+    options:
+      - 'The `ruby` is the Ruby script that then invokes the `main.rb` which is another Ruby script.'
+      - 'The `main.rb` file is the application starting point.'
+      - 'The `main.rb` file is executable.'
+      - 'The command is wrong and it will fail, because `main.rb` is not executable.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following turns the Ruby script to an executable file?"
+    options:
+      - '`change_mode +x`'
+      - '`mode_change +exe`'
+      - '`chmod +exe`'
+      - '`chmod +x`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following will parse file `foo.rb` twice:"
+      extra_text: |
+        ``` ruby
+        load 'foo.rb'
+        load 'foo.rb'
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following will parse file `foo.rb` twice:"
+      extra_text: |
+        ``` ruby
+        require 'foo.rb'
+        require 'foo.rb'
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is the collection of loading paths?"
+    options:
+      - '`$LOAD_PATHS`'
+      - '`$LOAD_PATH`'
+      - '`$LOAD_PATHS_ARRAY`'
+      - '`$LOADING_PATH`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The current folder is in the list of load paths"
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The alternative to setting the load path can be"
+    options:
+      - 'Specifying the relative path to the file and use `require_relative`.'
+      - 'Specifying the relative path to the file and use `load_relative`.'
+      - 'Specifying the relative path to the file and use `loading_relative`.'
+      - 'Specifying the relative path to the file and use `require_with_relative`.'
+    correct_options:
+      - 1

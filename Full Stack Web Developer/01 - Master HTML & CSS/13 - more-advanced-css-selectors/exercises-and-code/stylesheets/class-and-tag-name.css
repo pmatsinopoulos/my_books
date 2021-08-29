@@ -1,0 +1,7 @@
+.text-danger {
+    color: red;
+}
+
+p.text-danger {
+    font-style: italic;
+}

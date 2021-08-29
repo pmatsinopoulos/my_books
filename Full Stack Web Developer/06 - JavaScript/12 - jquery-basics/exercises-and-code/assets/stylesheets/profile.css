@@ -1,0 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
+.has-error {
+    border: 1px solid red;
+}

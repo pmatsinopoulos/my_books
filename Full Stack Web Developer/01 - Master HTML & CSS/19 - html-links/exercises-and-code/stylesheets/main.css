@@ -1,0 +1,15 @@
+a {
+    text-decoration: none;
+    color: maroon;
+    padding: 10px 20px;
+}
+
+a:hover {
+    background-color: darkblue;
+    color: white;
+}
+
+.current-page-link {
+    background-color: maroon;
+    color: white;
+}

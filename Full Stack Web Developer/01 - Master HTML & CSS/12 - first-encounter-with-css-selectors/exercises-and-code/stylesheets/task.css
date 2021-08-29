@@ -1,0 +1,11 @@
+body {
+    color: brown;
+}
+
+h1, h6 {
+    color: blue;
+}
+
+footer h6 {
+    color: green;
+}

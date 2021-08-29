@@ -1,0 +1,285 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the purpose of `<!DOCTYPE html>` at the start of the page?"
+    options:
+      - 'To tell the browser that an HTML page is contained in the document.'
+      - 'To tell the browser that this HTML page is a new HTML page that complies with the HTML standard.'
+      - 'To tell the browser that this is a plain text document.'
+      - 'To tell the browser that this is not a video file.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many `<html>` tags should I have inside an HTML page?"
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Does the `<html>` tag have content?"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is how we open and close an `<html>` tag"
+    options:
+      - |
+        ``` html
+        <html>
+
+        <lmth>
+        ```
+      - |
+        ``` html
+        <html>
+
+        <*html>
+        ```
+      - |
+        ``` html
+        <html>
+
+        </html>
+        ```
+      - |
+        ``` html
+        <html>
+
+        <stop-html>
+        ```
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many spaces do we indent with?"
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is a properly indented HTML document"
+      extra_text: |
+        ``` html
+        <!DOCTYPE html>
+        <html>
+          <head>
+            <title>Hello There</title>
+          </head>
+
+          <body>
+            <h1>Hello World!</h1>
+          </body>
+          </html>
+        ```
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "`<head>` section is a child of the..."
+    options:
+      - '`<html>`'
+      - '`<!DOCTYPE html>`'
+      - '`<body>`'
+      - '`</head>`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many `<head>` sections can we have?"
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "`<head>` section appears after the `<body>` section"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "The following tags can be included inside the `<head>` section"
+    options:
+      - '`<body>` and `<div>`'
+      - '`<section>` and `<article>`'
+      - '`<meta>` and `<title>`'
+      - '`<h1>` and `</h1>`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many `<body>` tags can I have in one HTML document?"
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `<body>` section follows the `<head>` section"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `<body>` section closing tag is:"
+    options:
+      - '`<*body>`'
+      - '`</body>`'
+      - '`<-body>`'
+      - '`>body<`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `<body>` section can contain a `<title>` tag."
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the blanks so that it contains a directive that denotes UTF 8 characters encoding"
+      text_area_pre_fill: |
+        <meta charset=      >
+    correct_answers:
+      - '<meta charset="utf-8">'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "An HTML tag can have attributes"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "An HTML attribute has a name and a value"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which one of the following is a correct way to write an attribute of a tag?"
+    options:
+      - '`<tag attribute_name:attribute_value>`'
+      - '`<tag attribute_name-"attribute_value">`'
+      - '`<tag attribute_name=>"attribute_value">`'
+      - '`<tag attribute_name="attribute_value">`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is an empty HTML tag?"
+    options:
+      - '`<html><head></head><body></body></html>`'
+      - '`<body></body>`'
+      - '`<div>Hello</div>`'
+      - '`<span>There</span>`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `<title>` tag appears inside the ..."
+    options:
+      - '`<head>` tag'
+      - '`<html>` tag'
+      - '`<body>` tag'
+      - '`<!DOCTYPE html>` section'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `<title>` tag is used by the browser to name the tab in which our page appears"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `<h1>` tag closes with ..."
+    options:
+      - '`<-h1>`'
+      - '`<*h1>`'
+      - '`</h1>`'
+      - '`>h1<`'
+    correct_options:
+      - 3
+
+
+
+
+
+

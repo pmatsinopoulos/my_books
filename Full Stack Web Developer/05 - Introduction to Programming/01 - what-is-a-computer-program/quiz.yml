@@ -1,0 +1,236 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is the brain of a computer?"
+    options:
+      - 'RAM - Random Access Memory'
+      - 'CPU - Central Processing Unit'
+      - 'Monitor'
+      - 'Mouse'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which are the three most important pieces of hardware that live inside a computer?"
+    options:
+      - 'CPU, RAM and Monitor'
+      - 'RAM, Monitor and Keyboard'
+      - 'CPU, RAM and Registers'
+      - 'CPU, Monitor and Keyboard'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is a Program?"
+    options:
+      - 'Calendar and registered events that would take place at specific points of time.'
+      - 'TV Program that tells us when a TV show will take place.'
+      - 'Something that comes first before a "gram".'
+      - 'A set of instructions that we write and give to a computer to execute.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How do we give orders to CPU?"
+    options:
+      - 'We prepare our data into RAM and then we ask CPU to carry out operations on these data.'
+      - 'We send an SMS with the orders that we want computer to carry out.'
+      - 'We prepare out data into the hard disk and we then click the right button of the mouse.'
+      - 'We do not give orders to CPU, we give orders to the microphone.'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What a Program is composed of?"
+    options:
+      - 'Appointments and Dates.'
+      - 'Numbers and additions that give results.'
+      - 'Data and instructions about how to manipulate the data.'
+      - 'Spreadsheets full of data and functions.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which piece of hardware holds our data?"
+    options:
+      - 'Keyboard'
+      - 'Printer'
+      - 'Monitor'
+      - 'RAM - Random Access Memory'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the most popular numbering system in our human world?"
+    options:
+      - 'Binary'
+      - 'Octal'
+      - 'Hexadecimal'
+      - 'Decimal'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which are the digits of the decimal numbering system?"
+    options:
+      - '1, 2, 3, 4, 5, 6, 7, 8, 9'
+      - '0, 1, 2, 3, 4, 5, 6, 7, 8, 9'
+      - '0, 1, 2, 4, 5, 6, 7, 8, 9'
+      - '1, 2, 3, 4, 5, 6, 7, 8, 9, 10'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which are the digits of the binary system?"
+    options:
+      - '1, 2, 3'
+      - '1, 2'
+      - '0, 1'
+      - '2, 1'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which are the digits of the octal numbering system?"
+    options:
+      - '0, 1, 2, 3, 4, 5, 6, 7'
+      - '1, 2, 3, 4, 5, 6, 7, 8'
+      - '0, 1, 2, 4, 5, 6, 7'
+      - '1, 2, 3, 4, 5, 6, 7'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which are the digits of the hexadecimal numbering system?"
+    options:
+      - '1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F'
+      - '1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13,14, 15,16'
+      - '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15'
+      - '0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is a programming language?"
+    options:
+      - 'Assembly'
+      - 'Prog L'
+      - 'Assembling'
+      - 'Binary'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assembly language is very easy to learn and write computer programs with."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is high level programming language?"
+    options:
+      - 'Assembly'
+      - 'Hexadecimal'
+      - 'Ruby'
+      - 'Binary'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the next is static programming language?"
+    options:
+      - "Ruby"
+      - "PHP"
+      - "C++"
+      - "Python"
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is dynamic programming language?"
+    options:
+      - 'Ruby'
+      - 'C++'
+      - 'Java'
+      - 'Pascal'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the statements is true?"
+    options:
+      - 'Compiled languages do not need to go through a compilation phase'
+      - 'Compiled languages need to go through a compilation phase'
+      - 'Script languages need to go through a compilation phase'
+      - 'Script languages generate executable file'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following statements is true?"
+    options:
+      - 'Compiled languages generated programs usually run faster than programs from script languages'
+      - 'Static languages are less verbose than dynamic languages'
+      - 'Ruby is static language'
+      - 'C++ is dynamic language'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Script languages programs may be open source code programs."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Compiled languages programs are usually closed source programs and user does not have access to the original source code."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1

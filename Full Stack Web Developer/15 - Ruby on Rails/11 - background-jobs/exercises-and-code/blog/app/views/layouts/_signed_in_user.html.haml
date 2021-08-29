@@ -1,0 +1,17 @@
+- # File: app/views/layouts/_signed_in_user.html.haml
+- #
+- if current_user
+  .signed-in-user-container.text-right
+
+    .signed-in-user.text-success
+      = current_user.email
+      - unless current_user.email_confirmed?
+        %span.text-danger
+          = ' (Unconfirmed) '
+
+    - unless current_user.email_confirmed?
+      .link-to-resend-email
+        = link_to 'Send Me Email Again', confirm_email_address_resend_path, method: :post
+
+    .sign-out-link
+      = link_to 'Sign Out', sign_out_path, method: :delete

@@ -1,0 +1,67 @@
+prompt: 'You need to answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Why a background job might be useful to a Web application?'
+    options:
+      - A background job is more secure to be executed.
+      - A background job will send a signal to the Web application.
+      - A background job is useful but it will increase the HTTP request loop processing.
+      - In order to make sure that we serve the HTTP request as quickly as possible.
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: Background jobs are stored in a single logical queue
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: 'Which is the table delayed job stores its background jobs?'
+    correct_answers:
+      - 'delayed_jobs'
+  -
+    input_type: text
+    question:
+      text: 'Which is the common command to start the delayed job background runner?'
+    correct_answers:
+      - 'bin/delayed_job start'
+      - './bin/delayed_job start'
+  -
+    input_type: text
+    question:
+      text: 'Start the delayed job background runner so that it processes the queue `high_priority`'
+    correct_answers:
+      - 'bin/delayed_job --queue high_priority start'
+      - './bin/delayed_job --queue high_priority start'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'I can switch off Delayed Job for the test environment'
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 1
+  -
+    input_type: text_area
+    question:
+      text: 'Make the following job store its instances in the `emails` queue'
+      text_area_pre_fill: |
+        class EmailToCustomerJob < ApplicationJob
+        __<fill in this blank line>__
+        end
+    correct_answers:
+      - |
+        class EmailToCustomerJob < ApplicationJob
+          queue_as :emails
+        end

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Purchase Form</title>
+    <link rel="stylesheet" href="stylesheets/purchase.css" type="text/css">
+  </head>
+
+  <body>
+    <h2>Place your Order</h2>
+    <form>
+
+      <div class="input-group">
+        <label for="fruits">Fruits:</label>
+        <select id="fruits" autofocus="autofocus">
+          <option>Tomatoes</option>
+          <option>Potatoes</option>
+          <option>Apples</option>
+          <option>Oranges</option>
+        </select>
+      </div>
+
+      <div class="input-group">
+        <label for="quantity">Quantity: </label>
+        <input type="number" id="quantity" required="required" min="1" max="10" step="any" placeholder="Kilo(s)"/>
+      </div>
+
+      <div class="input-group">
+        <input type="submit" value="Purchase"/>
+      </div>
+
+    </form>
+
+
+  </body>
+
+</html>

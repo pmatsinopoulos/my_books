@@ -1,0 +1,18 @@
+%div
+  Id:
+  \#{@product.id}
+%div
+  Code:
+  \#{@product.code}
+%div
+  Name:
+  \#{@product.display_name}
+%div
+  Description:
+  \#{@product.display_description}
+%div
+  = link_to 'Edit Product', edit_product_path(@product)
+%div
+  = link_to 'Create New Product', new_product_path
+%div
+  = link_to 'List of Products', products_path

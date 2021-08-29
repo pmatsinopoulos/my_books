@@ -1,0 +1,26 @@
+- # File: app/views/articles/new.html.erb
+
+%h1 Create a New Article
+
+= form_for @article, url: articles_path do |f|
+  - if @article.errors.any?
+    #error-explanation.alert.alert-danger.alert-dismissible{:role => "alert"}
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      %h2
+        = pluralize(@article.errors.count, "error")
+        prohibited this article from being saved:
+      %ul
+        - @article.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :title
+    = f.text_field :title, placeholder: 'Give Title of Article', class: 'form-control'
+  .form-group
+    = f.label :text
+    = f.text_area :text, placeholder: 'Type in the text of the Article', class: 'form-control'
+  %div
+    = f.submit class: 'btn btn-success'
+
+.text-right
+  %a{:href => articles_path} List of Articles

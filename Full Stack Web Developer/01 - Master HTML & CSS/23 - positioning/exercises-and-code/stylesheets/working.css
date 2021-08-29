@@ -1,0 +1,19 @@
+.column {
+    width: 20%;
+    background-color: Maroon;
+    color: white;
+}
+
+#left-column {
+    float: left;
+}
+
+#right-column {
+    float: right;
+}
+
+#footer {
+    background-color: #5F5F5F;
+    color: White;
+    clear: left;
+}

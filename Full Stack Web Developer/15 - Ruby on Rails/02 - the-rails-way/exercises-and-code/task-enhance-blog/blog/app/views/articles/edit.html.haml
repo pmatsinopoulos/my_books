@@ -1,0 +1,26 @@
+- # File: app/views/articles/edit.html.erb
+%h1
+  Update Article with ID: #{@article.id}
+= form_for @article, url: article_path(@article), method: :put do |f|
+  - if @article.errors.any?
+    #error-explanation.alert.alert-danger.alert-dismissible{:role => "alert"}
+      %button.close{"aria-label" => "Close", "data-dismiss" => "alert", :type => "button"}
+        %span{"aria-hidden" => "true"} ×
+      %h2
+        = pluralize(@article.errors.count, "error")
+        prohibited this article from being saved:
+      %ul
+        - @article.errors.full_messages.each do |msg|
+          %li= msg
+  .form-group
+    = f.label :title
+    = f.text_field :title, placeholder: 'Give Title of Article', class: 'form-control'
+  .form-group
+    = f.label :text
+    = f.text_area :text, placeholder: 'Type in the text of the Article', class: 'form-control'
+  %div
+    = f.submit class: 'btn btn-success'
+
+
+.text-right
+  = link_to 'List of Articles', articles_path

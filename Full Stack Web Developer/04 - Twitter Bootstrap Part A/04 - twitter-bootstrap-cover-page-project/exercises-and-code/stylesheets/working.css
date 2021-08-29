@@ -1,0 +1,79 @@
+body {
+    position: relative;
+    /*font-size: 1.4rem;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /* CIRAPS */
+    background-color: #2b542c;
+    background-image: url("../images/prague-czech-republic.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: left top;
+    background-size: 100% 100%;
+    color: White;
+    /*display: table;*/
+}
+
+#cover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+#navigation-bar-container {
+    width: 100%;
+    margin: 10px auto;
+    border-radius: 10px;
+}
+
+@media (min-width: 768px) {
+    #navigation-bar-container {
+        width: 50%;
+    }
+}
+
+#navbar ul {
+    margin-right: 0;
+}
+
+#navigation-bar-container a.navbar-brand,
+#navbar ul a {
+    font-weight: 900;
+}
+
+#navigation-bar-container a.navbar-brand {
+    font-size: 3.2rem;
+}
+
+#navbar ul a {
+    font-size: 1.8rem;
+}
+
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: table;
+    width: 100%;
+    height: 100%;
+}
+
+#center-content {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+
+#footer-content {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}

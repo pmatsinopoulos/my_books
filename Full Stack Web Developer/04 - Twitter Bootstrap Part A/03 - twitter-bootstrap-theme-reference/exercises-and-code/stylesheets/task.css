@@ -1,0 +1,33 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    padding-bottom: 30px;
+}
+
+#navigation-bar {
+    border-radius: 10px;
+    width: 80%;
+    margin: 10px auto 0;
+}
+
+#my-carousel,
+#all-images-and-info-container,
+#tabs-with-information {
+    margin-bottom: 30px;
+}
+
+.image-and-info-container {
+    text-align: center;
+    padding: 20px;
+}
+
+#tabs-with-information a {
+    font-size: 3.0rem;
+}
+
+table {
+    margin-top: 40px;
+}

@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width:  520px;
+    height: 430px;
+}
+
+.column {
+    width: 50%;
+    line-height: 0;
+}
+
+#left-column-first-row {
+    float: left;
+}
+
+#right-column-first-row {
+    float: left;
+}
+
+#left-column-second-row {
+    clear: left;
+    float: left;
+}
+
+#right-column-second-row {
+    float: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+#footer {
+    clear: left;
+}
+
+img:hover {
+    opacity: 0.7;
+}

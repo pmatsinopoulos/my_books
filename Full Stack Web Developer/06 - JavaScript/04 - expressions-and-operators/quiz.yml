@@ -1,0 +1,513 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Which of the following is a primary expression?'
+    options:
+      - '`2 + 5 === 5 + 3`'
+      - '`1.18`'
+      - "`foo('bar');`"
+      - '`var a = 5;`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Which of the following initializes an empty array?'
+    options:
+      - '`()`'
+      - '`{}`'
+      - '`[]`'
+      - "`//`"
+    correct_options:
+      - 3
+  -
+    input_type: text
+    question:
+      text: 'Write the missing part so that you initialize the `customers` array with three elements: `"Peter"`, `"Mary"`, `"Paul"`'
+      extra_text: |
+        ~~~ javascript
+        var customers = ________________________________________;
+        ~~~
+    correct_answers:
+      - '["Peter", "Mary", "Paul"]'
+      - "['Peter', 'Mary', 'Paul']"
+  -
+    input_type: text
+    question:
+      text: "Which is the property of the array that returns the number of its elements?"
+      extra_text: |
+        ~~~javascript
+        customers.____________;
+        ~~~
+    correct_answers:
+      - "length"
+  -
+    input_type: text
+    question:
+      text: "Write the missing part so that array `customers` is initialized with the two customers `customer1` and `customer2`:"
+      extra_text: |
+        ~~~ javascript
+        var customer1 = "Peter";
+        var customer2 = "Mary";
+        var customers = ___________________________;
+        ~~~
+    correct_answers:
+      - "[customer1, customer2]"
+  -
+    input_type: text
+    question:
+      text: "Initialize the object with no properties"
+      extra_text: |
+        ~~~ javascript
+        var customer = _________;
+        ~~~
+    correct_answers:
+      - "{}"
+  -
+    input_type: text  
+    question:
+      text: "Initialize the object with two properties: `dateOfPurchase` and `invoiceNumber`. Represent both date and invoice number values using strings."
+      extra_text: |
+        ~~~ javascript
+        var invoice = ________________________________________________________;
+        ~~~
+    correct_answers:
+      - /\A{dateOfPurchase:[ ]*'\d{4}-\d{2}-\d{2}',[ ]*invoiceNumber:[ ]*'[^']+'[ ]*}\z/
+      - /\A{dateOfPurchase:[ ]*"\d{4}-\d{2}-\d{2}",[ ]*invoiceNumber:[ ]*"[^"]+"[ ]*}\z/
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: "Which of the following is a function definition?"
+    options:
+      - '`var inc = increment(x) { return x + 1; };`'
+      - '`inc = incr(x) { return x.incr; }`'
+      - '`var increment = function(x) { return x + 1; };`'
+      - '`var increment = func(x) { return x + 1; };`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When an operator takes one operand, it is called ...:"
+    options:
+      - 'oneary'
+      - 'unary'
+      - 'singleton'
+      - 'firstOnly'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When an operator takes two operands, it is called ...:"
+    options:
+      - 'binary'
+      - 'twiceary'
+      - 'onetwoary'
+      - 'bothar'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When an operator takes three operands, it is called ...:"
+    options:
+      - 'thirdary'
+      - 'allary'
+      - 'threary'
+      - 'ternary'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the value of the variable `m` at the end of the following program?"
+      extra_text: |
+        ~~~ javascript
+        var m = 1;
+        m++;
+        ~~~
+    options:
+      - '`1`'
+      - '`2`'
+      - '`0`'
+      - '`-0`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print on the console?"
+      extra_text: |
+        ~~~ javascript
+        var m = 5;
+        console.log(--m);
+        ~~~
+    options:
+      - '`5`'
+      - '`6`'
+      - '`4`'
+      - '`-5`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the value of `m` at the end of this program?"
+      extra_text: |
+        ~~~ javascript
+        var m = 5;
+        console.log(m++);
+        ~~~
+    options:
+      - '`5`'
+      - '`6`'
+      - '`4`'
+      - '`-5`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does this program print on the console?"
+      extra_text: |
+        ~~~ javascript
+        var m = 5;
+        console.log(m++);
+        ~~~
+    options:
+      - '`5`'
+      - '`6`'
+      - '`4`'
+      - '`-5`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following expression?"
+      extra_text: |
+        ~~~ javascript
+        3 * 2 - 5 * 8
+        ~~~
+    options:
+      - '`-35`'
+      - '`-34`'
+      - '`8`'
+      - '`-8`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following expression?"
+      extra_text: |
+        ~~~ javascript
+        3 * (2 - 5) * 8
+        ~~~
+    options:
+      - '`-35`'
+      - '`-34`'
+      - '`72`'
+      - '`-72`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "5" == 5
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "5" === 5
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "foo" == true
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "foo" === true
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "1" == true
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "1" === true
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "2" == true
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "2" === true
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "Alpha" >= "Beta"
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "Alpha" >= "alpha"
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following comparison?"
+      extra_text: |
+        ~~~ javascript
+        "alpha" >= "alpha"
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var order = {invoiceDate: '2016-05-16', invoiceNumber: 'ABC7382'};
+        console.log("invoiceDate" in order);
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var a = true;
+        var b = false;
+        console.log(a && b);
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var a = true;
+        var b = false;
+        console.log(a || b);
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var a = true;
+        var b = false;
+        console.log(!b);
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var a = true;
+        var b = false;
+        console.log(a || b && b || b);
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var a = true;
+        var b = false;
+        console.log(a || (b && b || b));
+        ~~~
+    options:
+      - "`true`"
+      - "`false`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var count = 5;
+        count += 5;
+        console.log(count);
+        ~~~
+    options:
+      - '`5`'
+      - '`7`'
+      - '`9`'
+      - '`10`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is printed by the following program?"
+      extra_text: |
+        ~~~ javascript
+        var count = 5;
+        count -= 1;
+        console.log(count);
+        ~~~
+    options:
+      - '`5`'
+      - '`4`'
+      - '`3`'
+      - '`2`'
+    correct_options:
+      - 2

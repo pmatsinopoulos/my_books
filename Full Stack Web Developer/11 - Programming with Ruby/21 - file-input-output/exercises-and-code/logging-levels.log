@@ -1,0 +1,7 @@
+# Logfile created on 2016-12-17 10:32:30 +0000 by logger.rb/47272
+A, [2016-12-17T10:32:30.535963 #41002]   ANY -- : logging with unknown tag
+F, [2016-12-17T10:32:30.536000 #41002] FATAL -- : logging with fatal tag
+E, [2016-12-17T10:32:30.536014 #41002] ERROR -- : logging with error tag
+W, [2016-12-17T10:32:30.536026 #41002]  WARN -- : logging with warn tag
+I, [2016-12-17T10:32:30.536036 #41002]  INFO -- : logging with info tag
+D, [2016-12-17T10:32:30.536047 #41002] DEBUG -- : logging with debug tag

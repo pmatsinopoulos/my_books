@@ -1,0 +1,23 @@
+body {
+    background-color: antiquewhite;
+
+    border: 10px solid black;
+
+    padding: 10px 20px 30px 40px;
+
+    margin: 10px 10px;
+
+    box-sizing: border-box;
+
+    color: darkblue;
+}
+
+body * {
+    box-sizing: inherit;
+}
+
+p {
+    width: 400px;
+    padding: 10px 10px;
+    border: 3px solid red;
+}

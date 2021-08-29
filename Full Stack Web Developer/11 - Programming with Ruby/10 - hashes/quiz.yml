@@ -1,0 +1,78 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How can we initialize the `products` hash?"
+    options:
+      - '`products = []`'
+      - '`products = {}`'
+      - '`products = nil`'
+      - '`products = 0`'
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the blanks so that the value 30 is set to the products hash key 'Oranges'"
+      text_area_pre_fill: |
+        products = {}
+        ___________________________________
+    correct_answers:
+      - |
+        products = {}
+        products['Oranges'] = 30
+      - |
+        products = {}
+        products["Oranges"] = 30
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print?"
+      extra_text: |
+        ``` ruby
+        products = {}
+        products['Oranges'] = 30
+        products['Apples'] = 20
+        puts products['Oranges']
+        ```
+    options:
+      - '`10`'
+      - '`30`'
+      - '`20`'
+      - '`50`'
+    correct_options:
+      - 2
+  -
+    input_type: text_area
+    question:
+      text: "Fill in the program below so that it prints the name and price of the fruits correctly. Use meaningful variable names."
+      text_area_pre_fill: |
+        # This hash represents products and prices.
+        #
+        products = {}
+        products['Oranges'] = 30
+        products['Apples'] = 20
+        products['Tomatoes'] = 10
+
+        products._________________ do _____________
+
+          puts "The fruit #{_________} has the price #{_________}"
+
+        end
+    correct_answers:
+      - |
+        # This hash represents products and prices.
+        #
+        products = {}
+        products['Oranges'] = 30
+        products['Apples'] = 20
+        products['Tomatoes'] = 10
+
+        products.each do |fruit, price|
+
+          puts "The fruit #{fruit} has the price #{price}"
+
+        end

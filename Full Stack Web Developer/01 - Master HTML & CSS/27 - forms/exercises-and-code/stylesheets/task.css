@@ -1,0 +1,123 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+fieldset {
+    margin-bottom: 10px;
+}
+
+legend {
+    text-align : left;
+    margin: 0 5px 10px;
+    padding: 0 10px;
+}
+
+/* Divide the page on area blocks */
+
+
+#first-row-left-column {
+    margin-left: 19%;
+    margin-right: 1%;
+}
+
+#first-row-right-column {
+    margin-right: 19%;
+    margin-left: 1%;
+}
+
+#first-row-left-column,
+#first-row-right-column {
+    width: 30%;
+    float: left;
+}
+
+#second-row {
+    margin-left: 19%;
+    width: 62%;
+}
+
+#second-row-left-column,
+#second-row-right-column {
+    width: 48%;
+    float: left;
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+/* ---- end of dividing the page to areas --- */
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+select, input {
+    width: 150px;
+}
+
+input[type="number"] {
+    text-align: right;
+}
+
+input[type="submit"] {
+    background-color: maroon;
+    color: White;
+    padding: 5px 10px;
+    font-size: 1.8rem;
+}
+
+input[type="submit"]:hover {
+    background-color: #000096;
+    color: White;
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+    width: 104px;
+    text-align: right;
+}
+
+#one-way-label,
+.gender-label {
+    display: inline;
+}
+
+#one-way,
+.gender-radio {
+    display: inline;
+    width: auto;
+}
+
+.vertical {
+    width: 60%;
+    text-align: left;
+    margin: 0 20%;
+}
+
+.vertical label {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: 10px;
+}

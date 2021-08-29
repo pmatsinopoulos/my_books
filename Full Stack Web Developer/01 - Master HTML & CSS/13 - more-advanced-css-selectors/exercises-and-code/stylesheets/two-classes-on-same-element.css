@@ -1,0 +1,11 @@
+.text-danger {
+    color: red;
+}
+
+.small {
+    font-size: 9px;
+}
+
+.text-danger.small {
+    font-weight: bold;
+}

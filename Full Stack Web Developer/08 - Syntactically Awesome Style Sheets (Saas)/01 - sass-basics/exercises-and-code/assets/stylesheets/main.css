@@ -1,0 +1,67 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0; }
+
+body {
+  color: White;
+  background-color: DarkBlue; }
+
+div {
+  margin-top: 20px; }
+  div ul {
+    margin-left: 10px; }
+    div ul li {
+      font-size: 8px; }
+
+div.left-column a {
+  color: Blue; }
+  div.left-column a:hover {
+    color: LightBlue; }
+
+.right-column {
+  background-color: #2b542c;
+  background-image: url("../images/parthenon.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: left top;
+  background-size: 100% 100%; }
+
+div.big-radius {
+  -webkit-border-radius: 60px;
+  -moz-border-radius: 60px;
+  -ms-border-radius: 60px;
+  border-radius: 60px; }
+
+div.small-radius {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  border-radius: 10px; }
+
+.message, .success, .error, .information {
+  font-size: 12px;
+  padding: 10px 20px; }
+
+.success {
+  background-color: LightBlue;
+  color: Black; }
+
+.error {
+  background-color: Red;
+  color: White; }
+
+.information {
+  background-color: DarkBlue;
+  color: Yellow; }
+
+.container {
+  width: 100%; }
+
+.left-column {
+  width: 30%; }
+
+.right-column {
+  width: 70%; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,66 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the Ruby statement to print a string and change line?"
+    options:
+      - '`print`'
+      - '`puts`'
+      - '`putstring`'
+      - '`print_string`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the Ruby statement to print a string on the output and do not change line?"
+    options:
+      - '`print`'
+      - '`puts`'
+      - '`putstring`'
+      - '`print_string`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming that we run the following program, which of the following is true?"
+      extra_text: |
+        ~~~ ruby
+        print "Give me your name:"
+        name = gets
+        puts "Hello #{name}"
+        ~~~
+    options:
+      - 'The program will raise an error because name is undefined.'
+      - 'The program will print "Hello #{name}".'
+      - 'The program will print "Hello " and the name that the user inputs from keyboard.'
+      - 'The program will print "Hello name"'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The function `gets` is used to get input from the user. User gives the input using the keyboard and then pressing on the key <kbd>Enter</kbd> (or <kbd>Return</kbd>)."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the symbol that we use to start writing some comments in the code?"
+    options:
+      - '`*`'
+      - '`#`'
+      - '`!`'
+      - '`//`'
+    correct_options:
+      - 2

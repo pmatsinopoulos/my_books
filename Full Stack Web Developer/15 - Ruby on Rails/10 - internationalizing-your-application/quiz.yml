@@ -1,0 +1,93 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text_area
+    question:
+      text: "Which are the two most important methods of the `I18n`?"
+      text_area_pre_fill: |
+        __________________________________________
+        __________________________________________
+    correct_answers:
+      - |
+        I18n.translate
+        I18n.localize
+  -
+    input_type: text
+    question:
+      text: "How do we get the current locale?"
+    correct_answers:
+      - "I18n.locale"
+  -
+    input_type: text
+    question:
+      text: "How do we get the available locales?"
+    correct_answers:
+      - "I18n.available_locales"
+  -
+    input_type: text
+    question:
+      text: "Which folder contains the localization files?"
+    correct_answers:
+      - "config/locales"
+  -
+    input_type: text
+    question:
+      text: "How do I get the default locale?"
+    correct_answers:
+      - "I18n.default_locale"
+  -
+    input_type: text
+    question:
+      text: "How do I set the locale to be `fr`?"
+    correct_answers:
+      - "I18n.locale = :fr"
+      - "I18n.locale = 'fr'"
+      - 'I18n.locale = "fr"'
+  -
+    input_type: text
+    question:
+      text: "Which method do I have to override in order to add the locale to the default URL options?"
+    correct_answers:
+      - "default_url_options"
+  -
+    input_type: text
+    question:
+      text: "Which HTTP Header can be used to determine the locale to use?"
+    correct_answers:
+      - "Accept-Language"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is a correct entry in a translation file that would support variable parts for first and last name?"
+    options:
+      - '`welcome_message: "Hello #{first_name} #{last_name}!"`'
+      - '`welcome_message: "Hello %{first_name} %{last_name}!"`'
+      - '`welcome_message: "Hello ${first_name} ${last_name}!"`'
+      - '`welcome_message: "Hello \{first_name} \{last_name}!"`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which rake task prints all the time zones supported?"
+    correct_answers:
+      - "time:zones"
+  -
+    input_type: text
+    question:
+      text: "Which file contains the default time zone configured for our application?"
+    correct_answers:
+      - "config/application.rb"
+  -
+    input_type: text
+    question:
+      text: "Which Rails statement returns all the supported time zones?"
+    correct_answers:
+      - "ActiveSupport::TimeZone.all"
+  -
+    input_type: text
+    question:
+      text: "Which Rails statement is used to execute a block of code within the context of a specific time zone?"
+    correct_answers:
+      - "Time.use_zone"

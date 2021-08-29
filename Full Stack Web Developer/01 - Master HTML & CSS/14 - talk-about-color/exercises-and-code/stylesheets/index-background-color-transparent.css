@@ -1,0 +1,9 @@
+body {
+    background-color: maroon;
+}
+
+h1 {
+    background-color: rgba(0, 0, 255, 0.2);
+    padding: 10px 50px;
+    color: rgba(255, 255, 255, 0.6);
+}

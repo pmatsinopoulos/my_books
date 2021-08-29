@@ -1,0 +1,10 @@
+- # File: app/views/articles/edit.html.haml
+- #
+= image_tag 'pencil.png', size: '150x150', alt: 'Pencil Image Editing an Article'
+
+%h1 Update Article with ID: #{@article.id}
+
+= render partial: 'articles/form'
+
+.text-right
+  = link_to 'List of Articles', articles_path

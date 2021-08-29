@@ -1,0 +1,192 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: "Which command will display the changes introduced by the commit with hash `72ae37e91158f456d92489a3a25309c9704ecd9a`?"
+    correct_answers:
+      -  "git show 72ae37e91158f456d92489a3a25309c9704ecd9a"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "In order to reference a commit hash I usually have to give the whole commit hash value."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which command adds all the current working changes into the staging area?"
+    correct_answers:
+      - "git add ."
+  -
+    input_type: text
+    question:
+      text: "Assuming that you have changes in your working folder, fill in the following command to put those changes directly to the commit bucket, using the commit message `'Changed Header'`"
+    correct_answers:
+      - 'git commit -am "Changed Header"'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The command that puts changes directly to committed bucket works both for tracked and for untracked files."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Assuming that you have just deleted the file `orders.rb` from your working folder and that the file was already tracked and committed by your `git` repo, how can you undo this deletion and recover the deleted file?"
+    correct_answers:
+      - "git checkout -- orders.rb"
+  -
+    input_type: text_area
+    question:
+      text: "Let's assume that you want to delete the file `orders.rb` from your project and commit that change (with message 'Removed orders.rb file'). Which commands would you issue?"
+      text_area_pre_fill: |
+        ________________________________
+        ________________________________
+        ________________________________
+    correct_answers:
+      - |
+        rm orders.rb
+        git add orders.rb
+        git commit -m "Removed orders.rb file"
+  -
+    input_type: text
+    question:
+      text: "How do I switch to the version of the project that had commit hash `0fde004`?"
+    correct_answers:
+      - "git checkout 0fde004"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When I switch to a previous version of my project, then I lose the latest changes."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `HEAD` is pointing to the latest version of your project."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "What is the command that will move the `HEAD` to its previous position?"
+    correct_answers:
+      - "git checkout -"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which buckets does the `git stash` command move to stash bucket?"
+    options:
+      - 'Untracked Bucket and Stage Bucket.'
+      - 'Stage Bucket and Committed Bucket.'
+      - 'Modified Bucket and Stage Bucket.'
+      - 'Modified Bucket and Committed Bucket.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Stash works like a queue, i.e. first in first out."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "What is the command to pop out of the stash the top item?"
+    correct_answers:
+      - "git stash pop"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "`git stash` moves the untracked files to the stash."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "What is the command to move modifications, staged changes and untracked files into stash bucket?"
+    correct_answers:
+      - "git stash -u"
+  -
+    input_type: text
+    question:
+      text: "How can we see what is inside the stash?"
+    correct_answers:
+      - "git stash list"
+  -
+    input_type: text
+    question:
+      text: "Save your work to stash using the message `'Have created the order items model'`. Don't include the untracked files."
+    correct_answers:
+      - 'git stash save "Have created the order items model"'
+  -
+    input_type: text
+    question:
+      text: "Which is the command to print all the changes against the committed version of your project?"
+    correct_answers:
+      - 'git diff'
+  -
+    input_type: text_area
+    question:
+      text: "Which are the commands to amend the last commit with a change that you have just done on file `foo.txt`?"
+      text_area_pre_fill: |
+        ____________________________________________
+        ____________________________________________
+    correct_answers:
+      - |
+        git add foo.txt
+        git commit --amend
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "I can use the `git commit --amend` command to update the commit message of the last commit."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: text
+    question:
+      text: "We have committed some changes. How can we revert this commit but still keep the changes as pending?"
+    correct_answers:
+      - "git reset HEAD^1"
+      - "git reset HEAD^"
+      - "git reset HEAD~1"
+      - "git reset HEAD~"
+  -
+    input_type: text
+    question:
+      text: "We have committed some changes. How can we revert this commit and discard any changes this commit introduced?"
+    correct_answers:
+      - "git reset --hard HEAD^1"
+      - "git reset --hard HEAD^"
+      - "git reset --hard HEAD~1"
+      - "git reset --hard HEAD~"

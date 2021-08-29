@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+    margin-top: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+}
+
+table,
+table th,
+table td {
+    border: 1px solid maroon;
+    padding: 5px 10px;
+}
+
+table thead th {
+    background-color: #FFE4B5;
+}
+
+table tbody tr:nth-child(odd) {
+    background-color: #000096;
+    color: white;
+}
+
+table tbody tr:nth-child(even) {
+    background-color: lightgray;
+    color: black;
+}
+
+table thead tr:first-child th:first-child{
+    border-right: 0;
+}
+
+table thead tr:first-child th:nth-child(2) {
+    border-left: 0;
+}
+
+table tbody tr th {
+    text-align: left;
+}
+table tbody tr td {
+    text-align: right;
+}
+
+table tbody tr th::before {
+    content: "";
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    margin-right: 5px;
+    border: 1px solid red;
+    border-radius: 50%;
+    vertical-align: middle;
+    background-color: red;
+}

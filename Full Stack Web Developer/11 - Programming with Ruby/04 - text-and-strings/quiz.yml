@@ -1,0 +1,784 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following stores a string into the variable `a`?"
+    options:
+      - '`a = 1`'
+      - "`a = 'Hello World'`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following stores a string into the variable `a`?"
+    options:
+      - '`a = "Hello World!"`'
+      - '`a = 3`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will be printed on the output of the following program?"
+      extra_text: |
+        ``` ruby
+        name = 'John'
+        puts 'Hello name'
+        ```
+    options:
+      - '`Hello John`'
+      - '`Hello`'
+      - '`Hello name`'
+      - '`name`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        name = 'John'
+        puts 'Hello #{name}'
+        ```
+    options:
+      - '`Hello #{name}`'
+      - '`Hello John`'
+      - '`Hello name`'
+      - '`Hello`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will be the output of the following program?"
+      extra_text: |
+        ``` ruby
+        name = 'John'
+        puts "Hello #{name}"
+        ```
+    options:
+      - '`Hello #{name}`'
+      - '`Hello name`'
+      - '`Hello John`'
+      - '`Hello`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which statement prints the current date and time?"
+    options:
+      - '`puts Time.today`'
+      - '`puts Time.now`'
+      - '`puts Today.now`'
+      - '`puts Time`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print on the screen?"
+      extra_text: |
+        ``` ruby
+        customer = 'John Woo'
+        puts customer.length
+        ```
+    options:
+      - '`8`'
+      - '`7`'
+      - '`10`'
+      - '`6`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the function that returns the number of characters in a string?"
+    options:
+      - '`len`'
+      - '`length`'
+      - '`number_of_characters`'
+      - '`length_of_string`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What does the following program print on the screen?"
+      extra_text: |
+        ``` ruby
+        a = 'Hello'
+        puts a.reverse
+        ```
+    options:
+      - '`OLLEH`'
+      - '`H e l l o`'
+      - '`HELLO`'
+      - '`olleH`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The string Ruby function to make all characters of a string lowercase is `downcase`."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 'Hello'
+        puts a.downcase
+        ```
+    options:
+      - '`hello`'
+      - '`HELLO`'
+      - '`olleh`'
+      - '`HEllo`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 'Hello'
+        put a.upcase
+        ```
+    options:
+      - '`Hello`'
+      - '`HELLO`'
+      - '`hello`'
+      - '`olleh`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the content of the variable `a` at the end of the program?"
+      extra_text: |
+        ``` ruby
+        a = 'Hello'
+        a.upcase
+        ```
+    options:
+      - '`Hello`'
+      - '`HELLO`'
+      - '`HEllo`'
+      - '`olle`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the content of the variable `a` at the end of the program?"
+      extra_text: |
+        ``` ruby
+        a = 'Hello'
+        a.upcase!
+        ```
+    options:
+      - '`Hello`'
+      - '`HELLO`'
+      - '`HEllo`'
+      - '`hello`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following does not change the contents of the variable `a`?"
+    options:
+      - '`a.upcase!`'
+      - '`a.downcase!`'
+      - '`a.downcase`'
+      - '`a.reverse!`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is equivalent to:"
+      extra_text: |
+        ```ruby
+        customer.downcase!
+        ```
+    options:
+      - '`customer = customer.downcase`'
+      - '`customer = customer.upcase`'
+      - '`customer.upcase!`'
+      - '`customer = customer.reverse`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 'Hello'
+        puts a.empty?
+        ```
+    options:
+      - '`Hello`'
+      - '`true`'
+      - '`false`'
+      - '`hello`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        puts ''.empty?
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+      - 'a blank string'
+      - '`''`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following Ruby statement is valid:"
+      extra_text: |
+        ``` ruby
+        'This is a nice world!'.downcase
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Assuming the following variables:"
+      extra_text: |
+        ``` ruby
+        first_name = 'John'
+        last_name = 'Woo'
+        ```
+        What is the preferred statement to store into variable `customer` the full name?
+    options:
+      - '`customer = first_name + last_name`'
+      - "`customer = first_name + ' ' + last_name`"
+      - "`customer = '#{first_name} #{last_name}'`"
+      - "`'#{first_name} #{last_name}'`"
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the preferred statement to store the string `'world'` 10 times into variable `a`?"
+    options:
+      - "`a = 'world' * 10`"
+      - "`a = 'world' + 'world' + 'world' + 'world' + 'world' + 'world' + 'world' + 'world' + 'world' + 'world'`"
+      - "`a = 'worldworldworldworldworldworldworldworldworldworld'`"
+      - "`a = 'world',10`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The Ruby function that removes any blanks from the start and from the end of a string is `strip`."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following piece of code will raise an error."
+      extra_text: |
+        ``` ruby
+        ' ' + nil
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following piece of code will raise an error."
+      extra_text: |
+        ``` ruby
+        " #{nil}"
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many lines of text will be printed by the following program?"
+      extra_text: |
+        ``` ruby
+        puts "A gorilla escaped from its enclosure at London Zoo on Thursday.\nManagement said that the silverback gorilla's escape from its enclosure was a \"minor incident\"\nthat posed no danger to the public."
+        ```
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many lines of text will be printed by the following program?"
+      extra_text: |
+        ``` ruby
+        puts 'A gorilla escaped from its enclosure at London Zoo on Thursday.\nManagement said that the silverback gorilla\'s escape from its enclosure was a "minor incident"\nthat posed no danger to the public.'
+        ```
+    options:
+      - 1
+      - 2
+      - 3
+      - 4
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How do I write a double quote inside a double quote enclosed string literal?"
+    options:
+      - '`\"`'
+      - '`\\"`'
+      - '`&"`'
+      - '`#"`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How do I write a single quote inside a single quote enclosed string literal?"
+    options:
+      - "`\\'`"
+      - "`\'`"
+      - "`&'`"
+      - "`#'`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the preferred way to assign the string literal value to variable `a`?"
+    options:
+      - "`a = 'John Smith'`"
+      - '`a = "John Smith"`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 'John Smith'
+        puts a[6]
+        ```
+    options:
+      - 'Nothing'
+      - '`S`'
+      - '`m`'
+      - '`i`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 'John Smith'
+        puts "A:#{a[-6]}:B"
+        ```
+    options:
+      - 'Nothing'
+      - '`A::B`'
+      - '`A:S:B`'
+      - '`A: :B`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 'John Smith'
+        puts a[7, 2]
+        ```
+    options:
+      - '`it`'
+      - '`mi`'
+      - '`th`'
+      - '`ii`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the output of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 'John Smith'
+        puts a[2..8]
+        ```
+    options:
+      - '`John`'
+      - '`hn Smit`'
+      - '`hn Smith`'
+      - '`ohn Smi`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many are the standard ASCII characters?"
+    options:
+      - '200'
+      - '128'
+      - '127'
+      - '256'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which encoding is very popular in Web and Ruby world?"
+    options:
+      - 'UTF-8'
+      - 'UTF-16'
+      - 'ASCII'
+      - 'ISO-8859-7'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program output?"
+      extra_text: |
+        ``` ruby
+        puts 105.chr
+        ```
+    options:
+      - '`a`'
+      - '`I`'
+      - '`i`'
+      - '`E`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts "\u0580"
+        ```
+    options:
+      - '`ր`'
+      - '`Հ`'
+      - '`؀`'
+      - '`έ`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts 'Good Luck'.ascii_only?
+        ```
+    options:
+      - '`true`'
+      - '`Good Luck`'
+      - '`false`'
+      - '`Good Luck:true`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts "գեղեցիկ կանայք".ascii_only?
+        ```
+    options:
+      - '`true`'
+      - '`Good Luck`'
+      - '`false`'
+      - '`Good Luck:true`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts 'Hello World!'.length
+        ```
+    options:
+      - 10
+      - 11
+      - 12
+      - 13
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts 'Σε αγαπώ πολύ!'.length
+        ```
+    options:
+      - 11
+      - 12
+      - 13
+      - 14
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts 'Hello World!'.bytesize
+        ```
+    options:
+      - 10
+      - 11
+      - 12
+      - 13
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts 'Σε αγαπώ πολύ!'.bytesize
+        ```
+    options:
+      - 11
+      - 22
+      - 25
+      - 33
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following program print?"
+      extra_text: |
+        ``` ruby
+        puts 'this is fantastic!'.capitalize
+        ```
+    options:
+      - 'This Is Fantastic!'
+      - 'This is fantastic!'
+      - 'This is Fantastic!'
+      - 'THIS IS FANTASTIC!'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which statement will delete the characters `b` and `c` from the the given string?"
+    options:
+      - "`remove('I love computer programming with Ruby', 'bc')`"
+      - "`delete('I love computer programming with Ruby', 'bc')`"
+      - "`'I love computer programming with Ruby'.delete('bc')`"
+      - "'I love computer programming with Ruby'.remove('bc')`"
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which one of the following returns `true`?"
+    options:
+      - "`'I love computer programming'.end_with?('G')`"
+      - "`'I love computer programming'.end_with?('ING')`"
+      - "`'I love computer programming'.end_with?('ing.')`"
+      - "`'I love computer programming'.end_with?('ing')`"
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which one of the following returns `false`?"
+    options:
+      - "`'Ruby Language'.include?('foo')`"
+      - "`'Ruby Language'.include?('Lang')`"
+      - "`'Ruby Language'.include?('ge')`"
+      - "`'Ruby Language'.include?('Ru')`"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following statement return?"
+      extra_text: |
+        ``` ruby
+        'Ruby Language'.index('uage')
+        ```
+    options:
+      - "`5`"
+      - "`nil`"
+      - "`9`"
+      - "`10`"
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will the following statement return?"
+      extra_text: |
+        ``` ruby
+        'Ruby Language'.index('uages')
+        ```
+    options:
+      - "`uages`"
+      - "`nil`"
+      - "`9`"
+      - "`10`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the content of the variable `a` at the end of the program?"
+      extra_text: |
+        ``` ruby
+        a = 'Ruby Language'
+        a.insert(0, 'The language I love: ')
+        ```
+    options:
+      - "`Ruby Language`"
+      - "`The language I love: Ruby Language`"
+      - "`The language I love:`"
+      - "`Ruby Language - The language I love:`"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will be the output of the following program?"
+      extra_text: |
+        ``` ruby
+        puts 'Ruby Language'.rjust(50)
+        ```
+    options:
+      - '`"                                     Ruby Language"`'
+      - '`"Ruby Language"`'
+      - '`"Ruby Language                                     "`'
+      - '`"                   Ruby Language                  "`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will be the content of variable `a` at the end of the program?"
+      extra_text: |
+        ``` ruby
+        a = '     Th     i s     not good      '
+        a.strip!
+        ```
+    options:
+      - '`"Th     i s     not good           "`'
+      - '`"      Th     i s     not good"`'
+      - '`"Th     i s      not good"`'
+      - '`"This not good"`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the statement to replace all `b` with `c` and all `d` with `e`?"
+    options:
+      - "`'buying cookies'.replace('bc', 'de')`"
+      - "`'buying cookies'.tr('bc', 'de')`"
+      - "`'buying cookies'.tr('b', 'de')`"
+      - "`'buying cookies'.replace('bc')`"
+    correct_options:
+      - 2

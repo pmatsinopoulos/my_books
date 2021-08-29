@@ -1,0 +1,94 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'JavaScript is a case insensitive language'
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Is there a difference between `customer_order` and `Customer_Order`?'
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The starting and ending character sequences to create a comments block in JavaScript are:'
+    options:
+      - '`[* ... *]`'
+      - '`{* ... *}`'
+      - '`(* ... *)`'
+      - '`/* ... */`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'The line-level JavaScript comments start with:'
+    options:
+      - '`//`'
+      - '`#`'
+      - '`##`'
+      - '`--`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which of the following is not a literal?'
+    options:
+      - '`foo`'
+      - '`2`'
+      - '`"Hello"`'
+      - '`1.5`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is not a valid identifier:"
+    options:
+      - '`$customer`'
+      - '`_customer`'
+      - '`1_customer`'
+      - '`Customer`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which of the following I can use as an identifier to name my own variable:'
+    options:
+      - '`case`'
+      - '`order`'
+      - '`instanceof`'
+      - '`Date`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is the character used to terminate a JavaScript statement:"
+    options:
+      - '`.`'
+      - '`/`'
+      - '`;`'
+      - '`:`'
+    correct_options:
+      - 3

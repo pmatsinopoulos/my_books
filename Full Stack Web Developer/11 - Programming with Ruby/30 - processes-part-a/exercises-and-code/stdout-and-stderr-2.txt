@@ -1,0 +1,2 @@
+Writing to STDERR
+Writing to STDOUT

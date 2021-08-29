@@ -1,0 +1,402 @@
+prompt: 'Please, answer the following questions'
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which is the boolean value of the statement:'
+      extra_text: |
+        ~~~
+        5 is greater than 4
+        ~~~
+    options:
+      - '`true`'
+      - '`false`'
+      - '`yes`'
+      - '`no`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which is the boolean value of the statement?'
+      extra_text: |
+        ~~~
+        4 is greater than 5
+        ~~~
+    options:
+      - '`true`'
+      - '`false`'
+      - '`yes`'
+      - '`no`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Which of the following is a boolean operator?'
+    options:
+      - '`-`'
+      - '`+`'
+      - '`*`'
+      - '`AND`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'Which of the following is the list of boolean operators?'
+    options:
+      - '`+, -, *, /, %`'
+      - '`AND, OR, XOR`'
+      - '`AND, OR, XOR, NOT`'
+      - '`XOR, OR`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: true
+    question:
+      text: 'Which of the following is an unary boolean operator?'
+    options:
+      - '`AND`'
+      - '`OR`'
+      - '`XOR`'
+      - '`NOT`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `FALSE` and `B` is `FALSE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A AND B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `FALSE` and `B` is `TRUE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A AND B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `TRUE` and `B` is `FALSE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A AND B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `TRUE` and `B` is `TRUE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A AND B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `FALSE` and `B` is `FALSE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A OR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `FALSE` and `B` is `TRUE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A OR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `TRUE` and `B` is `FALSE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A OR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `TRUE` and `B` is `TRUE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A OR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `FALSE` and `B` is `FALSE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A XOR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If A is FALSE and B is TRUE, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A XOR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `TRUE` and `B` is `FALSE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A XOR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_mahy: false
+    question:
+      text: 'If `A` is `TRUE` and `B` is `TRUE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        A XOR B
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `FALSE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        NOT A
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'If `A` is `TRUE`, what is the result of the following boolean statement?'
+      extra_text: |
+        ~~~
+        NOT A
+        ~~~
+    options:
+      - '`TRUE`'
+      - '`FALSE`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'In Ruby the boolean operator `AND` is'
+    options:
+      - '`&&`'
+      - '`&`'
+      - '`|`'
+      - '`&&&`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'In Ruby the boolean operator `OR` is'
+    options:
+      - '`&&`'
+      - '`||`'
+      - '`&`'
+      - '`|`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'In Ruby the boolean operator `XOR` is'
+    options:
+      - '`&&`'
+      - '`||`'
+      - '`&`'
+      - '`^`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'In Ruby the boolean operator `NOT` is'
+    options:
+      - '`&&`'
+      - '`!`'
+      - '`!!`'
+      - '`||`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of this Ruby program?'
+      extra_text: |
+        ``` ruby
+        a = true
+        b = false
+        puts a && b
+        ```
+    options:
+      - '`false`'
+      - '`true`'
+      - '`yes`'
+      - '`no`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of this Ruby program?'
+      extra_text: |
+        ``` ruby
+        a = true
+        b = false
+        puts a || b
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+      - '`yes`'
+      - '`no`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ``` ruby
+        a = true
+        b = true
+        c = false
+        puts (a || b) && c
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ``` ruby
+        a = true
+        b = true
+        c = false
+        puts a || b && c
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: 'What is the output of the following Ruby program?'
+      extra_text: |
+        ``` ruby
+        a = true
+        b = true
+        c = false
+        d = false
+        puts a || b && (c || d)
+        ```
+    options:
+      - '`true`'
+      - '`false`'
+    correct_options:
+      - 1

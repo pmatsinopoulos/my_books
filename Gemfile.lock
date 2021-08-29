@@ -1,0 +1,27 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    addressable (2.8.0)
+      public_suffix (>= 2.0.2, < 5.0)
+    byebug (11.1.3)
+    coderay (1.1.3)
+    down (5.2.3)
+      addressable (~> 2.8)
+    method_source (1.0.0)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-byebug (3.9.0)
+      byebug (~> 11.0)
+      pry (~> 0.13.0)
+    public_suffix (4.0.6)
+
+PLATFORMS
+  x86_64-darwin-19
+
+DEPENDENCIES
+  down
+  pry-byebug
+
+BUNDLED WITH
+   2.2.24

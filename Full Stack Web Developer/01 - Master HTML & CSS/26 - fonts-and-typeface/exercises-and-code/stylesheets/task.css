@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Ubuntu Mono", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    color: white;
+    background-image: url("../images/shady-forest.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 43vh;
+}
+
+#opacity {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+h1 {
+    font-size: 6.4rem;
+}
+
+small {
+    font-size: 3.2rem;
+}
+
+hr {
+    width: 70%;
+    margin: 0 auto;
+}
+

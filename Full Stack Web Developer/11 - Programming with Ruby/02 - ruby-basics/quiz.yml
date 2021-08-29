@@ -1,0 +1,242 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How do we start the Interactive Ruby Console?"
+    options:
+      - '`irb`'
+      - '`clear`'
+      - '`ruby`'
+      - '`mv`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Variables are placeholders to hold content."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is true about variables?"
+    options:
+      - 'They are references to hardware devices on our computer.'
+      - 'They are not important to programming but can be helpful.'
+      - 'They are names for address positions in Random Access Memory.'
+      - 'They have nothing to do with programming.'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following is a valid variable name in Ruby?"
+    options:
+      - 'A'
+      - 'a'
+      - '1'
+      - 'this is a variable'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which of the following assigns the value `2` to the variable with name `a`?"
+    options:
+      - '`a <= 2`'
+      - '`a := 2`'
+      - '`2 => a`'
+      - '`a = 2`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The assignment operator is used to clear the contents of a variable."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Read the following Ruby code and pick up the variable that is undefined."
+      extra_text: |
+        ```ruby
+        a = 3
+        b
+        c = 8
+        d = 9
+        ```
+    options:
+      - '`a`'
+      - '`b`'
+      - '`c`'
+      - '`d`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the recommended way to name Ruby variables?"
+    options:
+      - 'Using snake format, like: `number_of_customers`'
+      - 'Using camel format, like: `numberOfCustomers`'
+      - 'Starting with an uppercase character and then snake format, like: `Number_of_customers`'
+      - 'Starting with an uppercase character and then camel format, like: `NumberOfCustomers`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the symbol of addition?"
+    options:
+      - '`-`'
+      - '`/`'
+      - '`+`'
+      - '`*`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the symbol of subtraction?"
+    options:
+      - '`-`'
+      - '`/`'
+      - '`+`'
+      - '`*`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the symbol of division?"
+    options:
+      - '`-`'
+      - '`/`'
+      - '`+`'
+      - '`*`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the symbol multiplication?"
+    options:
+      - '`-`'
+      - '`/`'
+      - '`+`'
+      - '`*`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the symbol of remainder of a division?"
+    options:
+      - '`%`'
+      - '`/`'
+      - '`-`'
+      - '`*`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Which is the modulo symbol?"
+    options:
+      - '`/`'
+      - '`-`'
+      - '`*`'
+      - '`%`'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following:"
+      extra_text: |
+        ```ruby
+        6 % 4
+        ```
+    options:
+      - '`6`'
+      - '`4`'
+      - '`2`'
+      - '`0`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the result of the following:"
+      extra_text: |
+        ``` ruby
+        2 ** 4
+        ```
+    options:
+      - '`16`'
+      - '`8`'
+      - '`4`'
+      - '`2`'
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What is the value of variable c at the end of the following program?"
+      extra_text: |
+        ``` ruby
+        a = 5
+        b = 6
+        c = a * b
+        ```
+    options:
+      - '`5`'
+      - '`30`'
+      - '`6`'
+      - '`11`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "What will be the content of the variable `d` at the end of the following program:"
+      extra_text: |
+        ``` ruby
+        a = 2
+        b = 8
+        c = 3
+        d = a * b + c
+        ```
+    options:
+      - '`18`'
+      - '`13`'
+      - '`10`'
+      - '`19`'
+    correct_options:
+      - 4

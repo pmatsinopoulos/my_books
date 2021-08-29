@@ -1,0 +1,2 @@
+# Logfile created on 2016-12-17 20:22:00 +0000 by logger.rb/47272
+I, [2016-12-17T20:22:11.412640 #3087]  INFO -- : Action: mv on file books/programming/Pascal/working-with-files.txt. Destination file: books/programming/Ruby

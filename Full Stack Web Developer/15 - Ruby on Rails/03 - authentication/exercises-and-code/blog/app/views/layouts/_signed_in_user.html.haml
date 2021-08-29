@@ -1,0 +1,8 @@
+- # File: app/views/layouts/_signed_in_user.html.haml
+- #
+- if current_user
+  .signed-in-user-container.text-right
+    .signed-in-user.text-success
+      = current_user.email if current_user
+    .sign-out-link
+      = link_to 'Sign Out', sign_out_path, method: :delete

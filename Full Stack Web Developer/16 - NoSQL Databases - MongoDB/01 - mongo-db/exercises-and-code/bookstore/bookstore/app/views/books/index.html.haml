@@ -1,0 +1,22 @@
+-# File: app/views/books/index.html.haml
+-#
+%h1 List Of Books
+- unless @books.empty?
+  %table
+    %thead
+      %tr
+        %th Title
+        %th Author
+        %th Tags
+        %th
+    %tbody
+      - @books.each do |book|
+        %tr
+          %td= link_to book.title, book_path(book)
+          %td= book.author
+          %td= book.tags_joined
+          %td
+            = link_to 'Edit', edit_book_url(book)
+            &nbsp;
+            = link_to 'Delete', book_url(book), method: :delete, data: {confirm: 'Are you sure?'}
+

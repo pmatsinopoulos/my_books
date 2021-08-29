@@ -1,0 +1,5 @@
+# File: Rakefile
+#
+task :default do
+  puts 'Hello World from default task!'
+end

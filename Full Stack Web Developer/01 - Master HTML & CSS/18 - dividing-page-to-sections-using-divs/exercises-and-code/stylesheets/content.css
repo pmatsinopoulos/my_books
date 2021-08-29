@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+    text-align: center;
+    margin: 0;
+}
+
+div {
+    padding: 10px;
+}
+
+#left-column {
+    background-color: #BC8F8F;
+    width: 25%;
+    float: left;
+}
+
+#middle-column {
+    background-color: #4682B4;
+    width: 50%;
+    float: left;
+}
+
+#right-column {
+    background-color: aqua;
+    width: 25%;
+    float: left;
+}
+
+#footer {
+    background-color: beige;
+    clear: left;
+}

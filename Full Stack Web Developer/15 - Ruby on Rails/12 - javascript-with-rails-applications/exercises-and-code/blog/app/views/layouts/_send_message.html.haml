@@ -1,0 +1,9 @@
+- # File: app/views/layouts/_send_message.html.haml
+- #
+.form-group
+  = form_tag do
+    = label_tag :message_to_send, 'Message To Send Out:'
+    = text_field_tag :message_to_send, nil, placeholder: 'Type in your message', class: 'form-control'
+    = submit_tag 'Send Message', id: 'btn-send-message', class: 'btn btn-success'
+  = label_tag :messages_received, 'Messages Received:'
+  = text_area_tag :messages_received, nil, class: 'form-control'

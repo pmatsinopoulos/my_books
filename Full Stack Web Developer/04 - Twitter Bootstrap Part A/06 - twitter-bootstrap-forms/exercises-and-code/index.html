@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Twitter Bootstrap Form Reference Page</title>
+
+    <!-- Bootstrap CSS files -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheets/main.css" type="text/css">
+
+    <!-- jQuery is a prerequisite for Bootstrap JavaScript library to work properly -->
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+    <!-- Bootstrap JavaScript Files -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+
+    <div id="main-container" class="container">
+
+      <div class="row">
+        <div class="col-md-6">
+
+          <h3>Sign In</h3>
+          <p>Sign in today for more experience.</p>
+
+          <form>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Enter email" class="form-control">
+            </div>
+
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" placeholder="Password" class="form-control">
+            </div>
+
+            <div class="pull-right">
+              <button class="btn btn-sm btn-primary" type="submit">
+                <strong>Log in</strong>
+              </button>
+            </div>
+
+            <div class="pull-left checkbox">
+              <label>
+                <input type="checkbox">Remember Me
+              </label>
+            </div>
+
+            <div class="clearfix"></div>
+          </form>
+        </div> <!-- left column -->
+
+        <div class="col-md-6">
+
+          <h3>Sign In</h3>
+          <p>Sign in today for more experience.</p>
+
+          <form class="form-horizontal">
+            <div class="form-group">
+              <label class="col-lg-2 control-label" for="email2">Email</label>
+              <div class="col-lg-10">
+                <input type="email" placeholder="Email" class="form-control" id="email2">
+                <span class="help-block">Example block-level help text here.</span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="col-lg-2 control-label" for="password2">Password</label>
+              <div class="col-lg-10">
+                <input type="password" placeholder="Password" class="form-control" id="password2">
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <div class="checkbox">
+                  <label>
+                    <input type="checkbox">Remember Me
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-lg-offset-2 col-lg-10">
+                <button class="btn btn-sm btn-white" type="submit">Sign in</button>
+              </div>
+            </div>
+          </form>
+
+        </div> <!-- right column -->
+
+      </div> <!-- row inside main container -->
+
+      <div id="inline-form-container">
+        <form role="form" class="form-inline">
+          <div class="form-group">
+            <label for="email3">Email address</label>
+            <input type="email" placeholder="Enter email" id="email3" class="form-control">
+          </div>
+
+          <div class="form-group">
+            <label for="password3">Password</label>
+            <input type="password" placeholder="Password" id="password3" class="form-control">
+          </div>
+
+          <div class="checkbox">
+            <input type="checkbox" id="checkbox1">
+            <label for="checkbox1">
+              Remember me
+            </label>
+          </div>
+
+          <button class="btn btn-white" type="submit">Sign in</button>
+        </form>
+      </div>
+
+      <div class="page-header">
+        <h3>Other Form Elements</h3>
+      </div>
+
+      <form class="form-horizontal">
+
+        <div class="page-header">
+          <em>Help Text</em>
+        </div>
+
+        <div class="form-group">
+          <label for="help-text" class="col-sm-2 control-label">VAT number</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="help-text" placeholder="Key in your VAT number"/>
+            <span class="help-block">Give your company VAT number. Enter the VIES VAT number with the two char prefix indicating your country.</span>
+          </div>
+        </div>
+
+        <div class="page-header">
+          <em>Static Control</em>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Email:</label>
+          <div class="col-sm-10">
+            <p class="form-control-static">foo@bar.com</p>
+          </div>
+        </div>
+
+        <div class="page-header">
+          <em>Select Boxes</em>
+        </div>
+
+        <div class="form-group">
+
+          <label class="col-sm-2 control-label">Select</label>
+
+          <div class="col-sm-10">
+            <select class="form-control" name="account">
+              <option>option 1</option>
+              <option>option 2</option>
+              <option>option 3</option>
+              <option>option 4</option>
+            </select>
+          </div>
+
+          <div class="col-sm-10 col-sm-offset-2">
+            <div class="page-header">
+              <em>Multiple</em>
+            </div>
+
+            <select class="form-control" multiple="multiple">
+              <option>option 1</option>
+              <option>option 2</option>
+              <option>option 3</option>
+              <option>option 4</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="page-header">
+          <em>Contextual Colouring</em>
+        </div>
+
+        <div class="form-group has-success">
+          <label class="col-sm-2 control-label">Input with success</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control"/>
+          </div>
+        </div>
+
+        <div class="form-group has-warning">
+          <label class="col-sm-2 control-label">Input with warning</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+
+        <div class="form-group has-error">
+          <label class="col-sm-2 control-label">Input with error</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+
+        <div class="page-header">
+          <em>Size of Input Controls</em>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Large</label>
+
+          <div class="col-sm-10">
+            <input type="text" class="form-control input-lg"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Default</label>
+
+          <div class="col-sm-10">
+            <input type="text" class="form-control"/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="col-sm-2 control-label">Small</label>
+
+          <div class="col-sm-10">
+            <input type="text" class="form-control input-sm"/>
+          </div>
+        </div>
+
+        <div class="page-header">
+          <em>Input Groups</em>
+        </div>
+
+
+        <div class="col-sm-10 col-sm-offset-2">
+
+          <div class="input-group form-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" placeholder="Username" class="form-control"/>
+          </div>
+
+          <div class="input-group form-group">
+            <input type="text" class="form-control"/>
+            <span class="input-group-addon">.00</span>
+          </div>
+
+          <div class="input-group form-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+          </div>
+
+          <div class="input-group form-group">
+            <span class="input-group-addon">
+              <input type="checkbox">
+            </span>
+            <input type="text" class="form-control">
+          </div>
+
+          <div class="input-group form-group">
+            <span class="input-group-addon">
+              <input type="radio">
+            </span>
+            <input type="text" class="form-control">
+          </div>
+
+        </div>
+
+        <div class="page-header">
+          <em>Input &amp; Button Groups</em>
+        </div>
+
+        <div class="col-sm-10 col-sm-offset-2">
+          <div class="input-group form-group">
+            <input type="text" class="form-control"/>
+            <span class="input-group-btn">
+              <button type="button" class="btn btn-primary">Go!</button>
+            </span>
+          </div>
+        </div>
+
+      </form>
+
+    </div> <!-- main container -->
+  </body>
+</html>
+

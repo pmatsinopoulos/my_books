@@ -1,0 +1,13 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    tcb_letter_spacing (0.1.0)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  tcb_letter_spacing
+
+BUNDLED WITH
+   1.14.3

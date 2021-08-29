@@ -1,0 +1,10 @@
+body {
+    text-align: center;
+}
+
+iframe {
+    height: 500px;
+    width: 700px;
+    border: 1px solid #FF9800;
+    padding: 10px 10px;
+}

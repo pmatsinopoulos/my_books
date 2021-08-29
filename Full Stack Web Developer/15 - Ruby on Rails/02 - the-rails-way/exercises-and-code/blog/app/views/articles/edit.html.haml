@@ -1,0 +1,16 @@
+- # File: app/views/articles/edit.html.erb
+%h1
+  Update Article with ID: #{@article.id}
+%form{:action => "/articles/#{@article.id}", :method => "post"}
+  %input#authenticity-token{:name => "authenticity_token", :type => "hidden", :value => form_authenticity_token}/
+  %input{:name => "_method", :type => "hidden", :value => "put"}/
+  .form-group
+    %label{:for => "title"} Title:
+    %input#title.form-control{:name => "title", :placeholder => "Give Title of Article", :type => "text", :value => "#{@article.title}"}/
+  .form-group
+    %label{:for => "text"} Text:
+    %textarea#text.form-control{:name => "text", :placeholder => "Type in the text of the Article"}= @article.text
+  %div
+    %button.btn.btn-success{:type => "submit"} Update Article
+.text-right
+  %a{:href => "/articles"} List of Articles

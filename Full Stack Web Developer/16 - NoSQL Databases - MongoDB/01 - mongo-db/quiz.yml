@@ -1,0 +1,203 @@
+prompt: "Please, answer the following questions"
+questions:
+  - 
+    input_type: select
+    allow_many: false
+    question:
+      text: "MongoDB is a Relational Database Management System."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "What is the command line tool that we use to connect to MongoDB server?"
+    correct_answers:
+      - "mongo"
+  -
+    input_type: text
+    question:
+      text: "What is the language that we use in the mongo shell?"
+    correct_answers:
+      - "JavaScript"
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Which command displays the current database?"
+    correct_answers:
+      - "db"
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. How do we display all the non-empty databases?"
+    correct_answers:
+      - "show dbs"
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. How do we switch to the database `customers`?"
+    correct_answers:
+      - "use customers"
+  -
+    input_type: text_area
+    question:
+      text: "Mongo shell. Create the database `customers` with collection `invoices` and `invoice` with fields i) `number` ii) `customer_number`."
+      extra_text: |
+        You need to do that by inserting the first document. Use "1234" for the `number` and "CN1234" for the `customer_number`.
+      text_area_pre_fill: |
+        use customers
+        ______________________________________________________________________
+      
+    correct_answers:
+      - |
+        use customers
+        db.invoices.insertOne({number: "1234", customer_number: "CN1234"})
+      - |
+        use customers
+        db.invoices.insertOne({number: '1234', customer_number: 'CN1234'})
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. List the `invoices` collection documents:"
+    correct_answers:
+      - "db.invoices.find()"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Mongo shell. Which method is used to create many documents at once?"
+    options:
+      - '`createMany()`'
+      - '`insertMany()`'
+      - '`createManyDocuments()`'
+      - '`insertManyDocuments()`'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Retrieve the document from `invoices` collection that has `customer_number` equal to `'12345678'`."
+    correct_answers:
+      - "db.invoices.find({customer_number: '12345678'})"
+      - 'db.invoices.find({customer_number: "12345678"})'
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Retrieve the document from `invoices` collection that has `customer_number` equal to `'12345678'`. Return only the `number` field."
+    correct_answers:
+      - "db.invoices.find({customer_number: '12345678'}, {number: 1})"
+      - 'db.invoices.find({customer_number: "12345678"}, {number: 1})'
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Retrieve the document from `invoices` collection that has `customer_number` equal to `'12345678'`. Return only the `number` field, and limit the number of results to 10 results only."
+    correct_answers:
+      - "db.invoices.find({customer_number: '12345678'}, {number: 1}).limit(10)"
+      - 'db.invoices.find({customer_number: "12345678"}, {number: 1}).limit(10)'
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Given a collection named `employees`, return back all the documents that have `salary` greater than or equal to `2500`."
+    correct_answers:
+      - "db.employees.find({salary: {$gte: 2500}})"
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Given a collection named `students`, update the `first_name` field to have value `'Mary'` for the student that has `last_name` equal to `'Bar'`."
+    correct_answers:
+      - "db.students.updateOne({last_name: 'Bar'}, {$set: {first_name: 'Mary'}})"
+      - 'db.students.updateOne({last_name: "Bar"}, {$set: {first_name: "Mary"}})'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Mongo shell. The command `replaceOne()` replaces a document with another one, and assigns a new `_id` to the document."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Delete an invoice from the `invoices` collection. The `invoice` should have `number` equal to `'12345678'`."
+    correct_answers:
+      - 'db.invoices.deleteOne({number: "12345678"})'
+      - "db.invoices.deleteOne({number: '12345678'})"
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Assume that the `invoices` collection has documents that have an `address_field` being an embedded document. How can you query for the documents that have `country` equal to `France` ?"
+    correct_answers:
+      - 'db.invoices.find({address_field.country: "France"})'
+      - "db.invoices.find({address_field.country: 'France'})"
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Assume that you have the collection `products` and each document has a field `categories` of type `Array`. The `categories` Array is holding string items. How can we query for the products that they have the category `books` and `online`?"
+    correct_answers:
+      - 'db.products.find({categories: {$all: ["books", "online"]}})'
+      - "db.products.find({categories: {$all: ['books', 'online']}})"
+  -
+    input_type: text
+    question:
+      text: "Which is the *primary key* field of a document?"
+    correct_answers:
+      - '_id'
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Create index on `invoices` collection on `number` field. The index should be ascending."
+    correct_answers:
+      - 'db.invoices.createIndex({number: 1})'
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. List all indexes of the collection `invoices`."
+    correct_answers:
+      - 'db.invoices.getIndexes()'
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Drop ascending index on `number` field of `invoices` collection."
+    correct_answers:
+      - 'db.invoices.dropIndex({number: 1})'
+  -
+    input_type: text
+    question:
+      text: "Mongo shell. Create a unique ascending index on `number` field of `invoices` collection."
+    correct_answers:
+      - 'db.invoices.createIndex({number: 1}, {unique: true})'
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "MongoDB server supports transactions and foreign keys like RDBMS systems do."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Does Mongoid support validations on the models?"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1
+
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Does Mongoid support associations among models?"
+    options:
+      - "Yes"
+      - "No"
+    correct_options:
+      - 1

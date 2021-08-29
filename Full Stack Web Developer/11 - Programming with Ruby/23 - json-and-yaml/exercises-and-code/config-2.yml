@@ -1,0 +1,25 @@
+# File: config-2.yml
+#
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  host: localhost
+  username: foo
+  password: bar
+
+development:
+  <<: *default
+  database: customers_db_development
+
+test:
+  <<: *default
+  database: customers_db_test
+
+production:
+  <<: *default
+  host: 192.168.2.1
+  database: customers_db_production
+  username: customers_db
+  password: adfkj3d8vjt4fjashd36
+

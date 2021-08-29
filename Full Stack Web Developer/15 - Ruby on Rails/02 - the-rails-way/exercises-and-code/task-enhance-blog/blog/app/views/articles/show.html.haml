@@ -1,0 +1,18 @@
+- # File: app/views/articles/show.html.erb
+%div
+  %strong ID:
+  = @article.id
+%div
+  %strong Title:
+  = @article.title
+%hr/
+%div
+  %strong Text:
+%div
+  = @article.text
+%div
+  = link_to 'Edit Article', edit_article_path(@article)
+%div
+  = link_to 'Create New Article', new_article_path
+%div
+  = link_to 'List of Articles', articles_path

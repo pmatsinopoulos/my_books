@@ -1,0 +1,264 @@
+prompt: "Please, answer the following questions"
+questions:
+  -
+    input_type: text
+    question:
+      text: "Write the command that installs `rake`:"
+    correct_answers:
+      - "gem install rake"
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The `Rakefile` can include any Ruby code."
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "When you call `rake` without specifying a task, your `Rakefile` should have a task named"
+    options:
+      - '`all`'
+      - '`current`'
+      - '`default`'
+      - '`run`'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The method that defines a new task is called..."
+    options:
+      - '`def task`'
+      - '`task`'
+      - '`work`'
+      - '`work-item`'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following task `foo` has as prerequisite the task with name `bar`:"
+      extra_text: |
+        ```ruby
+        task :bar do
+          puts 'bar'
+        end
+
+        task :foo do
+          puts 'foo'
+        end
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following task `foo` has as prerequisite the task with name `bar`:"
+      extra_text: |
+        ```ruby
+        task :foo do
+          puts 'foo'
+        end
+
+        task bar: :foo do
+          puts 'bar'
+        end
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The following task `foo` has as prerequisite the task with name `bar`:"
+      extra_text: |
+        ```ruby
+        task :foo => :bar do
+          puts 'foo'
+        end
+
+        task :bar do
+          puts 'bar'
+        end
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "If you run `rake` with the following `Rakefile` what will happen?"
+      extra_text: |
+        ```ruby
+        task :foo do
+          puts 'foo'
+        end
+
+        task :default => :foo
+        ```
+    options:
+      - 'We will see the `default` word printed on the standard output.'
+      - 'We will see `rake aborted` printed on the output.'
+      - 'We will see nothing printed on the output.'
+      - 'We will see the `foo` word printed on the standard output.'
+    correct_options:
+      - 4
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "The tasks `a`, `b` and `c` will be executed in sequence:"
+      extra_text: |
+        ```ruby
+        task d: [:a, :b, :c] do
+        end
+        task default: :d
+        ```
+    options:
+      - "True"
+      - "False"
+    correct_options:
+      - 1
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "How many dependencies task `foo` have?"
+      extra_text: |
+        ```ruby
+        task :foo do
+        end
+        task :foo
+        task :foo => [:bar, :mary]
+        task :bar do
+        end
+        task :mary do
+        end
+        task :foo => [:jhonny]
+        ```
+    options:
+      - '1'
+      - '2'
+      - '3'
+      - '4'
+    correct_options:
+      - 3
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "These tasks `a`, `b` and `c` will be executed in sequence:"
+      extra_text: |
+        ```ruby
+        multitask default: [:a, :b, :c] do
+        end
+        ```
+    options:
+      - 'True'
+      - 'False'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "Read the following `Rakefile` and suggest which is the output of running `rake invoice[1234]`"
+      extra_text: |
+        ```ruby
+        1. task :invoice, [:customer_code] do |t, arguments|
+        2.   puts "Invoicing customer with id #{arguments.customer_code}"
+        3. end
+        ```
+    options:
+      - 'Will fail with error. Line 2 should have been: `puts "Invoicing customer with id #{customer_code}"`'
+      - '`Invoicing customer with id 1234`'
+      - 'Will print an error because the task `customer_code` is not defined.'
+    correct_options:
+      - 2
+  -
+    input_type: select
+    allow_many: false
+    question:
+      text: "This is the `Rakefile` and files `test1.txt` and `test2.txt` already exist in the folder. If we invoke the `rake` command..."
+      extra_text: |
+        ```ruby
+        file 'test1.txt' do |t|
+          File.write(t.name, "line 1\n")
+        end
+
+        file 'test2.txt' do |t|
+          File.write(t.name, "line 2\n")
+        end
+
+        file 'test.txt' => ['test1.txt', 'test2.txt'] do
+          sh 'cat test1.txt >> test.txt'
+          sh 'cat test2.txt >> test.txt'
+        end
+
+        task default: 'test.txt'
+        ```
+
+        > *Note:* The `sh` method executes a shell command.
+    options:
+      - 'It will do nothing.'
+      - 'It will create the file `test.txt`'
+      - 'It will delete the files `test1.txt` and `test2.txt` and will recreate them.'
+      - 'It will delete the files `test1.txt` and `test2.txt` and will recreate them and then will create the `test.txt` file too.'
+    correct_options:
+      - 2
+  -
+    input_type: text
+    question:
+      text: "Which shell command displays the list of tasks that `rake` will load according to your `Rakefile`?"
+    correct_answers:
+      - "rake --tasks"
+      - "rake -T"
+  -
+    input_type: text_area
+    question:
+      text: "Add the description `Awesome Task` to the task defined below:"
+      text_area_pre_fill: |
+        ____________________________________
+        task :awesome_task do
+        end
+    correct_answers:
+      - |
+        desc 'Awesome Task'
+        task :awesome_task do
+        end
+      - |
+        desc "Awesome Task"
+        task :awesome_task do
+        end
+  -
+    input_type: text_area
+    question:
+      text: "Enclose the task `awesome_task` into the `billing` namespace:"
+      text_area_pre_fill: |
+        _______________________
+          task :awesome_task do
+          end
+        _______________________
+    correct_answers:
+      - |
+        namespace :billing
+          task :awesome_task do
+          end
+        end
