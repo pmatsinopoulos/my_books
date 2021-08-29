@@ -20,11 +20,10 @@ Enjoy and you can always find me here:
 - [09. Introduction To Testing](./Full%20Stack%20Web%20Developer/09%20-%20Introduction%20To%20Testing)
 - [10. SQL Essentials](./Full%20Stack%20Web%20Developer/10%20-%20SQL%20Essentials)
 - [11. Programming with Ruby](./Full%20Stack%20Web%20Developer/11%20-%20Programming%20with%20Ruby)
-- [12. Test Automation - TDD and BDD](./Full%20Stack%20Web%20Developer/12%20-%20Test%20Automation%20-%20TDD%20and%20BDD)
-- [13. Client Server Programming](./Full%20Stack%20Web%20Developer/13%20-%20Client%20Server%20Programming)
-- [14. Introduction to Web Development](./Full%20Stack%20Web%20Developer/14%20-%20Introduction%20to%20Web%20Development)
-- [15. Ruby on Rails](./Full%20Stack%20Web%20Developer/15%20-%20Ruby%20on%20Rails)
-- [16. NoSQL Databases - MongoDB](./Full%20Stack%20Web%20Developer/16%20-%20NoSQL%20Databases%20-%20MongoDB)
+- [12. Client Server Programming](./Full%20Stack%20Web%20Developer/13%20-%20Client%20Server%20Programming)
+- [13. Introduction to Web Development](./Full%20Stack%20Web%20Developer/14%20-%20Introduction%20to%20Web%20Development)
+- [14. Ruby on Rails](./Full%20Stack%20Web%20Developer/15%20-%20Ruby%20on%20Rails)
+- [15. NoSQL Databases - MongoDB](./Full%20Stack%20Web%20Developer/16%20-%20NoSQL%20Databases%20-%20MongoDB)
 
 # Not Free
 
