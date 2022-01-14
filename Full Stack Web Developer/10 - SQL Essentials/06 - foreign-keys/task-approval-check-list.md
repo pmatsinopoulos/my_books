@@ -19,6 +19,8 @@ Some things that may not be obvious from the diagram are:
     1. `enrolment_date` should be mandatory. It should be of type `date` and not `datetime`.
     1. The same student should not be allowed to enrol on the same course more than once.
     
+# Solution
+
 These are indicative SQL command that can be used to create the specified database schema:
 
 ``` sql
